@@ -1,3 +1,6 @@
+#!name=Bilibili
+#!desc=拦截广告
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/icon/Bilibili.png
 
 [Script]
 http-response ^https:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index\?)|resource\/show\/tab\/v2) script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili-json.js, requires-body=true, timeout=10, tag=bili-json
