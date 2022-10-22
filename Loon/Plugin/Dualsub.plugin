@@ -1,0 +1,10 @@
+#!name=Dualsub
+#!desc=多媒体字幕
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/icon/Loon.png
+
+[Script]
+http-response ^http.+(media.(dss|star)ott|manifests.v2.api.hbo|hbomaxcdn|nflxvideo|cbs(aa|i)video|cloudfront|akamaihd|avi-cdn|huluim|youtube).(com|net)\/(.+\.vtt($|\?m=\d+)|.+-all-.+\.m3u8.*|hls\.m3u8.+|\?o=\d+&v=\d+&e=.+|\w+\/2\$.+\/[a-zA-Z0-9-]+\.m3u8|api\/timedtext.+) script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Dualsub.js, requires-body=true, binary-body-mode=true, timeout=10, tag=Dualsub
+http-response ^http.+(setting|general).(media.dssott|hbomaxcdn|nflxvideo|youtube|cbsivideo|cloudfront|huluim).(com|net)\/\?action=(g|s)et script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Dualsub.js, requires-body=true, binary-body-mode=true, timeout=10, tag=Dualsub
+
+[Mitm]
+hostname = *.media.dssott.com, *.media.starott.com, *.api.hbo.com, *.hbomaxcdn.com, *.huluim.com, *.nflxvideo.net, *.cbsaavideo.com, *.cbsivideo.com, *.cloudfront.net, *.akamaihd.net, *.avi-cdn.net, *.youtube.com
