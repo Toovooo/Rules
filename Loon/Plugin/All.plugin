@@ -1,3 +1,6 @@
+#!name=永久解锁合集
+#!desc=tiao  fileball  VSCO  Planny  pillow  Usage  Fin  Airmail  Percento  Grow  ScannerPro  widgetart  Apollo  aphrodite
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/icon/Loon.png
 
 [Script]
 # FIMO
@@ -7,9 +10,9 @@ http-response ^https?:\/\/server\.yoyiapp\.com\/fimo-user\/apple\/certificate$ s
 # PDFviewer  Darkroom  audiomack  noto  Emote  sotic  anybox  Upnext  focus  Focuskeeper  inshot  peachy  inscopy  instake 
 # gear  Picsew  videorama   bazaart  geminiphoto   Spark  Vision  pandora  1Blocker    Bear  Manly  
 # 谜底时钟  白云天气  目标地图  图图记账  奇妙组件  谜底黑胶  手机硬件管家  发型多多  星空内购  立即翻译  照片清理
-http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers\/(\$RCAnonymousID%)?([\u4E00-\u9FA5A-Za-z0-9-_]+))$ script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/revenuecat.js, requires-body=true, binary-body-mode=true, timeout=10, tag=All in one
-http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers\/(\$RCAnonymousID%)?([\u4E00-\u9FA5A-Za-z0-9-_]+)) script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bytq.js, requires-body=true, binary-body-mode=true, timeout=10, tag=All in one
-http-response https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/verifyReceipt.js, requires-body=true, binary-body-mode=true, timeout=10, tag=All in one
+http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers\/(\$RCAnonymousID%)?([\u4E00-\u9FA5A-Za-z0-9-_]+))$ script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/revenuecat.js, requires-body=true, binary-body-mode=true, timeout=10, tag=永久解锁合集
+http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers\/(\$RCAnonymousID%)?([\u4E00-\u9FA5A-Za-z0-9-_]+)) script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bytq.js, requires-body=true, binary-body-mode=true, timeout=10, tag=永久解锁合集
+http-response https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/verifyReceipt.js, requires-body=true, binary-body-mode=true, timeout=10, tag=永久解锁合集
 
 [Mitm]
 hostname = api.revenuecat.com, buy.itunes.apple.com, server.yoyiapp.com
