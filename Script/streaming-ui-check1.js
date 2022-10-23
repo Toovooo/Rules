@@ -1,18 +1,7 @@
 /***
 
-Thanks to & modified from 
-1. https://gist.githubusercontent.com/Hyseen/b06e911a41036ebc36acf04ddebe7b9a/raw/nf_check.js
-2. https://github.com/AtlantisGawrGura/Quantumult-X-Scripts/blob/main/media.js
-3. https://github.com/CoiaPrant/MediaUnlock_Test/blob/main/check.sh
-
-
-For Quantumult-X 598+ ONLY!!
-
-2022-07-22
-
-[task_local]
-
-event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体-解锁查询, img-url=checkmark.seal.system, enabled=true
+[Script]
+generic script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/streaming-ui-check.js, tag=流媒体解锁查询, img-url=checkmark.seal.system
 
 @XIAO_KOP
 
