@@ -1,5 +1,5 @@
 #!name=Rewrite
-#!desc=常用重写规则与一些广告屏蔽
+#!desc=重写规则  广告屏蔽
 #!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/icon/Loon.png
 
 [MITM]
