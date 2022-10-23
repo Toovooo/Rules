@@ -8,7 +8,7 @@
  * 脚本使用方式：将以下配置粘贴于Loon配置文件中的[Script]模块下，也可以进行UI添加脚本，添加后需开启Loon代理，在策略组或者所有节点页面，选择一个节点长按，出现菜单后进行测试
  * 
  * [Script]
- * generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonScript/main/MediaCheck/check.js, tag=流媒体-解锁查询, img-url=checkmark.seal.system
+ * generic script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/streaming-ui-check1.js, tag=流媒体-解锁查询, img-url=checkmark.seal.system
  */
 
 const NF_BASE_URL = "https://www.netflix.com/title/81215567";
