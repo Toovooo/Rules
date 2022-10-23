@@ -1,7 +1,7 @@
  /***
   
   [Script]
-  generic script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/geo_location.js,tag=GeoLocation, img-url=location.fill.viewfinder.system
+  generic script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/geo_location1.js,tag=GeoLocation, img-url=location.fill.viewfinder.system
   
   @XIAO_KOP
 
