@@ -1,9 +1,7 @@
 /***
 
-For Quantumult-X 598+ ONLY!!
-
-[task_local]
-event-interaction https://raw.githubusercontent.com/Mess-R/Rules/main/QuantumultX/YouTube/YouTubeNoAd.js, tag=YouTube 广告检测, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/YouTube.png, enabled=true
+[Script]
+generic script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/YouTubeNoAd.js, tag=YouTube送中查询, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/YouTube.png
 
 基于@XIAO_KOP大佬的Google送中检测脚本修改。
 1:修改了判断逻辑，检测切换送中的节点。
