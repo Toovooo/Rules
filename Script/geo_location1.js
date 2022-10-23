@@ -1,6 +1,7 @@
  /***
-  [task_local]
-  event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/geo_location.js, tag=GeoIP 查询, img-url=location.fill.viewfinder.system
+  
+  [Script]
+  generic script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/geo_location.js,tag=GeoLocation, img-url=location.fill.viewfinder.system
   
   @XIAO_KOP
 
