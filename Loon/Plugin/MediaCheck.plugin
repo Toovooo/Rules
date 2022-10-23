@@ -1,5 +1,5 @@
-#!name=Rewrite
-#!desc=IP查询,多媒体检测,节点送中检测
+#!name=MediaCheck
+#!desc=IP查询  多媒体检测  节点送中检测
 #!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/icon/Loon.png
 
 [Script]
