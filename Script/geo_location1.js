@@ -3,7 +3,7 @@
  * Reference: https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/geo_location.js
  * 
  * [script]
- * generic script-path=https://raw.githubusercontent.com/Loon0x00/LoonExampleConfig/master/Script/generic_example.js,tag=GeoLocation,timeout=10,img-url=location.fill.viewfinder.system
+ * generic script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/geo_location1.js,tag=GeoLocation,timeout=10,img-url=location.fill.viewfinder.system
 */
 
 // $environment.params with input params
