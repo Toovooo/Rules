@@ -1,7 +1,7 @@
 /***
 
 [Script]
-generic script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/streaming-ui-check.js, tag=流媒体解锁查询, img-url=checkmark.seal.system
+generic script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/streaming-ui-check1.js, tag=流媒体解锁查询, img-url=checkmark.seal.system
 
 @XIAO_KOP
 
