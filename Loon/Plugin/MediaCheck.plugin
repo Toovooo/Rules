@@ -1,0 +1,8 @@
+#!name=Rewrite
+#!desc=IP查询,多媒体检测,节点送中检测
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/icon/Loon.png
+
+[Script]
+generic script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/geo_location.js,tag=GeoLocation
+generic script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/YouTubeNoAd.js, tag=YouTube送中查询
+generic script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/streaming-ui-check.js, tag=多媒体解锁查询
