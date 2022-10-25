@@ -3,9 +3,9 @@
 #!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/icon/YouTube.png
 
 [Script]
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next)\? script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/youtube.js, requires-body=true, binary-body-mode=true, timeout=10, tag=YouTube去广告
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/youtube-player.js, requires-body=true, binary-body-mode=true, timeout=10, tag=YouTube_player
-http-response ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/youtube-fake.js, requires-body=false, timeout=10, tag=YouTube_fake
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence) script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/youtube.js, requires-body=true, binary-body-mode=true, timeout=10, tag=YouTube去广告
+http-response ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/youtube-fake.js, requires-body=true, binary-body-mode=true, timeout=10, tag=youtube-fake
 
 [MITM]
-hostname = -redirector*.googlevideo.com, *.googlevideo.com, youtubei.googleapis.com
+hostname = *.googlevideo.com, youtubei.googleapis.com
+
