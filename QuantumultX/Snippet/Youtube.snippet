@@ -7,5 +7,6 @@
 ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext url reject
 
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next)\? url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/youtube.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/youtube-player.js
 
 hostname = -redirector*.googlevideo.com, *.googlevideo.com, www.youtube.com, s.youtube.com, youtubei.googleapis.com
