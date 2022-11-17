@@ -1,0 +1,13 @@
+#!name=Adobe
+#!desc=lightroom phothop&PSexpress
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/icon/Photoshop.png
+
+[Script]
+# lightroom
+http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/lightroom.js, requires-body=true, timeout=10, tag=lightroom
+
+# phothop&PSexpress
+http-response ^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/photoshop.js, requires-body=true, timeout=10, tag=phothop&PSexpress
+
+[Mitm]
+hostname = photos.adobe.io, lcs-mobile-cops.adobe.io, *.adobe.*
