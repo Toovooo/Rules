@@ -195,26 +195,6 @@ USER-AGENT,All4*,PROXY
 HOST-SUFFIX,c4assets.com,PROXY
 HOST-SUFFIX,channel4.com,PROXY
 
-# > Amazon Prime Video
-USER-AGENT,InstantVideo.US*,PROXY
-USER-AGENT,Prime%20Video*,PROXY
-HOST-SUFFIX,aiv-cdn.net,PROXY
-HOST-SUFFIX,aiv-delivery.net,PROXY
-HOST-SUFFIX,amazonvideo.com,PROXY
-HOST-SUFFIX,primevideo.com,PROXY
-HOST-SUFFIX,media-amazon.com,PROXY
-HOST-SUFFIX,atv-ps.amazon.com,PROXY
-HOST-SUFFIX,fls-na.amazon.com,PROXY
-HOST-SUFFIX,avodmp4s3ww-a.akamaihd.net,PROXY
-HOST-SUFFIX,d25xi40x97liuc.cloudfront.net,PROXY
-HOST-SUFFIX,dmqdd6hw24ucf.cloudfront.net,PROXY
-HOST-SUFFIX,dmqdd6hw24ucf.cloudfront.net,PROXY
-HOST-SUFFIX,d22qjgkvxw22r6.cloudfront.net,PROXY
-HOST-SUFFIX,d1v5ir2lpwr8os.cloudfront.net,PROXY
-HOST-SUFFIX,d27xxe7juh1us6.cloudfront.net,PROXY
-# HOST-SUFFIX,www.amazon.com,PROXY
-HOST-SUFFIX,avoddashs,PROXY
-
 # > Bahamut
 USER-AGENT,Anime*,PROXY
 HOST-SUFFIX,bahamut.com.tw,PROXY
@@ -237,15 +217,6 @@ HOST-SUFFIX,dazndn.com,PROXY
 HOST-SUFFIX,indazn.com,PROXY
 HOST-SUFFIX,d151l6v8er5bdm.cloudfront.net,PROXY
 HOST-SUFFIX,voddazn,PROXY
-
-# > discovery+
-USER-AGENT,DPlus*,PROXY
-USER-AGENT,discovery+*,PROXY
-HOST-SUFFIX,disco-api.com,PROXY
-HOST-SUFFIX,discoveryplus.co.uk,PROXY
-HOST-SUFFIX,discoveryplus.com,PROXY
-HOST-SUFFIX,discoveryplus.in,PROXY
-HOST-SUFFIX,dnitv.com,PROXY
 
 # > DMM
 HOST-SUFFIX,dmm.co.jp,PROXY

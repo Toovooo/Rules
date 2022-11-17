@@ -80,6 +80,7 @@ HOST-SUFFIX,disneyinternational.com,Disney
 HOST-SUFFIX,disneyinternationalhd.com,Disney
 HOST-SUFFIX,disneyjunior.com,Disney
 HOST-SUFFIX,disneyjuniortreataday.com,Disney
+HOST-SUFFIX,disneylandparis.com,Disney
 HOST-SUFFIX,disneylatino.com,Disney
 HOST-SUFFIX,disneymagicmoments.co.il,Disney
 HOST-SUFFIX,disneymagicmoments.co.uk,Disney
@@ -102,15 +103,18 @@ HOST-SUFFIX,disneypeoplesurveys.com,Disney
 HOST-SUFFIX,disneyplus.bn5x.net,Disney
 HOST-SUFFIX,disneyplus.com,Disney
 HOST-SUFFIX,disneyplus.com.ssl.sc.omtrdc.net,Disney
+HOST-SUFFIX,disneyprivacycenter.com,Disney
 HOST-SUFFIX,disneyredirects.com,Disney
 HOST-SUFFIX,disneysrivieraresort.com,Disney
 HOST-SUFFIX,disneystore.com,Disney
 HOST-SUFFIX,disneystreaming.com,Disney
 HOST-SUFFIX,disneysubscription.com,Disney
+HOST-SUFFIX,disneytermsofuse.com,Disney
 HOST-SUFFIX,disneytickets.co.uk,Disney
 HOST-SUFFIX,disneyturkiye.com.tr,Disney
 HOST-SUFFIX,disneytvajobs.com,Disney
 HOST-SUFFIX,disneyworld-go.com,Disney
+HOST-SUFFIX,dlp-media.com,Disney
 HOST-SUFFIX,dmed.technology,Disney
 HOST-SUFFIX,dssott.com,Disney
 HOST-SUFFIX,dtci.co,Disney
@@ -126,6 +130,10 @@ HOST-SUFFIX,espnqa.com,Disney
 HOST-SUFFIX,execute-api.us-east-1.amazonaws.com,Disney
 HOST-SUFFIX,go-disneyworldgo.com,Disney
 HOST-SUFFIX,go.com,Disney
+HOST-SUFFIX,hotstar-cdn.net,Disney
+HOST-SUFFIX,hotstar.com,Disney
+HOST-SUFFIX,hotstarext.com,Disney
+HOST-SUFFIX,hsprepack.akamaized.net,Disney
 HOST-SUFFIX,js-agent.newrelic.com,Disney
 HOST-SUFFIX,marvel.com,Disney
 HOST-SUFFIX,marvel10thanniversary.com,Disney
@@ -156,6 +164,7 @@ HOST-SUFFIX,starwarskids.com,Disney
 HOST-SUFFIX,streamingdisney.net,Disney
 HOST-SUFFIX,themarvelexperiencetour.com,Disney
 HOST-SUFFIX,thestationbymaker.com,Disney
+HOST-SUFFIX,thewaltdisneycompany.com,Disney
 HOST-SUFFIX,thisispolaris.com,Disney
 HOST-SUFFIX,watchdisneyfe.com,Disney
 HOST-SUFFIX,watchespn.com,Disney

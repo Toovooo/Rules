@@ -1,5 +1,7 @@
+# > General
 
 HOST-SUFFIX,adservice,REJECT
+
 HOST-SUFFIX,1phads.com,REJECT
 HOST-SUFFIX,1rtb.com,REJECT
 HOST-SUFFIX,1xl.co.uk,REJECT

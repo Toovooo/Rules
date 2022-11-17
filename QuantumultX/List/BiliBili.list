@@ -47,13 +47,16 @@ HOST,3geauymtsgrzdnqbofa5dy.ourdvsss.com,BiliBili
 HOST,3geauymtsgrzdrcbzfahue.ourdvsss.com,BiliBili
 HOST,3geauymtsgrzdrcbzfahuk.ourdvsss.com,BiliBili
 HOST,4go41hcjtgazdoctqge4o.ourdvsss.com,BiliBili
-HOST,apm-misaka.biliapi.net,BiliBili
 HOST,p-bstarstatic.akamaized.net,BiliBili
 HOST,p.bstarstatic.com,BiliBili
 HOST,upos-bstar-mirrorakam.akamaized.net,BiliBili
 HOST,upos-bstar1-mirrorakam.akamaized.net,BiliBili
 HOST-SUFFIX,acg.tv,BiliBili
 HOST-SUFFIX,acgvideo.com,BiliBili
+HOST-SUFFIX,animetamashi.cn,BiliBili
+HOST-SUFFIX,animetamashi.com,BiliBili
+HOST-SUFFIX,anitama.cn,BiliBili
+HOST-SUFFIX,anitama.net,BiliBili
 HOST-SUFFIX,b23.tv,BiliBili
 HOST-SUFFIX,baka.im,BiliBili
 HOST-SUFFIX,bigfun.cn,BiliBili
@@ -68,8 +71,10 @@ HOST-SUFFIX,bilibili.cc,BiliBili
 HOST-SUFFIX,bilibili.cn,BiliBili
 HOST-SUFFIX,bilibili.co,BiliBili
 HOST-SUFFIX,bilibili.com,BiliBili
+HOST-SUFFIX,bilibili.net,BiliBili
 HOST-SUFFIX,bilibili.tv,BiliBili
 HOST-SUFFIX,bilibiligame.cn,BiliBili
+HOST-SUFFIX,bilibiligame.co,BiliBili
 HOST-SUFFIX,bilibiligame.net,BiliBili
 HOST-SUFFIX,bilibilipay.cn,BiliBili
 HOST-SUFFIX,bilibilipay.com,BiliBili
@@ -79,6 +84,7 @@ HOST-SUFFIX,bilicdn3.com,BiliBili
 HOST-SUFFIX,bilicdn4.com,BiliBili
 HOST-SUFFIX,bilicdn5.com,BiliBili
 HOST-SUFFIX,biligame.cn,BiliBili
+HOST-SUFFIX,biligame.co,BiliBili
 HOST-SUFFIX,biligame.com,BiliBili
 HOST-SUFFIX,biligame.net,BiliBili
 HOST-SUFFIX,biligo.com,BiliBili
@@ -96,6 +102,7 @@ HOST-SUFFIX,hdslb.com.w.kunlunpi.com,BiliBili
 HOST-SUFFIX,hdslb.net,BiliBili
 HOST-SUFFIX,hdslb.org,BiliBili
 HOST-SUFFIX,im9.com,BiliBili
+HOST-SUFFIX,maoercdn.com,BiliBili
 HOST-SUFFIX,mcbbs.net,BiliBili
 HOST-SUFFIX,mincdn.com,BiliBili
 HOST-SUFFIX,sharejoytech.com,BiliBili
@@ -114,7 +121,4 @@ IP-CIDR,120.92.108.182/32,BiliBili
 IP-CIDR,120.92.113.99/32,BiliBili
 IP-CIDR,120.92.153.217/32,BiliBili
 IP-CIDR,134.175.207.130/32,BiliBili
-IP-CIDR,203.107.1.33/32,BiliBili
-IP-CIDR,203.107.1.34/32,BiliBili
-IP-CIDR,203.107.1.65/32,BiliBili
-IP-CIDR,203.107.1.66/32,BiliBili
+IP-CIDR,203.107.1.0/24,BiliBili
