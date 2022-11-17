@@ -17,4 +17,3 @@ http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? requires-
 
 [MITM]
 hostname = app.bilibili.com, grpc.biliapi.net
-
