@@ -1,0 +1,15 @@
+
+# Pixelmator Planny Gear Aphrodite Apollo MoneyThings Audiomack 1Blocker Scanner Pro Darkroom Pillow 
+# VSCO Grow WhiteCloud Fin Widgetsmith vision Percento Airmail Usage Spark
+# 图图记账 目标地图 谜底时钟 奇妙组件 
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/(\$RCAnonymousID%)?(\w)*$) url script-echo-response https://raw.githubusercontent.com/Toovooo/Rules/master/Script/FakeVIP.js
+
+# APTV
+https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/APTV.js
+
+# Fileball
+^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/fileball.js
+^https:\/\/app-measurement\.com\/config\/app\/1?(.*?)*$ url reject
+
+hostname = api.revenuecat.com, app-measurement.com
+
