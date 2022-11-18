@@ -2,13 +2,11 @@
 #!desc=拦截广告
 #!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/icon/Bilibili.png
 
-[Rule]
-^https?:\/\/app\.bilibili\.com\/x\/resource\/ip reject
-^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default reject
-
 [Rewrite]
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity reject-dict
 ^https://app.bilibili.com/x/v2/splash/show reject-dict
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip reject
+^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default reject
 
 [Script]
 # http-response ^https:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index\?)|resource\/show\/tab\/v2) script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili-json.js, requires-body=true, timeout=10, tag=bili-json
