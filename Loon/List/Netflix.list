@@ -1,5 +1,6 @@
 
-DOMAIN,api.fast.com
+DOMAIN,e13252.dscg.akamaiedge.net
+DOMAIN,h-netflix.online-metrix.net
 DOMAIN,netflix.com.edgesuite.net
 DOMAIN-SUFFIX,fast.com
 DOMAIN-SUFFIX,flxvpn.net
@@ -41,6 +42,7 @@ IP-CIDR,108.128.162.0/24,no-resolve
 IP-CIDR,108.136.154.16/28,no-resolve
 IP-CIDR,108.136.154.32/27,no-resolve
 IP-CIDR,108.137.114.0/28,no-resolve
+IP-CIDR,108.137.114.64/26,no-resolve
 IP-CIDR,108.175.32.0/20,no-resolve
 IP-CIDR,13.112.191.184/29,no-resolve
 IP-CIDR,13.113.196.64/26,no-resolve
@@ -143,6 +145,7 @@ IP-CIDR,13.245.93.160/29,no-resolve
 IP-CIDR,13.245.93.176/28,no-resolve
 IP-CIDR,13.245.93.192/28,no-resolve
 IP-CIDR,13.246.108.0/22,no-resolve
+IP-CIDR,13.246.120.0/22,no-resolve
 IP-CIDR,13.246.70.0/23,no-resolve
 IP-CIDR,13.248.224.0/21,no-resolve
 IP-CIDR,13.248.232.0/23,no-resolve
@@ -224,6 +227,8 @@ IP-CIDR,130.176.86.0/23,no-resolve
 IP-CIDR,130.176.88.0/21,no-resolve
 IP-CIDR,130.176.96.0/19,no-resolve
 IP-CIDR,15.152.10.0/24,no-resolve
+IP-CIDR,15.152.133.112/28,no-resolve
+IP-CIDR,15.152.133.128/28,no-resolve
 IP-CIDR,15.152.174.0/23,no-resolve
 IP-CIDR,15.152.176.0/22,no-resolve
 IP-CIDR,15.152.24.0/26,no-resolve
@@ -308,6 +313,7 @@ IP-CIDR,16.162.52.0/24,no-resolve
 IP-CIDR,16.163.196.0/22,no-resolve
 IP-CIDR,16.163.206.0/23,no-resolve
 IP-CIDR,16.171.48.0/22,no-resolve
+IP-CIDR,16.62.56.224/27,no-resolve
 IP-CIDR,160.1.128.0/24,no-resolve
 IP-CIDR,176.34.159.192/26,no-resolve
 IP-CIDR,177.71.207.128/26,no-resolve
@@ -426,6 +432,7 @@ IP-CIDR,18.252.4.16/29,no-resolve
 IP-CIDR,18.252.56.0/23,no-resolve
 IP-CIDR,18.253.186.0/24,no-resolve
 IP-CIDR,18.254.68.0/23,no-resolve
+IP-CIDR,18.60.78.192/27,no-resolve
 IP-CIDR,185.2.220.0/22,no-resolve
 IP-CIDR,185.9.188.0/22,no-resolve
 IP-CIDR,192.173.64.0/18,no-resolve
@@ -662,8 +669,11 @@ IP-CIDR,3.26.82.240/29,no-resolve
 IP-CIDR,3.26.83.0/24,no-resolve
 IP-CIDR,3.26.84.0/22,no-resolve
 IP-CIDR,3.26.88.0/27,no-resolve
+IP-CIDR,3.28.70.48/28,no-resolve
+IP-CIDR,3.28.70.96/27,no-resolve
 IP-CIDR,3.30.129.0/24,no-resolve
 IP-CIDR,3.30.130.0/23,no-resolve
+IP-CIDR,3.30.204.0/24,no-resolve
 IP-CIDR,3.30.40.84/30,no-resolve
 IP-CIDR,3.32.139.0/24,no-resolve
 IP-CIDR,3.32.190.244/30,no-resolve
@@ -822,6 +832,7 @@ IP-CIDR,35.83.248.40/29,no-resolve
 IP-CIDR,35.84.36.0/30,no-resolve
 IP-CIDR,35.90.132.0/23,no-resolve
 IP-CIDR,35.92.26.0/24,no-resolve
+IP-CIDR,35.93.124.0/22,no-resolve
 IP-CIDR,37.77.184.0/21,no-resolve
 IP-CIDR,38.72.126.0/24,no-resolve
 IP-CIDR,44.192.134.240/28,no-resolve
@@ -991,4 +1002,3 @@ IP-CIDR6,2607:fb10::/32,no-resolve
 IP-CIDR6,2620:10c:7000::/44,no-resolve
 IP-CIDR6,2a00:86c0::/32,no-resolve
 IP-CIDR6,2a03:5640::/32,no-resolve
-
