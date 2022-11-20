@@ -1,12 +1,2 @@
 
-
-[Header Rewrite]
-https:\/\/api\.revenuecat\.com header-del x-revenuecat-etag
-
-[Script]
-Revenuecat = type=http-response,pattern=https:\/\/api\.revenuecat\.com,requires-body=1,max-size=0,script-path=scripts/QuantumultX/scripts/revenuecat.js,script-update-interval=-1
-
-[Script]
-Buy = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,max-size=0,script-path=scripts/QuantumultX/scripts/verify_receipt.js,script-update-interval=-1
-
 hostname = api.revenuecat.com, buy.itunes.apple.com
