@@ -1,36 +1,8 @@
 
-# FIMO
-^https?:\/\/server\.yoyiapp\.com\/fimo-user\/apple\/certificate$ url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Fimo.js
-
-# tiao  fileball  VSCO  Planny  pillow  Usage  Fin  Airmail  Percento  Grow  ScannerPro  widgetart  Apollo  aphrodite   
-# PDFviewer  Darkroom  audiomack  noto  Emote  sotic  anybox  Upnext  focus  Focuskeeper  inshot  peachy  inscopy  instake 
-# gear  Picsew  videorama   bazaart  geminiphoto   Spark  Vision  pandora  1Blocker    Bear  Manly  
-# 谜底时钟  白云天气  目标地图  图图记账  奇妙组件  谜底黑胶  手机硬件管家  发型多多  星空内购  立即翻译  照片清理
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers\/(\$RCAnonymousID%)?([\u4E00-\u9FA5A-Za-z0-9-_]+))$ url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/revenuecat.js
-^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers\/(\$RCAnonymousID%)?([\u4E00-\u9FA5A-Za-z0-9-_]+)) url script-request-header https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bytq.js
-https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/verifyReceipt.js
-
-
-#!name=Unlock Any Revenuecat
-#!desc=Unlock Vsco, Noto, pillow, Spark mail, 1Blocker, darkroom, Planny, Widgetsmith, Grow, Anybox, Scanner Pro, iPTV+, Fileball,..
-
-[MITM]
-hostname = %APPEND% api.revenuecat.com
-
-[Header Rewrite]
 https:\/\/api\.revenuecat\.com header-del x-revenuecat-etag
 
-[Script]
-Revenuecat = type=http-response,pattern=https:\/\/api\.revenuecat\.com,requires-body=1,max-size=0,script-path=scripts/langkhach/revenuecat.js,script-update-interval=-1
+https:\/\/api\.revenuecat\.com url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/revenuecat.js
 
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/verifyreceipt.js
 
-#!name=Unlock Any Buy Apple
-#!desc=Unlock Beer, in short, fabulous, ShadowLink, ..
-[MITM]
-hostname = %APPEND% buy.itunes.apple.com
-[Script]
-Buy = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=1,max-size=0,script-path=scripts/langkhach/verify_receipt.js,script-update-interval=-1
-
-
-
-hostname = api.revenuecat.com, buy.itunes.apple.com, server.yoyiapp.com
+hostname = api.revenuecat.com, buy.itunes.apple.com
