@@ -1,0 +1,12 @@
+#!name=永久解锁合集
+#!desc=建议解锁后禁用
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/icon/All.png
+
+[Script]
+# http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/*) script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/revenuecat.js, requires-body=true, timeout=10, tag=解锁
+http-response ^https:\/\/api\.revenuecat\.com script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/revenuecat.js, requires-body=true, timeout=10, tag=解锁
+
+http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/verifyreceipt.js, requires-body=true, timeout=10, tag=解锁1
+
+[Mitm]
+hostname = api.revenuecat.com, buy.itunes.apple.com
