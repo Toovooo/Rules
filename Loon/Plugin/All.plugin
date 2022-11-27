@@ -1,6 +1,6 @@
 #!name=永久解锁合集
 #!desc=建议解锁后禁用
-#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/icon/All.png
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/AppStore.png
 
 [Script]
 http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers\/(\$RCAnonymousID%)?([\u4E00-\u9FA5A-Za-z0-9-_]+))$ script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/ABC.js, requires-body=true, binary-body-mode=true, timeout=10, tag=永久解锁
