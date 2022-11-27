@@ -1,6 +1,6 @@
 #!name=YouTube
 #!desc=拦截广告
-#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/icon/YouTube.png
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/YouTube.png
 
 [Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-dict
