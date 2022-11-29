@@ -1,6 +1,6 @@
 #!name=General
 #!desc=重写规则  广告屏蔽
-#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/AdBlack.png
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Poppinn/afwalldonate.png
 
 [Rewrite]
 # Redirect Google Search Service

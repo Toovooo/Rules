@@ -1,6 +1,6 @@
 #!name=哔哩哔哩
 #!desc=拦截广告
-#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Bilibili.png
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Poppinn/bilibili.png
 
 [Rewrite]
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity reject-dict
@@ -15,3 +15,4 @@ http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? requires-
 
 [MITM]
 hostname = app.bilibili.com, grpc.biliapi.net
+

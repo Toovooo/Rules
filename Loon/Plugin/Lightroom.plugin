@@ -1,0 +1,10 @@
+#!name=Adobe
+#!desc=Lightroom
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Poppinn/lightroom.png
+
+[Script]
+# lightroom
+http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/lightroom.js, requires-body=true, timeout=10, tag=lightroom
+
+[Mitm]
+hostname = photos.adobe.io
