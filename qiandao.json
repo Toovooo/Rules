@@ -2,7 +2,7 @@
  "name": "签到脚本",
  "description": "666",
  "task": [
-    "13 8 * * * https://raw.githubusercontent.com/Toovooo/Rules/master/Script/meituan.js, tag=美团签到, img-url=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/xxx/Want.png,enabled=true",
+    "13 8 * * * https://raw.githubusercontent.com/Toovooo/Rules/master/Script/meituan.js, tag=美团签到, img-url=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/xxx/Meituan.png,enabled=true",
     "18 9 * * * https://raw.githubusercontent.com/Toovooo/Rules/master/Script/10010.js, tag=中国联通签到, img-url=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/xxx/ChinaUnicom.png, enabled=true",
  ]
 }
