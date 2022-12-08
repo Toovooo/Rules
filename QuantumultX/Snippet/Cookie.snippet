@@ -1,5 +1,10 @@
 
+# 10010
+^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/10010cookie.js
+^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/10010cookie.js
+^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo) url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/10010cookie.js
+
 # 美团
 ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/meituan.cookie.js
 
-hostname = i.meituan.com
+hostname = act.10010.com, m.client.10010.com, i.meituan.com
