@@ -4,7 +4,10 @@
 ^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/10010cookie.js
 ^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo) url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/10010cookie.js
 
-# 美团
+# Meituan
 ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/meituan.cookie.js
 
-hostname = act.10010.com, m.client.10010.com, i.meituan.com
+# Neteasemusic
+^https:\/\/music.163.com\/weapi\/user\/level url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/neteasemusiccookie.js
+
+hostname = act.10010.com, m.client.10010.com, i.meituan.com, music.163.com
