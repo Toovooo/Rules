@@ -111,10 +111,7 @@ payload:
   - DOMAIN-SUFFIX,upos-hz-mirrorakam.akamaized.net
   - DOMAIN-SUFFIX,uposdash-302-bilivideo.yfcdn.net
   - DOMAIN-SUFFIX,yo9.com
-  - USER-AGENT,*bili*
-  - USER-AGENT,Bilibili*
-  - USER-AGENT,bili*
-  - USER-AGENT,bili-inter*
+
   - IP-CIDR,106.75.74.76/32
   - IP-CIDR,111.206.25.147/32
   - IP-CIDR,119.3.238.64/32
