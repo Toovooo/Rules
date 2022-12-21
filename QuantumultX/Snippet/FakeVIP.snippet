@@ -1,9 +1,6 @@
 
 # All
-https:\/\/api\.revenuecat\.com url script-echo-response https://raw.githubusercontent.com/Toovooo/Rules/master/Script/revenuecat.js
-
-# APTV
-https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/APTV.js
+^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/(\$RCAnonymousID%)?(\w)*$) url script-echo-response https://raw.githubusercontent.com/Toovooo/Rules/master/Script/revenuecat.js
 
 # Fileball
 ^https:\/\/firebaseremoteconfig\.googleapis\.com\/v\d\/projects url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Fileball.js
