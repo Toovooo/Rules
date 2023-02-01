@@ -61,6 +61,21 @@ https://jdread-api.jd.com/jdread/api/popup url reject-200
 # NetEase - appconf.mail.163.com, interface*.music.163.com
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ url reject
 ^https?:\/\/interface(\d)?.music.163.com\/eapi\/ad\/ url reject
+api\/ad\/ url reject-dict
+api\/sp\/flow url reject-dict
+api\/link\/position\/show\/resource url reject-dict
+eapi\/resource-exposure\/config url reject-dict
+api\/search\/specialkeyword url reject-dict
+api\/link\/scene\/show\/resource url reject-dict
+api\/search\/default url reject-dict
+api\/comment\/feed\/inserted url reject-dict
+api\/v1\/content\/exposure\/comment url reject-dict
+api\/search\/rcmd\/keyword url reject-dict
+api\/search\/default\/keyword url reject-dict
+api\/comment\/hotcomment\/collect url reject-dict
+api\/middle\/clientcfg\/config url reject-dict
+api\/resource-exposure\/activity\/config url reject-dict
+api\/vipcenter/tspopup\/get url reject-dict
 
 # Pinduoduo - api.yangkeduo.com, api.pinduoduo.com
 ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject
