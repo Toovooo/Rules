@@ -579,7 +579,3 @@ IP6-CIDR,2a0b:b580::/48,China
 IP6-CIDR,2a0b:b581::/48,China
 IP6-CIDR,2a0b:b582::/48,China
 IP6-CIDR,2a0b:b583::/48,China
-
-# Emby
-HOST,ha.jmsooo.com,DIRECT
-HOST,4837.misakaf.org,DIRECT
