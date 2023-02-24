@@ -1,11 +1,9 @@
 
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-img
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide) url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/YoutubeAD.js
 
-# DualSubs.YouTube.Player
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url echo-response application/vnd.yt-ump echo-response https://raw.githubusercontent.com/Toovooo/Rules/master/QuantumultX/Snippet/blank.txt
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/youtube.js
 ^https?:\/\/(www|m)\.youtube\.com\/youtubei\/v1\/player(\?.*)$ url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/DualSubs.YouTube.Player.js
 ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$ url script-request-header https://raw.githubusercontent.com/Toovooo/Rules/master/Script/DualSubs.YouTube.TimedText.request.js
 ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$ url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/DualSubs.YouTube.TimedText.response.js
 
 hostname = *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, m.youtube.com
-
