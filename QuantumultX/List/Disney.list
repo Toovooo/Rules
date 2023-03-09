@@ -1,5 +1,7 @@
 
 HOST,cdn.registerdisney.go.com,Disney
+HOST,espn.hb.omtrdc.net,Disney
+HOST,espndotcom.tt.omtrdc.net,Disney
 HOST-SUFFIX,20thcenturystudios.com.au,Disney
 HOST-SUFFIX,20thcenturystudios.com.br,Disney
 HOST-SUFFIX,20thcenturystudios.jp,Disney
@@ -158,6 +160,8 @@ HOST-SUFFIX,sorcerersarena.com,Disney
 HOST-SUFFIX,spaindisney.com,Disney
 HOST-SUFFIX,star-brasil.com,Disney
 HOST-SUFFIX,star-latam.com,Disney
+HOST-SUFFIX,starott.com,Disney
+HOST-SUFFIX,starplus.com,Disney
 HOST-SUFFIX,starwars.com,Disney
 HOST-SUFFIX,starwarsgalacticstarcruiser.com,Disney
 HOST-SUFFIX,starwarskids.com,Disney

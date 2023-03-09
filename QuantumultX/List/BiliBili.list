@@ -1,4 +1,12 @@
 
+HOST,apm-misaka.biliapi.net,BiliBili
+HOST,p-bstarstatic.akamaized.net,BiliBili
+HOST,p.bstarstatic.com,BiliBili
+HOST,upos-bstar-mirrorakam.akamaized.net,BiliBili
+HOST,upos-bstar1-mirrorakam.akamaized.net,BiliBili
+HOST-SUFFIX,bilibili.tv,BiliBili
+HOST-SUFFIX,biliintl.com,BiliBili
+
 HOST,0gr4uqmtt8y41hcjsgrzdrc31.ourdvsss.com,BiliBili
 HOST,0gr4uqmtt8y41hcjsgrzdrc3s.ourdvsss.com,BiliBili
 HOST,0gr4uqmtt8y41hcjsgrzdrc3z.ourdvsss.com,BiliBili
@@ -47,10 +55,6 @@ HOST,3geauymtsgrzdnqbofa5dy.ourdvsss.com,BiliBili
 HOST,3geauymtsgrzdrcbzfahue.ourdvsss.com,BiliBili
 HOST,3geauymtsgrzdrcbzfahuk.ourdvsss.com,BiliBili
 HOST,4go41hcjtgazdoctqge4o.ourdvsss.com,BiliBili
-HOST,p-bstarstatic.akamaized.net,BiliBili
-HOST,p.bstarstatic.com,BiliBili
-HOST,upos-bstar-mirrorakam.akamaized.net,BiliBili
-HOST,upos-bstar1-mirrorakam.akamaized.net,BiliBili
 HOST-SUFFIX,acg.tv,BiliBili
 HOST-SUFFIX,acgvideo.com,BiliBili
 HOST-SUFFIX,animetamashi.cn,BiliBili
@@ -72,7 +76,6 @@ HOST-SUFFIX,bilibili.cn,BiliBili
 HOST-SUFFIX,bilibili.co,BiliBili
 HOST-SUFFIX,bilibili.com,BiliBili
 HOST-SUFFIX,bilibili.net,BiliBili
-HOST-SUFFIX,bilibili.tv,BiliBili
 HOST-SUFFIX,bilibiligame.cn,BiliBili
 HOST-SUFFIX,bilibiligame.co,BiliBili
 HOST-SUFFIX,bilibiligame.net,BiliBili
@@ -89,12 +92,12 @@ HOST-SUFFIX,biligame.com,BiliBili
 HOST-SUFFIX,biligame.net,BiliBili
 HOST-SUFFIX,biligo.com,BiliBili
 HOST-SUFFIX,biliimg.com,BiliBili
-HOST-SUFFIX,biliintl.com,BiliBili
 HOST-SUFFIX,biliplus.com,BiliBili
 HOST-SUFFIX,bilivideo.cn,BiliBili
 HOST-SUFFIX,bilivideo.com,BiliBili
 HOST-SUFFIX,bilivideo.net,BiliBili
 HOST-SUFFIX,corari.com,BiliBili
+HOST-SUFFIX,dreamcast.hk,BiliBili
 HOST-SUFFIX,dyhgames.com,BiliBili
 HOST-SUFFIX,hdslb.com,BiliBili
 HOST-SUFFIX,hdslb.com.w.kunlunhuf.com,BiliBili
@@ -122,3 +125,4 @@ IP-CIDR,120.92.113.99/32,BiliBili
 IP-CIDR,120.92.153.217/32,BiliBili
 IP-CIDR,134.175.207.130/32,BiliBili
 IP-CIDR,203.107.1.0/24,BiliBili
+
