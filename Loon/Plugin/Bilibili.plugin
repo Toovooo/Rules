@@ -1,18 +1,34 @@
 #!name=哔哩哔哩
 #!desc=拦截广告
-#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Poppinn/bilibili.png
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/icon/Bilibili.png
 
 [Rewrite]
-^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity reject-dict
-^https://app.bilibili.com/x/v2/splash/show reject-dict
-^https?:\/\/app\.bilibili\.com\/x\/resource\/ip reject
-^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default reject
+^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive url reject-dict
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip url reject
+^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/Default url reject
+^https://app.bilibili.com/x/v2/splash/show url reject-dict
+^https://app.bilibili.com/x/v2/search/defaultwords url reject-dict
+^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report url reject-dict
+^https://api.bilibili.com/pgc/season/player/cards url reject-dict
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) url reject-dict
 
 [Script]
-# http-response ^https:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index\?)|resource\/show\/tab\/v2) script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili-json.js, requires-body=true, timeout=10, tag=bili-json
-http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$ script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=bili-proto
-http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json_vip.js, requires-body=true, timeout=10, tag=bilibili_json_vip
+http-response ^https?:\/\/api\.bili(api|bili)\.(net|com)\/pgc\/season\/app\/related\/recommend\? requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=视频播放下方商品推广
+http-response ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=屏蔽直播页顶部轮播图
+http-response ^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=屏蔽直播间商品广告浮窗
+http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=屏蔽首页活动
+http-response ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\? requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=观影页面去广告
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=应用开屏广告
+http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=1080P高码率+4K画质
+http-response ^https://app.bilibili.com/x/v2/search/square requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=热搜发现
+http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=推荐去广告
+http-response ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=追番去广告
+http-response ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=直播去广告
+http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=标签页处理
+http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=我的页面处理
+http-response ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.view\.v1\.View\/View$ requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_proto.js, requires-body=true, timeout=10, tag=UP主推荐广告
+http-response ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_proto.js, requires-body=true, timeout=10, tag=动态页面去广告
 
 [MITM]
-hostname = app.bilibili.com, grpc.biliapi.net
+hostname = -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net, app.bilibili.com, api.live.bilibili.com, *.bilibili.com, *.bilibili.*, grpc.biliapi.net,*biliapi.net
 
