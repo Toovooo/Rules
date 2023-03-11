@@ -1,6 +1,6 @@
 #!name=哔哩哔哩
 #!desc=拦截广告
-#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/icon/Bilibili.png
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Poppinn/Bilibili.png
 
 [Rewrite]
 ^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive url reject-dict
