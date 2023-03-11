@@ -3,13 +3,12 @@
 #!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Poppinn/youtube.png
 
 [Rewrite]
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-dict
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-img
 
 [Script]
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide) script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/YoutubeAD.js, requires-body=true, binary-body-mode=true, timeout=10, tag=YouTube去广告
-http-response ^https?:\/\/(www|m)\.youtube\.com\/youtubei\/v1\/player(\?.*)$ requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/DualSubs.YouTube.Player.js, tag=DualSubs.YouTube.Player
-http-request ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$ requires-body=0, max-size=0, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/DualSubs.YouTube.TimedText.request.js, tag=DualSubs.YouTube.TimedText
-http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$ requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/DualSubs.YouTube.TimedText.response.js, tag=DualSubs.YouTube.TimedText
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/youtube.src.js, requires-body=true, binary-body-mode=true, timeout=10, tag=拦截广告
+http-response ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player(\?.*)$ requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/DualSubs.YouTube.Player.response.js, tag=自动翻译
+http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$ requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/DualSubs.YouTube.TimedText.response.js, tag=自动翻译
 
 [MITM]
-hostname = *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, m.youtube.com
+hostname = www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com
