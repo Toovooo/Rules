@@ -1,15 +1,12 @@
-
 DOMAIN,analytics.strava.com
 DOMAIN,blzddist1-a.akamaihd.net
 DOMAIN,cdn.angruo.com
 DOMAIN,cdp.cloud.unity3d.com
 DOMAIN,client.amplifi.com
-DOMAIN,dl.google.com
 DOMAIN,download.jetbrains.com
 DOMAIN,images-cn.ssl-images-amazon.com
 DOMAIN,ip.istatmenus.app
 DOMAIN,kc.kexinshe.com
-DOMAIN,mtalk.google.com
 DOMAIN,origin-a.akamaihd.ne
 DOMAIN,origin-a.akamaihd.net
 DOMAIN,outlook.office365.com
@@ -1423,7 +1420,6 @@ DOMAIN-SUFFIX,gongxiangcj.com
 DOMAIN-SUFFIX,gongyi.xin
 DOMAIN-SUFFIX,goodread.com
 DOMAIN-SUFFIX,goofish.com
-DOMAIN-SUFFIX,googletraveladservices.com
 DOMAIN-SUFFIX,goosail.com
 DOMAIN-SUFFIX,goselling.com
 DOMAIN-SUFFIX,goto-game.com
