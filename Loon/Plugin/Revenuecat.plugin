@@ -1,0 +1,9 @@
+#!name=Revenuecat
+#!desc=解锁所有Revenuecat
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/apps/appstore.png
+
+[Script]
+http-response https:\/\/api\.revenuecat\.com script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/revenuecat.js, requires-body=true, timeout=10, tag=Revenuecat
+
+[Mitm]
+hostname = api.revenuecat.com

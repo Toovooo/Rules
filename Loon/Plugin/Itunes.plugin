@@ -1,0 +1,10 @@
+#!name=itunes
+#!desc=解锁itunes
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/apps/store.png
+
+[Script]
+http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/verifyreceipt.js, requires-body=true, timeout=10, tag=itunes
+http-response ^https:\/\/sk\.ulysses\.app\/api\/v1\/itunes_receipt_verify script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/verifyreceipt.js, requires-body=true, timeout=10, tag=itunes
+
+[Mitm]
+hostname = buy.itunes.apple.com
