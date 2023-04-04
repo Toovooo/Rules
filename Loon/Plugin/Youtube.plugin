@@ -1,6 +1,6 @@
 #!name=YouTube
-#!desc=拦截广告
-#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Poppinn/youtube.png
+#!desc=拦截广告+中文字幕
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/apps/youtube.png
 
 [Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-img
