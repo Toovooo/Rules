@@ -1,9 +1,8 @@
-#!name=Adobe
-#!desc=Lightroom
+#!name=Lightroom
+#!desc=解锁订阅
 #!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/apps/lightroom.png
 
 [Script]
-# lightroom
 http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/lightroom.js, requires-body=true, timeout=10, tag=lightroom
 
 [Mitm]
