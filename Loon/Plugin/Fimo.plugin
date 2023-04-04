@@ -3,7 +3,6 @@
 #!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Poppinn/camera.png
 
 [Script]
-# Fimo
 http-response ^https?:\/\/server\.yoyiapp\.com\/fimo-user\/user$ script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Fimo.js, requires-body=true, timeout=10, tag=Fimo
 
 [Mitm]
