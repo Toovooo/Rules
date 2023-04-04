@@ -1,4 +1,5 @@
-
+# Hulu
+HOST,live-mediashield-ava-hulustream-com.akamaized.net,Hulu
 HOST-SUFFIX,112263.com,Hulu
 HOST-SUFFIX,assetshuluimcom-a.akamaihd.net,Hulu
 HOST-SUFFIX,callhulu.com,Hulu
@@ -16,6 +17,7 @@ HOST-SUFFIX,huloo.tv,Hulu
 HOST-SUFFIX,hulu.com,Hulu
 HOST-SUFFIX,hulu.hb.omtrdc.net,Hulu
 HOST-SUFFIX,hulu.jp,Hulu
+HOST-SUFFIX,hulu.playback.edge.bamgrid.com,Hulu
 HOST-SUFFIX,hulu.sc.omtrdc.net,Hulu
 HOST-SUFFIX,hulu.tv,Hulu
 HOST-SUFFIX,hulu.us,Hulu
@@ -55,4 +57,3 @@ HOST-SUFFIX,streaks.jp,Hulu
 HOST-SUFFIX,thehulubraintrust.com,Hulu
 HOST-SUFFIX,wwwhuluplus.com,Hulu
 HOST-SUFFIX,yb.uncn.jp,Hulu
-

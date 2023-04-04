@@ -1,4 +1,3 @@
-
 # > Amazon Prime Video
 USER-AGENT,InstantVideo.US*,Streaming
 USER-AGENT,Prime%20Video*,Streaming
@@ -98,49 +97,3 @@ USER-AGENT,FOXPlus*,Streaming
 HOST-SUFFIX,akamaized.net,Streaming
 HOST-SUFFIX,foxplus.com,Streaming
 HOST-SUFFIX,theplatform.com,Streaming
-
-# > HBO GO & HBO MAX
-USER-AGENT,HBOMAX*,Streaming
-HOST-KEYWORD,hbogoasia,Streaming
-HOST-SUFFIX,hboasia.com,Streaming
-HOST-SUFFIX,hbogo.co.th,Streaming
-HOST-SUFFIX,hbogo.com,Streaming
-HOST-SUFFIX,hbogo.eu,Streaming
-HOST-SUFFIX,hbogoasia.com,Streaming
-HOST-SUFFIX,hbogoasia.id,Streaming
-HOST-SUFFIX,hbogoasia.ph,Streaming
-HOST-SUFFIX,hbo.com,Streaming
-HOST-SUFFIX,hbomax.com,Streaming
-HOST-SUFFIX,hbomaxcdn.com,Streaming
-HOST-SUFFIX,hbonow.com,Streaming
-HOST-SUFFIX,maxgo.com,Streaming
-HOST,hbolb.onwardsmg.com,Streaming
-HOST,hbounify-prod.evergent.com,Streaming
-HOST,dai3fd1oh325y.cloudfront.net,Streaming
-HOST,execute-api.ap-southeast-1.amazonaws.com,Streaming
-
-# > Hulu(フールー)
-HOST-SUFFIX,happyon.jp,Streaming
-HOST-SUFFIX,hulu.jp,Streaming
-HOST-SUFFIX,prod.hjholdings.tv,Streaming
-HOST-SUFFIX,streaks.jp,Streaming
-HOST-SUFFIX,yb.uncn.jp,Streaming
-
-# > Hulu
-HOST-SUFFIX,hulu.com,Streaming
-HOST-SUFFIX,hulu.hb.omtrdc.net,Streaming
-HOST-SUFFIX,hulu.sc.omtrdc.net,Streaming
-HOST-SUFFIX,huluad.com,Streaming
-HOST-SUFFIX,huluim.com,Streaming
-HOST-SUFFIX,hulumail.com,Streaming
-HOST-SUFFIX,huluqa.com,Streaming
-HOST-SUFFIX,hulustream.com,Streaming
-HOST,cs428.wpc.edgecastcdn.net,Streaming
-HOST,cws-hulu.conviva.com,Streaming
-HOST,hulu.com.c.footprint.net,Streaming
-HOST,hulu.map.fastly.net,Streaming
-IP-CIDR,8.28.124.0/23,Streaming
-IP-CIDR,199.60.116.0/24,Streaming
-IP-CIDR,199.200.48.0/22,Streaming
-IP-CIDR,208.91.156.0/22,Streaming
-IP6-CIDR,2620:100:3000::/40,Streaming

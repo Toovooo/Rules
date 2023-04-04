@@ -1,4 +1,4 @@
-
+# BiliBili
 HOST,apm-misaka.biliapi.net,BiliBili
 HOST,p-bstarstatic.akamaized.net,BiliBili
 HOST,p.bstarstatic.com,BiliBili
@@ -125,4 +125,3 @@ IP-CIDR,120.92.113.99/32,BiliBili
 IP-CIDR,120.92.153.217/32,BiliBili
 IP-CIDR,134.175.207.130/32,BiliBili
 IP-CIDR,203.107.1.0/24,BiliBili
-

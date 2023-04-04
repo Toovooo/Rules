@@ -1,4 +1,4 @@
-
+# NetEaseMusic
 HOST,iadmat.nosdn.127.net,NetEaseMusic
 HOST,netease.ugcvideoss.ourdvs.com,NetEaseMusic
 HOST-SUFFIX,163yun.com,NetEaseMusic
@@ -35,4 +35,3 @@ IP-CIDR,47.100.127.239/32,NetEaseMusic
 IP-CIDR,59.111.128.0/17,NetEaseMusic
 IP-CIDR,59.111.19.33/32,NetEaseMusic
 IP-CIDR,59.111.21.14/31,NetEaseMusic
-
