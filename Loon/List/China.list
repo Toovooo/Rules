@@ -1,4 +1,4 @@
-
+# China
 DOMAIN,analytics.strava.com
 DOMAIN,blzddist1-a.akamaihd.net
 DOMAIN,cdn.angruo.com
@@ -12,9 +12,7 @@ DOMAIN,kc.kexinshe.com
 DOMAIN,mtalk.google.com
 DOMAIN,origin-a.akamaihd.ne
 DOMAIN,origin-a.akamaihd.net
-DOMAIN,outlook.office365.com
 DOMAIN,sms.imagetasks.com
-DOMAIN,smtp.office365.com
 DOMAIN,www.libvideo.com
 DOMAIN-SUFFIX,00cdn.com
 DOMAIN-SUFFIX,0123456789.com
@@ -2260,8 +2258,6 @@ DOMAIN-SUFFIX,miaomiaozhe.com
 DOMAIN-SUFFIX,miaopai.com
 DOMAIN-SUFFIX,miaostreet.com
 DOMAIN-SUFFIX,miaozhen.com
-DOMAIN-SUFFIX,microsoft.com
-DOMAIN-SUFFIX,microsoftonline.com
 DOMAIN-SUFFIX,midasbuy.com
 DOMAIN-SUFFIX,miercn.com
 DOMAIN-SUFFIX,migucloud.com
@@ -2413,9 +2409,6 @@ DOMAIN-SUFFIX,ocwms.com
 DOMAIN-SUFFIX,oecd-ilibrary.org
 DOMAIN-SUFFIX,oeeee.com
 DOMAIN-SUFFIX,offcn.com
-DOMAIN-SUFFIX,office.com
-DOMAIN-SUFFIX,office.net
-DOMAIN-SUFFIX,officese.com
 DOMAIN-SUFFIX,oi-wiki.com
 DOMAIN-SUFFIX,oicq88.com
 DOMAIN-SUFFIX,okooo.com
@@ -2425,7 +2418,6 @@ DOMAIN-SUFFIX,oldboyedu.com
 DOMAIN-SUFFIX,oncdp.com
 DOMAIN-SUFFIX,oneapm.com
 DOMAIN-SUFFIX,onegreen.net
-DOMAIN-SUFFIX,onenote.net
 DOMAIN-SUFFIX,oneplus.com
 DOMAIN-SUFFIX,oneplus.net
 DOMAIN-SUFFIX,oneplusbbs.com
@@ -2461,7 +2453,6 @@ DOMAIN-SUFFIX,oupeng.com
 DOMAIN-SUFFIX,ourbits.club
 DOMAIN-SUFFIX,ourdvs.com
 DOMAIN-SUFFIX,ourdvsss.com
-DOMAIN-SUFFIX,outlook.com
 DOMAIN-SUFFIX,ovid.com
 DOMAIN-SUFFIX,ovscdns.com
 DOMAIN-SUFFIX,ovscdns.net
@@ -2681,7 +2672,6 @@ DOMAIN-SUFFIX,ruguoapp.com
 DOMAIN-SUFFIX,runoob.com
 DOMAIN-SUFFIX,runsheng.com
 DOMAIN-SUFFIX,rzrc114.com
-DOMAIN-SUFFIX,s-microsoft.com
 DOMAIN-SUFFIX,s-reader.com
 DOMAIN-SUFFIX,sa-brazil-1.myhuaweicloud.com
 DOMAIN-SUFFIX,saasops.tech
@@ -3253,12 +3243,6 @@ DOMAIN-SUFFIX,win007.com
 DOMAIN-SUFFIX,win7china.com
 DOMAIN-SUFFIX,win8.net
 DOMAIN-SUFFIX,win8china.com
-DOMAIN-SUFFIX,windows.com
-DOMAIN-SUFFIX,windows.net
-DOMAIN-SUFFIX,windows10zj.com
-DOMAIN-SUFFIX,windows7en.com
-DOMAIN-SUFFIX,windowsupdate.com
-DOMAIN-SUFFIX,windowszj.com
 DOMAIN-SUFFIX,winegame.net
 DOMAIN-SUFFIX,winwin7.com
 DOMAIN-SUFFIX,wishdown.com
@@ -3301,8 +3285,6 @@ DOMAIN-SUFFIX,wywyx.com
 DOMAIN-SUFFIX,x315.com
 DOMAIN-SUFFIX,xafc.com
 DOMAIN-SUFFIX,xbiao.com
-DOMAIN-SUFFIX,xbox.com
-DOMAIN-SUFFIX,xboxlive.com
 DOMAIN-SUFFIX,xcsc.com
 DOMAIN-SUFFIX,xdrig.com
 DOMAIN-SUFFIX,xdwan.com
@@ -3614,8 +3596,6 @@ DOMAIN-KEYWORD,alipay
 DOMAIN-KEYWORD,aliyun
 DOMAIN-KEYWORD,baidu
 DOMAIN-KEYWORD,beplay
-DOMAIN-KEYWORD,microsoft
-DOMAIN-KEYWORD,officecdn
 DOMAIN-KEYWORD,taobao
 USER-AGENT,%E4%B8%AD%E5%9B%BD%E5%B7%A5%E5%95%86%E9%93%B6%E8%A1%8C*
 USER-AGENT,%E4%BA%AC%E4%B8%9C%E5%88%B0%E5%AE%B6*
@@ -3630,7 +3610,6 @@ USER-AGENT,MegaWerewolf*
 USER-AGENT,MicroMessenger%20Client
 USER-AGENT,MicroMessenger*
 USER-AGENT,MicroMessengerClient*
-USER-AGENT,Microsoft*
 USER-AGENT,Moke*
 USER-AGENT,NeteaseMusic*
 USER-AGENT,QQ*
