@@ -1,14 +1,3 @@
-/*
- * 感谢并修改自
- * https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js
- * 节点检测工具
- * 脚本功能：检查节点是否支持以下流媒体服务：NetFlix、Disney、YouTuBe、Dazn、Param
- * For Loon 373+ Only, 小于373版本会有bug
- * 更新于：2023-04-04
- * 原作者：XIAO_KOP
- * 现作者：Loon0x00
- */
-
 const NF_BASE_URL = "https://www.netflix.com/title/81215567";
 const DISNEY_BASE_URL = 'https://www.disneyplus.com';
 const DISNEY_LOCATION_BASE_URL = 'https://disney.api.edge.bamgrid.com/graph/v1/device/graphql';
