@@ -1,6 +1,6 @@
 #!name=BoxJs
 #!desc=数据管理
-#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/apps/box.png
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/BoxJs.png
 
 [Rule]
 DOMAIN-SUFFIX,jsdelivr.net,PROXY
