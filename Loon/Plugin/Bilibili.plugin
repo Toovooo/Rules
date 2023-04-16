@@ -24,8 +24,8 @@ http-response ^https://app.bilibili.com/x/v2/search/square requires-body=1,scrip
 http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=推荐去广告
 http-response ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=追番去广告
 http-response ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=直播去广告
-http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=标签页处理
-http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=我的页面处理
+#http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=标签页处理
+#http-response ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_json.js, requires-body=true, timeout=10, tag=我的页面处理
 http-response ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.view\.v1\.View\/View$ requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_proto.js, requires-body=true, timeout=10, tag=UP主推荐广告
 http-response ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ requires-body=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bilibili_proto.js, requires-body=true, timeout=10, tag=动态页面去广告
 
