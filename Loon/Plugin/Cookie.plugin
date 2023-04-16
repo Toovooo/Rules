@@ -1,0 +1,12 @@
+#!name=获取cookie
+#!desc=Bing,美团,网易云音乐,联通
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/AdBlack.png
+
+[Script]
+http-response https:\/\/rewards\.bing\.com script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/bing.js, requires-body=true, tag=Bing积分
+http-response ^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/10010.cookie.js, tag=中国联通
+http-response ^https:\/\/music.163.com\/weapi\/user\/level script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/neteasemusic.cookie.js, requires-body=true, tag=网易云音乐
+http-response ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/meituan.cookie.js, requires-body=true, tag=美团
+
+[Mitm]
+hostname = rewards.bing.com,act.10010.com,m.client.10010.com,music.163.com,i.meituan.com
