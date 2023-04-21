@@ -4,17 +4,9 @@
 
 [Rewrite]
 # Google 
-^https?:\/\/(www.)?(g|google)\.cn url 302 https://www.google.com
-^https?:\/\/(ditu|maps).google\.cn url 302 https://maps.google.com
-^https?:\/\/translate\.google\.cn url 302 https://translate.google.com
-
-# Redirect HTTP to HTTPS
-^https?:\/\/(www.)?taobao\.com\/ url 302 https://taobao.com/
-^https?:\/\/(www.)?jd\.com\/ url 302 https://www.jd.com/
-^https?:\/\/(www.)?mi\.com\/ url 302 https://www.mi.com/
-^https?:\/\/you\.163\.com\/ url 302 https://you.163.com/
-^https?:\/\/(www.)?suning\.com\/ url 302 https://suning.com/
-^https?:\/\/(www.)?yhd\.com\/ url 302 https://yhd.com/
+^https?:\/\/(www.)?(g|google)\.cn 302 https://www.google.com
+^https?:\/\/(ditu|maps).google\.cn 302 https://maps.google.com
+^https?:\/\/translate\.google\.cn 302 https://translate.google.com
 
 # Taobao - gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com
 ^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3,4}-\d{4}\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q\d0\.jpg_\.(heic|webp)$ url reject
