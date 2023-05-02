@@ -3,11 +3,6 @@
 #!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/General.png
 
 [Rewrite]
-# Google 
-^https?:\/\/(www.)?(g|google)\.cn 302 https://www.google.com
-^https?:\/\/(ditu|maps).google\.cn 302 https://maps.google.com
-^https?:\/\/translate\.google\.cn 302 https://translate.google.com
-
 # Taobao - gw.alicdn.com, heic.alicdn.com, acs.m.taobao.com
 ^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3,4}-\d{4}\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q\d0\.jpg_\.(heic|webp)$ url reject
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ url reject
