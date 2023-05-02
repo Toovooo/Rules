@@ -2,6 +2,11 @@
 #!desc=解锁播放,下载,支持3方播放器
 #!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/Emby.png
 
+[Rule]
+DOMAIN-SUFFIX,cf.jmsooo.com,PROXY
+DOMAIN-SUFFIX,ha.jmsooo.com,PROXY
+DOMAIN-SUFFIX,cu.poloemby.xyz,PROXY
+
 [Script]
 http-response ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Embycrack.js, requires-body=true, timeout=10, tag=播放解锁
 http-response \/Users\/\w{32}\/Items\/\d+\? script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby-plugin.js, requires-body=true, timeout=10, tag=添加外部播放器连接
@@ -10,4 +15,4 @@ http-response (\/Videos\/\d+\/stream\/.+\?.+&filename)|(\/Videos\/\d+\/\w{32}\/S
 http-response (\/Videos\/\d+\/stream\?.+&filename)|(\/Videos\/\d+\/\w{32}\/Subtitles\/.+&filename) script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Download-file-rename.js, requires-body=true, timeout=10, tag=下载文件重命名
 
 [Mitm]
-hostname = mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, embymv.tk, *.misakaf.org, nakonako.net, nakoemby.com, cu.poloemby.xyz
+hostname = mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, cu.poloemby.xyz
