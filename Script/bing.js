@@ -117,7 +117,7 @@ if(!lk.isExecComm) {
             "keys": [bingPointCookieKey],
             "script_timeout": scriptTimeout
         }, {
-            "script_url": "https://github.com/lowking/Scripts/blob/master/bing/bingPoint.js",
+            "script_url": "https://github.com/Toovooo/Rules/blob/master/Script/bing.js",
             "author": "@lowking",
             "repo": "https://github.com/lowking/Scripts",
         })
@@ -129,7 +129,7 @@ function getCookie() {
     if (lk.isGetCookie(/\/rewards\.bing\.com/)) {
         lk.log(`开始获取cookie`)
         try {
-            const bingHeader = JSON.stringify($request.headers.cookie)
+            const bingHeader = JSON.stringify($request.headers.Cookie)
             if (!!bingHeader) {
                 lk.setVal(bingPointCookieKey, bingHeader)
                 lk.appendNotifyInfo('🎉成功获取cookie，可以关闭相应脚本')
