@@ -1,9 +1,9 @@
-#!name=Lightroom
-#!desc=解锁订阅
-#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/Lightroom.png
+#!name = Lightroom
+#!desc = 解锁订阅
+#!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/Lightroom.png
 
 [Script]
-http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/lightroom.js, requires-body=true, timeout=10, tag=lightroom
+http-response ^https:\/\/photos\.adobe\.io\/v2\/accounts* script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/lightroom.js, requires-body = true, timeout = 10, tag = lightroom
 
 [Mitm]
 hostname = photos.adobe.io

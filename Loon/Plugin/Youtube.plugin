@@ -1,18 +1,18 @@
-#!name=YouTube
-#!desc=拦截广告+中文字幕
-#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/YouTube.png
+#!name = YouTube
+#!desc = 拦截广告+中文字幕
+#!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/YouTube.png
 
 [Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-img
 
 [Script]
-# http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/youtube.src.js, requires-body=true, binary-body-mode=true, timeout=10, tag=拦截广告
+# http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/youtube.src.js, requires-body = true, binary-body-mode = true, timeout = 10, tag = 拦截广告
 
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/youtube.response.beta.js, requires-body=true, binary-body-mode=true, timeout=10, tag=拦截广告
-http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\? script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/youtube.request.beta.js, requires-body=true, binary-body-mode=true, timeout=10, tag=拦截广告
-http-response ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player(\?.*)$ requires-body=1, timeout=30, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/DualSubs.YouTube.Player.response.js, tag=DualSubs.YouTube.Player.response.json, argument=
-http-request ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$ requires-body=0, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/DualSubs.YouTube.TimedText.request.js, tag=DualSubs.YouTube.TimedText.request, argument=
-http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$ requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/DualSubs.YouTube.TimedText.response.js, tag=DualSubs.YouTube.TimedText.response, argument=
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/youtube.response.beta.js, requires-body = true, binary-body-mode = true, timeout = 10, tag = 拦截广告
+http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\? script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/youtube.request.beta.js, requires-body = true, binary-body-mode = true, timeout = 10, tag = 拦截广告
+http-response ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player(\?.*)$ script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/DualSubs.YouTube.Player.response.js, requires-body = 1, timeout = 30, tag = DualSubs.YouTube.Player.response.json
+http-request ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$ script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/DualSubs.YouTube.TimedText.request.js, requires-body = 0, tag = DualSubs.YouTube.TimedText.request
+http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$ script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/DualSubs.YouTube.TimedText.response.js, requires-body = 1, tag = DualSubs.YouTube.TimedText.response
 
 [MITM]
 hostname = www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com
