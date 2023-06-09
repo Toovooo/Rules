@@ -67,9 +67,9 @@ if(!lk.isExecComm) {
                 {
                     "id": bingResetHoursKey,
                     "name": "Bing每日任务重置时间",
-                    "val": 8,
+                    "val": 9,
                     "type": "number",
-                    "desc": "写小时数，默认：8"
+                    "desc": "写小时数，默认：9"
                 },
                 {
                     "id": bingPointCookieKey,
