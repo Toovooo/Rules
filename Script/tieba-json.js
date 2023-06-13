@@ -2,7 +2,7 @@ const url = $request.url;
 const method = $request.method;
 const postMethod = "POST";
 const notifyTitle = "贴吧json脚本错误";
-console.log(`贴吧json-2022.11.09`);
+console.log(`贴吧json-2023.06.12.2`);
 
 let body = JSON.parse($response.body);
 // 直接全局搜索 @Modify(
@@ -155,7 +155,7 @@ if (url.includes("tiebaads/commonbatch") && method === postMethod) {
     removeGoodsInfo(body.forum?.banner_list?.app);
 } else if (url.includes("c/f/frs/threadlist")) {
     console.log('贴吧-threadlist');
-    // TODO
+    removeGoodsInfo(body.banner_list?.app);
 } else if (url.includes("c/f/pb/page")) {
     console.log('贴吧-PbPage');
     if (body.recom_ala_info?.live_id) {
@@ -176,13 +176,24 @@ if (url.includes("tiebaads/commonbatch") && method === postMethod) {
         console.log('无需处理postList中的outer_item');
     }
     removeGoodsInfo(body.banner_list?.app);
+    const bannerGoodsInfoLength = body.banner_list?.pb_banner_ad?.goods_info?.length;
+    if (bannerGoodsInfoLength) {
+        console.log(`去除pb_banner_ad的goods_info:${bannerGoodsInfoLength}`)
+        body.banner_list.pb_banner_ad.goods_info = []
+    }
 } else if (url.includes("c/f/excellent/personalized")) {
     console.log('贴吧-personalized');
     removeGoodsInfo(body.banner_list?.app);
     body.thread_list = removeLive(body.thread_list);
+    if(body.live_answer){
+        console.log('去除推荐页上方的banner广告');
+        body.live_answer = null;
+    } else {
+        console.log('推荐页无banner广告');
+    }
 } else if (url.includes("c/f/frs/generalTabList")) {
     console.log('贴吧-generalTabList');
-    // TODO
+    removeGoodsInfo(body.app_list);
 } else {
     $notification.post(notifyTitle, "路径/请求方法匹配错误:", method + "," + url);
 }
