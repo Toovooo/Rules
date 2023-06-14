@@ -5,6 +5,7 @@
 [Rule]
 DOMAIN-SUFFIX, ju.dog, PROXY
 DOMAIN-SUFFIX, cf.jmsooo.com, PROXY
+DOMAIN-SUFFIX, cf2.jmsooo.com, PROXY
 DOMAIN-SUFFIX, ha.jmsooo.com, PROXY
 DOMAIN-SUFFIX, cu.poloemby.xyz, PROXY
 
