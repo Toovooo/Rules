@@ -1,0 +1,20 @@
+#!name = Bing AI
+#!desc = 拦截广告
+#!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/AdBlack.png
+
+[Rule]
+DOMAIN-SUFFIX, bing.com, PROXY
+DOMAIN-SUFFIX, bing.com.cn, PROXY
+DOMAIN-SUFFIX, bing.net, PROXY
+DOMAIN-SUFFIX, bingads.com, PROXY
+DOMAIN-SUFFIX, bingagencyawards.com, PROXY
+DOMAIN-SUFFIX, bingapistatistics.com, PROXY
+DOMAIN-SUFFIX, bingsandbox.com, PROXY
+DOMAIN-SUFFIX, bingvisualsearch.com, PROXY
+DOMAIN-SUFFIX, bingworld.com, PROXY
+
+[Script]
+http-request ^https:\/\/www\.bing\.com\/(search|new) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/BingAI.js, requires-body = false, tag = Bing AI
+
+[MITM]
+hostname = www.bing.com
