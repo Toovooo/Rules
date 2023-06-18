@@ -1,6 +1,4 @@
 # Apple
-DOMAIN,apps.apple.com
-DOMAIN,itunes.apple.com
 DOMAIN,a1.mzstatic.com
 DOMAIN,a2.mzstatic.com
 DOMAIN,a3.mzstatic.com
@@ -193,14 +191,7 @@ DOMAIN,audio-ssl.itunes.apple.com
 DOMAIN,audio.itunes.apple.com
 DOMAIN,mvod.itunes.apple.com
 DOMAIN,streamingaudio.itunes.apple.com
-DOMAIN,apple.comscoreresearch.com
 DOMAIN,gateway.icloud.com
-DOMAIN,gspe1-ssl.ls.apple.com
-DOMAIN,news-assets.apple.com
-DOMAIN,news-client-search.apple.com
-DOMAIN,news-client.apple.com
-DOMAIN,news-edge.apple.com
-DOMAIN,news-events.apple.com
 DOMAIN,api-glb-sea.smoot.apple.com
 DOMAIN,books.itunes.apple.com
 DOMAIN,cvws.icloud-content.com
@@ -1727,8 +1718,6 @@ DOMAIN-SUFFIX,simplyipod.com
 DOMAIN-SUFFIX,ukipad.com
 DOMAIN-SUFFIX,wwwipodlounge.com
 DOMAIN-SUFFIX,wwwmacbookair.com
-DOMAIN-SUFFIX,apple.comscoreresearch.com
-DOMAIN-SUFFIX,appleenews.com
 DOMAIN-SUFFIX,applemusic.berlin
 DOMAIN-SUFFIX,applemusic.co
 DOMAIN-SUFFIX,applemusic.com
@@ -1737,10 +1726,6 @@ DOMAIN-SUFFIX,applemusic.hamburg
 DOMAIN-SUFFIX,applemusic.wang
 DOMAIN-SUFFIX,applemusicconnect.com
 DOMAIN-SUFFIX,applemusicfestival.com
-DOMAIN-SUFFIX,applenews.berlin
-DOMAIN-SUFFIX,applenews.hamburg
-DOMAIN-SUFFIX,applenews.tv
-DOMAIN-SUFFIX,applenewsformat.com
 DOMAIN-SUFFIX,appletv.com
 DOMAIN-SUFFIX,appletv.fr
 DOMAIN-SUFFIX,appletv.wang
@@ -1764,7 +1749,6 @@ DOMAIN-SUFFIX,iphoto.se
 DOMAIN-SUFFIX,iphoto.wang
 DOMAIN-SUFFIX,musickit.net
 DOMAIN-SUFFIX,wwwapplemusic.com
-DOMAIN-SUFFIX,apple.news
 DOMAIN-SUFFIX,apple-dns.net
 DOMAIN-SUFFIX,appsto.re
 DOMAIN-SUFFIX,digicert.com
@@ -1779,8 +1763,6 @@ DOMAIN-KEYWORD,testflight
 DOMAIN-KEYWORD,icloud.com.akadns.net
 USER-AGENT,com.apple.appstored*
 USER-AGENT,Music*
-USER-AGENT,AppleNews*
-USER-AGENT,com.apple.news*
 USER-AGENT,com.apple.trustd*
 USER-AGENT,AppleTV*
 USER-AGENT,com.apple.tv*
