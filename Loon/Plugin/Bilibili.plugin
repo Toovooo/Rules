@@ -4,12 +4,12 @@
 
 [Rewrite]
 # IP请求,地理位置请求
-^https:\/\/app\.bilibili\.com\/x\/resource\/ip url reject
-^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp=jsonp$ url reject-200
+^https:\/\/app\.bilibili\.com\/x\/resource\/ip reject
+^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp=jsonp$ reject-200
 
 # 首页 DefaultWord,推荐,热搜发现,右上角活动,标签页,观影页,直播,直播间商品广告浮窗
-^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ url reject
-^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? url reject-dict
+^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ reject
+^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? reject-dict
 
 [Script]
 # Proto 动态广告,后台播放限制,播放页广告
