@@ -5,7 +5,7 @@
 #!select = 字幕译文位置,译文位于外文之上,译文位于外文之下
 
 [Rewrite]
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-200
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-img
 
 [Script]
 # 拦截广告
