@@ -9,8 +9,8 @@
 
 [Script]
 # 拦截广告
-http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\? requires-body = 1, script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.beta.js, tag = youtube.request, argument =
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? requires-body = 1, script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.beta.js, tag = youtube.response, argument =
+http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\? requires-body = true, script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.beta.js, tag = youtube.request, argument =
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? requires-body = true, script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.beta.js, tag = youtube.response, argument =
 
 # 字幕模块
 http-response ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player(\?.*)$ requires-body = 1, timeout = 30, script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/DualSubs.YouTube.Player.response.js, tag = DualSubs.YouTube.Player.response.json, argument =
