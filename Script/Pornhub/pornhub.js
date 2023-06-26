@@ -1,3 +1,3 @@
 var body = $response.body
-    .replace(/<head>/, '<head><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ddgksf2013/Html/pornhub.css" type="text/css">');
+    .replace(/<head>/, '<head><link rel="stylesheet" href="https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Pornhub/pornhub.css" type="text/css">');
 $done({ body });
