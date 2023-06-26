@@ -4,73 +4,73 @@
 
 [Rewrite]
 # 百度云 - pan.baidu.com
-^https:\/\/pan\.baidu\.com\/act\/api\/activityentry\? url reject-dict
-^https:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/adx\? url reject-dict
-^https:\/\/update\.pan\.baidu\.com\/statistics\? url reject-dict
+^https:\/\/pan\.baidu\.com\/act\/api\/activityentry\? reject-dict
+^https:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/adx\? reject-dict
+^https:\/\/update\.pan\.baidu\.com\/statistics\? reject-dict
 
 # 饿了么 - elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com
-^https:\/\/elemecdn.com\/.+\/sitemap url reject
-^https:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4} url reject
-^https:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} url reject
-^https:\/\/fuss10.elemecdn.com\/.+\.mp4 url reject
-^https:\/\/www1.elecfans.com\/www\/delivery url reject
+^https:\/\/elemecdn.com\/.+\/sitemap reject
+^https:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4} reject
+^https:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} reject
+^https:\/\/fuss10.elemecdn.com\/.+\.mp4 reject
+^https:\/\/www1.elecfans.com\/www\/delivery reject
 
 # 公众号广告 - mp.weixin.qq.com
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad\? url response-body "advertisement_num":\d*, "advertisement_info":\[.*\], response-body "advertisement_num":0, "advertisement_info":[],
 
 # 公众号商品推广 - mp.weixin.qq.com
-^https:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info\? url reject-dict
+^https:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info\? reject-dict
 
 # 京东 - api.m.jd.com
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=queryMaterialAdverts url reject
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=queryMaterialAdverts reject
 
 # 京东读书 - jdread-api.jd.com
-https://jdread-api.jd.com/jdread/api/channel/module/opens url reject-200
-https://jdread-api.jd.com/jdread/api/popup url reject-200
+https://jdread-api.jd.com/jdread/api/channel/module/opens reject-200
+https://jdread-api.jd.com/jdread/api/popup reject-200
 
 # 京喜特价 - api.m.jd.com
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising url reject
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising reject
 
 # 京东金融 - ms.jr.jd.com
-^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture url reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture reject
 
 # 美团 - 美团外卖 - flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
-^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? url reject-dict
-^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg url reject-dict
-^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg url reject-dict
-^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ url reject-dict
+^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? reject-dict
+^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg reject-dict
+^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg reject-dict
+^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
 
 # 闲鱼 - gw.alicdn.com, acs.m.taobao.com
-^https:\/\/gw\.alicdn\.com\/mt\/ url reject
-^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} url reject
-^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} url reject
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome url reject
+^https:\/\/gw\.alicdn\.com\/mt\/ reject
+^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} reject
+^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome reject
 
 # 小米商城 - api.m.mi.com
-^https:\/\/api\.m\.mi\.com\/v1\/app\/popup_info$ url reject-dict
-^https:\/\/api\.m\.mi\.com\/v1\/misearch\/search_input$ url reject-dict
-^https:\/\/api\.m\.mi\.com\/v2\/search\/search_default$ url reject-dict
-^https:\/\/api\.m\.mi\.com\/v1\/home\/page_feed(_v5)?$ url reject-dict
+^https:\/\/api\.m\.mi\.com\/v1\/app\/popup_info$ reject-dict
+^https:\/\/api\.m\.mi\.com\/v1\/misearch\/search_input$ reject-dict
+^https:\/\/api\.m\.mi\.com\/v2\/search\/search_default$ reject-dict
+^https:\/\/api\.m\.mi\.com\/v1\/home\/page_feed(_v5)?$ reject-dict
 
 # 米家 - home.mi.com
-^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|myTab)\? url reject-dict
+^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|myTab)\? reject-dict
 
 # 云闪付 - wallet.95516.com
-^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 url reject
+^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 reject
 
 # 中国移动 - clientaccess.10086.cn
-^https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject
-^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query url reject
+^https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit reject
+^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query reject
 
 # 中国联通 - m.client.10010.com
-^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm url reject
-^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd url reject
+^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm reject
+^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd reject
 
 # 中国电信 - cloud.189.cn
-^https?:\/\/cloud\.189\.cn\/include\/splash\/ url reject
+^https?:\/\/cloud\.189\.cn\/include\/splash\/ reject
 
 # pornhub - *.pornhub.com
-^https:\/\/(cn|www)\.pornhub\.com\/_xa\/ads url reject-dict
+^https:\/\/(cn|www)\.pornhub\.com\/_xa\/ads reject-dict
 
 [Script]
 # 京东
