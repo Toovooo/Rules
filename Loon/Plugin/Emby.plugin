@@ -1,5 +1,5 @@
 #!name = Emby
-#!desc = 解锁播放,下载,支持3方播放器
+#!desc = 解锁播放,支持外连播放器
 #!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/Emby.png
 
 [Rule]
@@ -7,7 +7,9 @@ DOMAIN-SUFFIX, ju.dog, PROXY
 DOMAIN-SUFFIX, cf.jmsooo.com, PROXY
 DOMAIN-SUFFIX, cf2.jmsooo.com, PROXY
 DOMAIN-SUFFIX, ha.jmsooo.com, PROXY
-DOMAIN-SUFFIX, cu.poloemby.xyz, PROXY
+DOMAIN-SUFFIX, embymv.tk, PROXY
+DOMAIN-SUFFIX, kr.embymv.tk, PROXY
+DOMAIN-SUFFIX, jp.embymv.tk, PROXY
 
 [Script]
 http-response ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby/Embycrack.js, requires-body = true, tag = 播放解锁
