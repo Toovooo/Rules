@@ -6,6 +6,13 @@
 DOMAIN, 180.76.76.200, REJECT
 IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
 
+[Rewrite]
+^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/splashSchedule reject
+^https?:\/\/c\.tieba\.baidu\.com\/c\/f\/forum\/getAdInfo reject
+^https?:\/\/c\.tieba\.baidu\.com\/\w+\/\w+\/(sync|newRnSync|mlog) reject
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/\w+\/\w+\/(sync|newRnSync|mlog) reject
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/c\/s\/splashSchedule reject
+
 [Script]
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Tieba/tieba-json.js, requires-body = true, timeout = 10, tag = 贴吧json
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Tieba/tieba-proto.js, requires-body = true, binary-body-mode = true, timeout = 10, tag = 贴吧proto
