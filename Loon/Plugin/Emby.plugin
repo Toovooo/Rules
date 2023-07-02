@@ -19,4 +19,4 @@ http-response (\/Videos\/\d+\/stream\/.+\?.+&filename)|(\/Videos\/\d+\/\w{32}\/S
 http-response (\/Videos\/\d+\/stream\?.+&filename)|(\/Videos\/\d+\/\w{32}\/Subtitles\/.+&filename) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby/EmbyDownload.js, requires-body = true, tag = 下载文件重命名
 
 [Mitm]
-hostname = mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, cu.poloemby.xyz, ju.dog
+hostname = mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, embymv.tk, ju.dog
