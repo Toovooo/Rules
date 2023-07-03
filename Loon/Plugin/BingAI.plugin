@@ -1,6 +1,6 @@
 #!name = Bing AI
 #!desc = New Bing - GPT4
-#!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/AdBlack.png
+#!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/BingAI.png
 
 [Rule]
 DOMAIN-SUFFIX, bing.com, PROXY
