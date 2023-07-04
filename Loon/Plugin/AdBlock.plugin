@@ -59,7 +59,7 @@ http-response ^https?:\/\/appraven\.net\/AppRaven\/(app|social|buy) script-path 
 http-response ^https?:/\/(cn|www)\.pornhub\.com\/($|(view|video).*$) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Pornhub/pornhub.js, requires-body = true, tag = pornhub
 
 # 公众号广告 - mp.weixin.qq.com
-http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Adblock/Wechat.js, requires-body = true, tag = 公众号广告
+http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Adblock/wechat.js, requires-body = true, tag = 公众号广告
 
 [Mitm]
 hostname = elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, api.m.jd.com, jdread-api.jd.com, ms.jr.jd.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, gw.alicdn.com, acs.m.taobao.com, wallet.95516.com, clientaccess.10086.cn, m.client.10010.com, appraven.net, *.pornhub.com, mp.weixin.qq.com
