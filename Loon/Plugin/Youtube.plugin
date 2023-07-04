@@ -9,13 +9,13 @@
 
 [Script]
 # 拦截广告
-http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\? script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/youtube.request.beta.js, requires-body = true, binary-body-mode = true, tag = youtube request
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/youtube.response.beta.js, requires-body = true, binary-body-mode = true, tag = youtube response
+http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\? script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YoutubeRequest.js, requires-body = true, binary-body-mode = true, tag = Youtube Request
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YoutubeResponse.js, requires-body = true, binary-body-mode = true, tag = Youtube Response
 
 # 字幕模块
-http-response ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player(\?.*)$ requires-body = 1, timeout = 30, script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubs.YouTube.Player.response.js, tag = DualSubs.YouTube.Player.response.json, argument =
-http-request ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$ requires-body = 0, script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubs.YouTube.TimedText.request.js, tag = DualSubs.YouTube.TimedText.request, argument =
-http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$ requires-body = 1, script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubs.YouTube.TimedText.response.js, tag = DualSubs.YouTube.TimedText.response, argument =
+http-response ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player(\?.*)$ requires-body = 1, timeout = 30, script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubsYouTubePlayerResponse.js, tag = DualSubs YouTube Player Response, argument =
+http-request ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$ requires-body = 0, script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubsYouTubeTimedTextRequest.js, tag = DualSubs YouTube TimedText Request, argument =
+http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$ requires-body = 1, script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubsYouTubeTimedTextResponse.js, tag = DualSubs YouTube TimedText Response, argument =
 
 [MITM]
 hostname = www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com
