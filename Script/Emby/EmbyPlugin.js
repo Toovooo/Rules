@@ -1,7 +1,3 @@
-/**
- * @description [emby调用第三方播放器播放 支持：Infuse、nPlayer、VLC 、IINA、Movist Pro]
- */
-
 let requestURL = $request.url;
 let addLink = '/Users';
 let embyPlguin = '/plugin/scheme/';
