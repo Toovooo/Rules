@@ -1,29 +1,29 @@
-# Block HTTPDNS
+# Block HOSTDNS
 
 # Alibaba
-HTTP,httpdns.alicdn.com,REJECT
+HOST,httpdns.alicdn.com,REJECT
 
 # Aliyun
-HTTP,httpdns-api.aliyuncs.com,REJECT
-HTTP,httpdns-sc.aliyuncs.com,REJECT
+HOST,httpdns-api.aliyuncs.com,REJECT
+HOST,httpdns-sc.aliyuncs.com,REJECT
 IP-CIDR,203.107.1.0/24,REJECT
 
 # Baidu
-HTTP,httpsdns.baidu.com,REJECT
-HTTP,httpdns.baidu.com,REJECT
+HOST,httpsdns.baidu.com,REJECT
+HOST,httpdns.baidu.com,REJECT
 
 # BaiduBCE
-HTTP,httpdns.baidubce.com,REJECT
+HOST,httpdns.baidubce.com,REJECT
 IP-CIDR,186.76.76.200/32,REJECT
 
 # Bilibili
-HTTP,httpdns.bilivideo.com,REJECT
+HOST,httpdns.bilivideo.com,REJECT
 
 # Huawei
-HTTP,httpdns.c.cdnhwc2.com,REJECT
+HOST,httpdns.c.cdnhwc2.com,REJECT
 
 # JD
-HTTP,dns.jd.com,REJECT
+HOST,dns.jd.com,REJECT
 IP-CIDR,101.124.19.122/32,REJECT
 IP-CIDR6,2402:db40:5100:1011::5/128,REJECT
 
@@ -31,29 +31,29 @@ IP-CIDR6,2402:db40:5100:1011::5/128,REJECT
 IP-CIDR,103.224.222.208/32,REJECT
 
 # NetEase
-HTTP,httpdns.n.netease.com,REJECT
-HTTP,httpdns.music.163.com,REJECT
-HTTP,music.httpdns.c.163.com,REJECT
-HTTP,lofter.httpdns.c.163.com,REJECT
+HOST,httpdns.n.netease.com,REJECT
+HOST,httpdns.music.163.com,REJECT
+HOST,music.httpdns.c.163.com,REJECT
+HOST,lofter.httpdns.c.163.com,REJECT
 IP-CIDR,59.111.239.61/32,REJECT
 IP-CIDR,59.111.239.62/32,REJECT
 IP-CIDR,115.236.121.51/32,REJECT
 IP-CIDR,115.236.121.195/32,REJECT
 
 # Oppo
-HTTP,httpdns.push.oppomobile.com,REJECT
+HOST,httpdns.push.oppomobile.com,REJECT
 
 # Volcengine
-HTTP,httpdns.volcengineapi.com,REJECT
+HOST,httpdns.volcengineapi.com,REJECT
 
 # Weibo
-HTTP,dns.weibo.cn,REJECT
+HOST,dns.weibo.cn,REJECT
 IP-CIDR,39.97.128.148/32,REJECT
 IP-CIDR,39.97.130.51/32,REJECT
 
 # Weixin
-HTTP,dns.weixin.qq.com,REJECT
-HTTP,dns.weixin.qq.com.cn,REJECT
+HOST,dns.weixin.qq.com,REJECT
+HOST,dns.weixin.qq.com.cn,REJECT
 IP-CIDR,42.81.232.18/32,REJECT
 IP-CIDR,42.187.182.106/32,REJECT
 IP-CIDR,42.187.182.123/32,REJECT
