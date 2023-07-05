@@ -28,7 +28,7 @@ HOST-SUFFIX,spotifyjobs.com,Spotify
 HOST-SUFFIX,spotifynewsroom.jp,Spotify
 HOST-SUFFIX,spotilocal.com,Spotify
 HOST-SUFFIX,tospotify.com,Spotify
-HOST-KEYWORD,-spotify-com,Spotify
+HOST-KEYWORD,-spotify-,Spotify
 HOST-KEYWORD,spotify.com,Spotify
 USER-AGENT,Spotify*,Spotify
 IP-CIDR,104.154.127.126/32,Spotify
