@@ -1,8 +1,7 @@
-# Emby
-^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Embycrack.js
-\/Users\/\w{32}\/Items\/\d+\? url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby-plugin.js
-\/plugin\/scheme url script-echo-response https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby-plugin.js
-(\/Videos\/\d+\/stream\/.+\?.+&filename)|(\/Videos\/\d+\/\w{32}\/Subtitles\/\d+\/.+\?.+&filename) url script-request-header https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby-plugin.js
-(\/Videos\/\d+\/stream\?.+&filename)|(\/Videos\/\d+\/\w{32}\/Subtitles\/.+&filename) url script-response-header https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Download-file-rename.js
+^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby/EmbyCrack.js
+\/Users\/\w{32}\/Items\/\d+\? url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby/EmbyPlugin.js
+\/plugin\/scheme url script-echo-response https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby/EmbyPlugin.js
+(\/Videos\/\d+\/stream\/.+\?.+&filename)|(\/Videos\/\d+\/\w{32}\/Subtitles\/\d+\/.+\?.+&filename) url script-request-header https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby/EmbyPlugin.js
+(\/Videos\/\d+\/stream\?.+&filename)|(\/Videos\/\d+\/\w{32}\/Subtitles\/.+&filename) url script-response-header https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby/EmbyDownload.js
 
-hostname = mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, cu.poloemby.xyz
+hostname = mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, embymv.tk, ju.dog
