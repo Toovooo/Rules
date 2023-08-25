@@ -1,0 +1,10 @@
+#!name = Bing搜索
+#!desc = 获取cookie
+#!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/Cookie.png
+
+^https\:\/\/www\.bing\.com\/search\?q=pc&.* url script-request-header https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Bing/BingSearchCookie.js
+^https\:\/\/www\.bing\.com\/search\?q=testt&.* url script-request-header https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Bing/BingSearchCookie.js
+^https\:\/\/cn\.bing\.com\/search\?q=pc&.* url script-request-header https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Bing/BingSearchCookie.js
+^https\:\/\/cn\.bing\.com\/search\?q=testt&.* url script-request-header https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Bing/BingSearchCookie.js
+
+hostname = www.bing.com, cn.bing.com

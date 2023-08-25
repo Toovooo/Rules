@@ -1,0 +1,8 @@
+#!name = Pornhub
+#!desc = 去除广告
+#!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/Pornhub.png
+
+^https:\/\/(cn|www)\.pornhub\.com\/_xa\/ads url reject-dict
+^https?:/\/(cn|www)\.pornhub\.com\/($|(view|video).*$) url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Pornhub/pornhub.js
+
+hostname = *.pornhub.com

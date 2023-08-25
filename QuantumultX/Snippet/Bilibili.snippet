@@ -1,3 +1,7 @@
+#!name=哔哩哔哩
+#!desc=拦截广告 解锁画质
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/Bilibili.png
+
 # Proto 动态广告,后台播放限制,播放页广告 //app.bilibili.com
 ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.dynamic\.v2\.Dynamic\/Dyn(All|Video)$ url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Bilibili/biliProto.js
 ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Bilibili/biliProto.js
