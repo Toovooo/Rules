@@ -1,4 +1,4 @@
-# Emby
+#!name=Emby
 HOST-SUFFIX,ha.jmsooo.com,Emby
 HOST-SUFFIX,cf.jmsooo.com,Emby
 HOST-SUFFIX,cf2.jmsooo.com,Emby
@@ -6,3 +6,4 @@ HOST-SUFFIX,ju.dog,Emby
 HOST-SUFFIX,embymv.tk,Emby
 HOST-SUFFIX,kr.embymv.tk,Emby
 HOST-SUFFIX,jp.embymv.tk,Emby
+HOST-SUFFIX,public.emby.ws,Emby

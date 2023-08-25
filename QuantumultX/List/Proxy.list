@@ -1,4 +1,4 @@
-# PROXY
+#!name=PROXY
 HOST-SUFFIX,openvpn.net,PROXY
 HOST-SUFFIX,openwrt.org,PROXY
 HOST-SUFFIX,v2ex.co,PROXY

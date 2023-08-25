@@ -1,4 +1,4 @@
-# BingAI
+#!name=BingAI
 HOST,bg.v4.a.dl.ws.microsoft.com,BingAI
 HOST-SUFFIX,bing.com,BingAI
 HOST-SUFFIX,bing.com.cn,BingAI

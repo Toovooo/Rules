@@ -1,4 +1,4 @@
-# AppStore
+#!name=AppStore
 HOST,ppq.apple.com,AppStore
 HOST-SUFFIX,apps.apple.com,AppStore
 HOST-SUFFIX,itunes.apple.com,AppStore

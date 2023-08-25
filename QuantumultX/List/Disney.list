@@ -1,4 +1,4 @@
-# Disney
+#!name=Disney
 USER-AGENT,Disney+*,Disney
 HOST-SUFFIX,bamgrid.com,Disney
 HOST-SUFFIX,disneyplus.com,Disney

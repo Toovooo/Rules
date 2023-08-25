@@ -1,4 +1,4 @@
-# Microsoft
+#!name=Microsoft
 HOST,bg.v4.a.dl.ws.microsoft.com,Microsoft
 HOST,bg4.v4.a.dl.ws.microsoft.com,Microsoft
 HOST,bj1.api.bing.com,Microsoft
@@ -144,6 +144,7 @@ HOST-SUFFIX,biing.com,Microsoft
 HOST-SUFFIX,binads.com,Microsoft
 HOST-SUFFIX,binb.com,Microsoft
 HOST-SUFFIX,binf.com,Microsoft
+HOST-SUFFIX,bing,Microsoft
 HOST-SUFFIX,bing.com,Microsoft
 HOST-SUFFIX,bing.com.cn,Microsoft
 HOST-SUFFIX,bing.net,Microsoft

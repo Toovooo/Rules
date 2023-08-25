@@ -1,4 +1,4 @@
-# OpenAI
+#!name=OpenAI
 HOST,cdn.auth0.com,OpenAI
 HOST,o33249.ingest.sentry.io,OpenAI
 HOST-SUFFIX,ai.com,OpenAI
