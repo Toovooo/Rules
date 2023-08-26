@@ -1,4 +1,4 @@
-# Netflix
+#!name = Netflix
 USER-AGENT,Argo*
 DOMAIN-KEYWORD,apiproxy-device-prod-nlb-
 DOMAIN-KEYWORD,dualstack.apiproxy-

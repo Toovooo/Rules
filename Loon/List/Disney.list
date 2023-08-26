@@ -1,4 +1,4 @@
-# Disney
+#!name = Disney
 USER-AGENT,Disney+*
 DOMAIN-SUFFIX,bamgrid.com
 DOMAIN-SUFFIX,disneyplus.com
