@@ -1,8 +1,9 @@
 #!name = YouTube
 #!desc = 拦截广告 字幕模块
 #!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/YouTube.png
-#!select = 仅输出译文,是,否
-#!select = 字幕译文位置,译文位于外文之上,译文位于外文之下
+#!select=自动显示翻译字幕,是,否
+#!select=仅输出译文,是,否
+#!select=字幕译文位置,译文位于外文之上,译文位于外文之下
 
 [Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-img
