@@ -2,15 +2,15 @@
 #!desc = 拦截广告 字幕模块
 #!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/YouTube.png
 
-# 拦截广告
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-img
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\? url script-request-header https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YoutubeRequest.js
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YoutubeResponse.js
-
 # 字幕模块
 ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubsYouTubePlayerResponse.js
 ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubsYouTubePlayerResponse.js
 ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext url script-request-header https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubsYouTubeTimedTextRequest.js
 ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubsSubtitlesCompositeResponse.js
+
+# 拦截广告
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-img
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\? url script-request-header https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YoutubeRequest.js
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YoutubeResponse.js
 
 hostname = www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com
