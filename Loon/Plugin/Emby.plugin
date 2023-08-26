@@ -10,6 +10,7 @@ DOMAIN-SUFFIX, ha.jmsooo.com, PROXY
 DOMAIN-SUFFIX, embymv.tk, PROXY
 DOMAIN-SUFFIX, kr.embymv.tk, PROXY
 DOMAIN-SUFFIX, jp.embymv.tk, PROXY
+DOMAIN-SUFFIX, public.emby.ws, PROXY
 
 [Script]
 http-response ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby/EmbyCrack.js, requires-body = true, tag = 播放解锁
@@ -19,4 +20,4 @@ http-response (\/Videos\/\d+\/stream\/.+\?.+&filename)|(\/Videos\/\d+\/\w{32}\/S
 http-response (\/Videos\/\d+\/stream\?.+&filename)|(\/Videos\/\d+\/\w{32}\/Subtitles\/.+&filename) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby/EmbyDownload.js, requires-body = true, tag = 下载文件重命名
 
 [Mitm]
-hostname = mb3admin.com, *.emby.wtf, *.plusmedia.site, *.jmsooo.com, embymv.tk, ju.dog
+hostname = mb3admin.com, *.jmsooo.com, embymv.tk, ju.dog, public.emby.ws

@@ -13,8 +13,8 @@ DOMAIN-SUFFIX, bingsandbox.com, PROXY
 DOMAIN-SUFFIX, bingvisualsearch.com, PROXY
 DOMAIN-SUFFIX, bingworld.com, PROXY
 
-[Script]
-http-request ^https:\/\/www\.bing\.com\/(search|new) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/BingAI.js, requires-body = false, tag = Bing AI
+[Rewrite]
+^https:\/\/www\.bing\.com\/(search|new) header-replace-regex User-Agent \w+\/[\d\.]+$ "AppleWebKit/537.36 Chrome/110.0 Safari/537.36 Edg/110.0"
 
 [MITM]
 hostname = www.bing.com

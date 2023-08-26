@@ -1,6 +1,6 @@
-#!name=高德地图
-#!desc=移除各种广告
-#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/Amap.png
+#!name = 高德地图
+#!desc = 移除各种广告
+#!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/Amap.png
 
 [Rewrite]
 # 其他
