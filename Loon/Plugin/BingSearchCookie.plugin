@@ -3,10 +3,8 @@
 #!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/Cookie.png
 
 [Script]
-http-request ^https\:\/\/www\.bing\.com\/search\?q=pc&.* script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Bing/BingSearchCookie.js, requires-body = 0, tag = PC Cookie
-http-request ^https\:\/\/www\.bing\.com\/search\?q=testt&.* script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Bing/BingSearchCookie.js, requires-body = 0, tag = Mobile Cookie
-http-request ^https\:\/\/cn\.bing\.com\/search\?q=pc&.* script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Bing/BingSearchCookie.js, requires-body = 0, tag = PC Cookie
-http-request ^https\:\/\/cn\.bing\.com\/search\?q=testt&.* script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Bing/BingSearchCookie.js, requires-body = 0, tag = Mobile Cookie
+http-request ^https\:\/\/(www|cn)\.bing\.com\/search\?.*q=pc.* script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Bing/BingSearchCookie.js, requires-body = 0, tag = PC Cookie
+http-request ^https\:\/\/(www|cn)\.bing\.com\/search\?.*q=testt.* script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Bing/BingSearchCookie.js, requires-body = 0, tag = Mobile Cookie
 
 [Mitm]
 hostname = www.bing.com, cn.bing.com
