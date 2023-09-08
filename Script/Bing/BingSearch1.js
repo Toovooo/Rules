@@ -1,17 +1,18 @@
 /*
 脚本功能: 🏆BingSearch Task v1.2
-脚本地址: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingSearch.js
+脚本作者: @mcdasheng
+脚本地址: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/Bing/bingSearch/bingSearch.js
 脚本说明:
   v1版本用于单账号快速执行
-  v2版本支持多账号: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingSearch_v2.js
+  v2版本支持多账号: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/Bing/bingSearch/bingSearch_v2.js
 操作步骤: 
   1.先获取 Cookie
       Dashboard Cookie:  
         面板 Cookie,可用于lowking脚本
-        https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingPoint.cookie.js
+        https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/Bing/bingPoint/bingPoint.cookie.js
       BingSearch Cookie:  
         移动端 & pc端 Cookie,用于本脚本
-        https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingSearch.cookie.js
+        https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/Bing/bingSearch/bingSearch.cookie.js
   2.自行设置cron表达式
 注意事项:
   Bing每天只能在一个地区进行积分任务or搜索任务,注意配置分流
@@ -21,7 +22,7 @@
     如果日志显示正常执行,尝试打开"强制国区"更换host
 地区选择:
   Bing搜索等级达到2级后,解锁移动端搜索任务
-    每日搜索积分: 国区162,日区162,美区270!!
+    每日搜索积分: 国区162,日区162,美区270 !!
   外区额外有每日任务,连续完成一定天数可以获得额外积分
     目前只能手做任务,偶尔还会失败         (未解决,手做任务都失败写锤子)
   国区也有签到任务啦,但是分数很少
@@ -30,14 +31,14 @@
     日区: 苹果礼品卡 ￥2500 JPY          (需要日本手机号,攒了2w分没换到)
     美区: xBox,Spotify,StarBucks...     (没换过,不知道)
 MicroSoft分流:
-    https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Microsoft/Microsoft.list
+  https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Microsoft/Microsoft.list
 BoxJs订阅地址:
-    https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/mcdasheng.boxjs.json
+  https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/mcdasheng.boxjs.json
 [task_local]
-0-59/3 * * * * * https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingSearch.js, tag=🏆BingSearch Task, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Opinion_Rewards.png, enabled=false
+  0-59/3 * * * * * https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/Bing/bingSearch/bingSearch.js, tag=🏆BingSearch Task, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Opinion_Rewards.png, enabled=false
 */
 
-const $ = new Env("bingSearch");
+const $ = new Env("BingSearch");
 
 $.host = $.getdata("bing_cn") === "true" ? "cn.bing.com" : "www.bing.com";
 $.mb_cookie = $.getdata("bingSearchCookieMobileKey");

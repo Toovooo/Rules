@@ -1,45 +1,45 @@
 /* 
-脚本功能: 获取 bingSearch Cookie
-操作步骤: 
-  pc_Cookie: Bing web登录,搜索 'pc' 
-         or  ipad app登录,搜索 'pc' 
-  mb_Cookie: Bing app登录,搜索 'testt'
-BoxJs订阅地址:
-    https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/mcdasheng.boxjs.json
-
+🏆脚本功能: 获取 bingSearch Cookie v2.2
+🤓脚本作者: @mcdasheng
+🥳操作步骤: 
+  💻pc_Cookie: 
+    Bing web登录,搜索 'pc' 
+    ipad Bing app 登录,搜索 'pc' (好像获取不到了?)
+    ipad Edge app 登录,搜索 'pc'
+  📱mb_Cookie: 
+    ios Bing app登录,搜索 'testt'
+    ios Edge app登录,搜索 'testt'
+🎯重写脚本:
 [rewrite_local]
 外区: 也可以用于获取国区cookie,执行任务无效请打开"强制国区"开关
-^https\:\/\/www\.bing\.com\/search\?q=pc&.* url script-request-header https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingSearch.cookie.js
-^https\:\/\/www\.bing\.com\/search\?q=testt&.* url script-request-header https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingSearch.cookie.js
-国区
-^https\:\/\/cn\.bing\.com\/search\?q=pc&.* url script-request-header https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingSearch.cookie.js
-^https\:\/\/cn\.bing\.com\/search\?q=testt&.* url script-request-header https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingSearch.cookie.js
-
+  ^https\:\/\/www\.bing\.com\/search\?.*q=pc.* url script-request-header https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/Bing/bingSearch/bingSearch.cookie.js
+  ^https\:\/\/www\.bing\.com\/search\?.*q=testt.* url script-request-header https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/Bing/bingSearch/bingSearch.cookie.js
+国区:
+  ^https\:\/\/cn\.bing\.com\/search\?.*q=pc.* url script-request-header https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/Bing/bingSearch/bingSearch.cookie.js
+  ^https\:\/\/cn\.bing\.com\/search\?.*q=testt.* url script-request-header https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/Bing/bingSearch/bingSearch.cookie.js
 [mitm]
-hostname = www.bing.com, cn.bing.com
+  hostname = www.bing.com, cn.bing.com
+📦BoxJs订阅地址:
+  https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/mcdasheng.boxjs.json
 */
 
-const $ = new Env("bingSearchCookie");
+const $ = new Env("🔍BingSearchCookie");
 
 if ($request.url.search(/q=testt/) != -1) {
-  const ck = $request.headers["Cookie"];
+  const ck = $request.headers["Cookie"] || $request.headers["cookie"];
   $.msg($.name, "🎉MobileCookie获取成功!");
   $.log("🎉MobileCookie获取成功!");
   $.log(ck);
   $.setval(ck, "bingSearchCookieMobileKey");
-  $.log("testCookie...");
-  $.log($.getdata("bingSearchCookieMobileKey"));
   $.done();
 }
 
 if ($request.url.search(/q=pc/) != -1) {
-  const ck = $request.headers["Cookie"];
+  const ck = $request.headers["Cookie"] || $request.headers["cookie"];
   $.msg($.name, "🎉PC端Cookie获取成功!");
   $.log("🎉PC端Cookie获取成功!");
   $.log(ck);
   $.setval(ck, "bingSearchCookiePCKey");
-  $.log("testCookie...");
-  $.log($.getdata("bingSearchCookiePCKey"));
   $.done();
 }
 

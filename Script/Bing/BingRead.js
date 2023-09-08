@@ -1,20 +1,20 @@
 /* 
 脚本作者: @mcdasheng688
-脚本功能: 📖BingRead 新闻阅读 (国区) v1.1
+脚本功能: 📖BingRead 新闻阅读 (国区) v1.1.1
 操作步骤: 
-  打开第一个账号,阅读10个新闻,下拉到底,等待金币提示or重写通知
-  打开其他账号,获取对应账号信息
-  执行任务
+  1. 打开第一个账号,阅读10个新闻,下拉到底,等待金币提示or重写通知
+  2. 打开其他账号,获取对应账号信息
+  3. 执行任务
 🎯重写脚本:
 [rewrite local]
-^https:\/\/prod\.rewardsplatform\.microsoft\.com\/dapi\/me\/activities url script-request-body https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingRead.cookie.js
+  ^https:\/\/prod\.rewardsplatform\.microsoft\.com\/dapi\/me\/activities url script-request-body https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/Bing/bingRead/bingRead.cookie.js
 [MITM]
-hostname = prod.rewardsplatform.microsoft.com
+  hostname = prod.rewardsplatform.microsoft.com
 ⏰定时任务:
 [task local]
-38 10 * * * https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingRead.js, img-url=book.fill.system, tag=bingRead, enabled=true
+  38 10 * * * https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/Bing/bingRead/bingRead.js, img-url=book.fill.system, tag=bingRead, enabled=true
 📦BoxJs地址:
-https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/mcdasheng.boxjs.json
+  https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/mcdasheng.boxjs.json
 @tips:
   🥳支持多账号
   新闻有时效性,手动刷新是因为没抓到新闻生成地址,我也想全自动。。。
@@ -22,11 +22,11 @@ https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/mcdasheng.boxjs.jso
   这样用一个账号手动观看，会自动记录id，用于其他账号做这个任务
   如果只有一个账号，意义不大
 @params: 
-  "bingRead_ids"          阅读id个数
-  "bingRead_auths"        用户鉴权个数
+  "bingRead_ids"          阅读 id
+  "bingRead_auths"        用户鉴权
   "bingRead_timeout"      超时时间,默认100s
   "bingRead_interval"     阅读间隔,默认2s
-  "bingRead_autoDelete"   自动删除auths ids,默认关闭
+  "bingRead_autoDelete"   自动删除 auths & ids,默认关闭
 */
 
 const $ = new Env("📖BingRead");
@@ -64,6 +64,7 @@ setTimeout(() => {
 
 processAll().then(() => {
   if (autoDelete === "true") {
+    $.log(`-------------------------------------------`);
     $.setdata("", "bingRead_ids");
     $.setdata("", "bingRead_auths");
     $.log(`🎉新闻id已删除!`);
