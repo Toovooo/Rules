@@ -1,0 +1,162 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+
+proxy-providers:
+  All:
+    type: http
+    url: "订阅地址"
+    interval: 3600
+    path: ./all.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204    
+  HK:
+    type: file
+    path: ./all.yaml
+    filter: 港|HK|(?i)Hong
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+  JP:
+    type: file
+    path: ./all.yaml
+    filter: 日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+  US:
+    type: file
+    path: ./all.yaml
+    filter: 美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+  TW:
+    type: file
+    path: ./all.yaml
+    filter: 台|湾|TW|(?i)Taiwan
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204  
+  KR:
+    type: file
+    path: ./all.yaml
+    filter: KR|Korea|KOR|首尔|韩|韓
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204 
+  SG:
+    type: file
+    path: ./all.yaml
+    filter: 新加坡|坡|狮城|SG|Singapore
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204       
+      
+proxy-groups:
+  - name: 美国
+    type: select
+    use:
+      - US
+    proxies: []
+  - name: 香港
+    type: select
+    use:
+      - HK
+    proxies: []
+  - name: 日本
+    type: select
+    use:
+      - JP
+    proxies: []
+  - name: 韩国
+    type: select
+    use:
+      - KR
+    proxies: []
+  - name: 台湾
+    type: select
+    use:
+      - TW
+    proxies: []
+  - name: 新加坡
+    type: select
+    use:
+      - SG
+    proxies: []
+  - name: 节点选择
+    type: select
+    proxies:
+      - 美国
+      - 香港
+      - 日本
+      - 韩国
+      - 台湾
+      - 新加坡
+  - name: 国际媒体
+    type: select
+    proxies:
+      - 美国
+      - 香港
+      - 日本
+      - 韩国
+      - 台湾
+      - 新加坡
+  - name: 音乐服务
+    type: select
+    proxies:
+      - 美国
+      - 香港
+      - 日本
+      - 韩国
+      - 台湾
+      - 新加坡
+  - name: 游戏服务
+    type: select
+    proxies:
+      - 美国
+      - 香港
+      - 日本
+      - 韩国
+      - 台湾
+      - 新加坡
+  - name: 苹果服务
+    type: select
+    proxies:
+      - DIRECT
+      - 美国
+      - 香港
+      - 日本
+      - 韩国
+      - 台湾
+      - 新加坡
+  - name: 其它
+    type: select
+    proxies:
+      - 国内直连
+      - 节点选择
+
+rule-providers:
+
+  China:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/Toovooo/Rules@master/Clash/yaml/China.yaml"
+    path: ./Toovooo/China.yaml
+    interval: 21600
+
+rules:
+  - RULE-SET,China,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,其它
