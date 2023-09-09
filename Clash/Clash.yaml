@@ -144,7 +144,7 @@ proxy-groups:
   - name: 其它
     type: select
     proxies:
-      - 国内直连
+      - DIRECT
       - 节点选择
 
 rule-providers:
