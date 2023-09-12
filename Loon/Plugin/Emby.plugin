@@ -7,7 +7,6 @@ DOMAIN-SUFFIX, ju.dog, PROXY
 DOMAIN-SUFFIX, cf2.jmsooo.com, PROXY
 DOMAIN-SUFFIX, embymv.tk, PROXY
 
-
 [Script]
 http-response ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby/EmbyCrack.js, requires-body = true, tag = 播放解锁
 http-response \/Users\/\w{32}\/Items\/\d+\? script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby/EmbyPlugin.js, requires-body = true, tag = 添加外部播放器连接
