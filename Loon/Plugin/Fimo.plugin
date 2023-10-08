@@ -1,6 +1,7 @@
 #!name = Fimo
 #!desc = 解锁会员
 #!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Poppinn/camera.png
+#!date = 2023.10.8   20:08:18
 
 [Script]
 http-response ^https?:\/\/server\.yoyiapp\.com\/fimo-user\/user$ script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Fimo.js, requires-body = true, timeout = 10, tag = Fimo

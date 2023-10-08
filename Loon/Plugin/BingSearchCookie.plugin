@@ -1,6 +1,7 @@
 #!name = Bing搜索任务
 #!desc = 获取cookie
 #!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/Cookie.png
+#!date = 2023.10.8   20:08:18
 
 [Script]
 http-request ^https\:\/\/(www|cn)\.bing\.com\/search\?.*q=pc.* script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Bing/BingSearchCookie.js, requires-body = 0, tag = PC Cookie

@@ -1,6 +1,7 @@
 #!name = Pornhub
 #!desc = 去除广告
 #!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/AdBlack.png
+#!date = 2023.10.8   20:08:18
 
 [Rewrite]
 ^https:\/\/(cn|www)\.pornhub\.com\/_xa\/ads reject-dict

@@ -1,11 +1,14 @@
 #!name = Emby
 #!desc = 解锁播放,支持外连播放器
 #!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/Emby.png
+#!date = 2023.10.8   20:08:18
 
 [Rule]
 DOMAIN-SUFFIX, ju.dog, PROXY
+DOMAIN-SUFFIX, cf.jmsooo.com, PROXY
 DOMAIN-SUFFIX, cf2.jmsooo.com, PROXY
 DOMAIN-SUFFIX, embymv.tk, PROXY
+DOMAIN-SUFFIX, 140.238.6.215, PROXY
 
 [Script]
 http-response ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby/EmbyCrack.js, requires-body = true, tag = 播放解锁
@@ -15,4 +18,4 @@ http-response (\/Videos\/\d+\/stream\/.+\?.+&filename)|(\/Videos\/\d+\/\w{32}\/S
 http-response (\/Videos\/\d+\/stream\?.+&filename)|(\/Videos\/\d+\/\w{32}\/Subtitles\/.+&filename) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby/EmbyDownload.js, requires-body = true, tag = 下载文件重命名
 
 [Mitm]
-hostname = mb3admin.com, *.jmsooo.com, embymv.tk, ju.dog
+hostname = mb3admin.com, *.jmsooo.com, embymv.tk, ju.dog, 140.238.6.215
