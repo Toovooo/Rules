@@ -1,7 +1,7 @@
 #!name = 网易云音乐
 #!desc = 拦截广告,解锁会员
 #!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/Music.png
-#!date = 2023.10.8   20:08:18
+#!date = 2023.10.8   20:08:10
 
 [Rewrite]
 # 开屏广告,首页顶部横幅广告
