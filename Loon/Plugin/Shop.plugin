@@ -23,9 +23,9 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT, no-resolve
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=uniformRecommend reject-dict
 
 [Script]
-http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Adblock/Shop.js, requires-body = true, tag = 淘宝开屏广告
-http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Adblock/Shop.js, requires-body = true, tag = 淘宝开屏广告
-http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(personinfoBusiness|start) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Adblock/Shop.js, requires-body = true, tag = 京东广告
+http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Adblock/shop.js, requires-body = true, tag = 淘宝开屏广告
+http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Adblock/shop.js, requires-body = true, tag = 淘宝开屏广告
+http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(personinfoBusiness|start) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Adblock/shop.js, requires-body = true, tag = 京东广告
 
 [Mitm]
 hostname = acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, api.m.jd.com
