@@ -34,10 +34,6 @@ if (body) {
                 if (floor?.data?.commonPopup_dynamic) {
                   delete floor.data.commonPopup_dynamic;
                 }
-                // 底部会员续费横幅
-                if (floor?.data?.commonTips?.length > 0) {
-                  floor.data.commonTips = [];
-                }
                 // 弹窗
                 if (floor?.data?.commonWindows?.length > 0) {
                   floor.data.commonWindows = [];
