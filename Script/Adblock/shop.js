@@ -34,6 +34,10 @@ if (body) {
                 if (floor?.data?.commonPopup_dynamic) {
                   delete floor.data.commonPopup_dynamic;
                 }
+                // 底部会员续费横幅
+                if (floor?.data?.commonTips?.length > 0) {
+                  floor.data.commonTips = [];
+                }
                 // 弹窗
                 if (floor?.data?.commonWindows?.length > 0) {
                   floor.data.commonWindows = [];
@@ -44,6 +48,10 @@ if (body) {
                 }
               } else if (floor?.mId === "orderIdFloor") {
                 if (floor?.data?.commentRemindInfo?.infos?.length > 0) {
+                  // 发布评价的提醒
+                  floor.data.commentRemindInfo.infos = [];
+                }
+              } else if (floor?.mId === "userinfo") {
                 // 顶部背景图 去掉会导致顶部黑字在黑暗模式中无法显示 暂时保留
                 // if (floor?.data?.bgImgInfo?.bgImg) {
                 //   delete floor.data.bgImgInfo.bgImg;
@@ -118,13 +126,18 @@ if (body) {
                     item.enable4G = "false";
                     item.coldStart = "false";
                     item.waitTime = "0";
-                    item.imgUrl = "";
                     item.startTime = "5364633600000";
                     item.endTime = "5364719999000";
                     item.gmtStart = "2140-01-01 00:00:00";
                     item.gmtEnd = "2140-01-01 23:59:59";
                     item.gmtStartMs = "5364633600000";
                     item.gmtEndMs = "5364719999000";
+                    if (item?.imgUrl) {
+                      item.imgUrl = "";
+                    }
+                    if (item?.videoUrl) {
+                      item.videoUrl = "";
+                    }
                   }
                 }
               }
