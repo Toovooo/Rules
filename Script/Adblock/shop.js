@@ -53,18 +53,18 @@ if (body) {
                 //   delete floor.data.bgImgInfo.bgImg;
                 // }
                 // 开通plus会员卡片
-                if (floor?.data?.newPlusBlackCard) {
-                  delete floor.data.newPlusBlackCard;
-                }
-              }
-              newFloors.push(floor);
-            }
-          }
-          obj.floors = newFloors;
-        }
-        body = JSON.stringify(obj);
-      } catch (error) {
-        console.log(`京东-个人主页, 出现异常: ` + error);
+                //  if (floor?.data?.newPlusBlackCard) {
+                //   delete floor.data.newPlusBlackCard;
+                //  }
+                //  }
+                // newFloors.push(floor);
+                // }
+                // }
+                // obj.floors = newFloors;
+                // }
+                // body = JSON.stringify(obj);
+                // } catch (error) {
+                // console.log(`京东-个人主页, 出现异常: ` + error);
       }
       break;
     // 京东-开屏广告
