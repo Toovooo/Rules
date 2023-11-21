@@ -7,20 +7,21 @@ let body = $response.body;
 if (body) {
   switch (true) {
     // 京东-开屏广告
-    case /^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start/.test(url):
-      try {
-        let obj = JSON.parse(body);
-        if (obj?.images?.length > 0) {
-          obj.images = [];
-        }
-        if (obj?.showTimesDaily) {
-          obj.showTimesDaily = 0;
-        }
-        body = JSON.stringify(obj);
-      } catch (error) {
-        console.log(`京东-开屏广告, 出现异常: ` + error);
+  case /^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start/.test(url):
+    try {
+      let obj = JSON.parse(body);
+      if (obj?.images?.length > 0) {
+        obj.images = [];
       }
-      break;
+      if (obj?.showTimesDaily) {
+        obj.showTimesDaily = 0;
+      }
+      body = JSON.stringify(obj);
+    } catch (error) {
+      console.log(`京东-开屏广告, 出现异常: ` + error);
+    }
+    break;
+  case /^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=welcomeHome/.test(url):
     // 淘宝-开屏视频广告
     case /^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.cloudvideo\.video\.query/.test(url):
       try {
