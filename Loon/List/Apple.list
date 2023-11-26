@@ -1,5 +1,10 @@
 #!name = Apple
 DOMAIN,apple.comscoreresearch.com
+DOMAIN,ppq.apple.com
+DOMAIN-SUFFIX,apps.apple.com
+DOMAIN-SUFFIX,itunes.apple.com
+DOMAIN-SUFFIX,itunes-apple.com.akadns.net
+DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,akadns.net
 DOMAIN-SUFFIX,apple-cloudkit.com
@@ -7,7 +12,6 @@ DOMAIN-SUFFIX,apple-mapkit.com
 DOMAIN-SUFFIX,apple.co
 DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,apple.com.cn
-DOMAIN-SUFFIX,apple.news
 DOMAIN-SUFFIX,apple-livephotoskit.com
 DOMAIN-SUFFIX,applemusic.com
 DOMAIN-SUFFIX,apzones.com
