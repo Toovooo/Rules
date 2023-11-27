@@ -1,7 +1,7 @@
 #!name = Bing AI
 #!desc = New Bing - GPT4
-#!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Black/BingAI.png
-#!date = 2023.10.8   20:08:10
+#!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/Bing.png
+#!date = 2023.11.28   20:08:10
 
 [Rewrite]
 ^https:\/\/www\.bing\.com\/(search|new) header-replace-regex User-Agent \w+\/[\d\.]+$ "AppleWebKit/537.36 Chrome/110.0 Safari/537.36 Edg/110.0"
