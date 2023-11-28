@@ -1,7 +1,7 @@
 #!name = 京东
 #!desc = 去开屏广告
 #!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/JingDong.png
-#!date = 2023.11.28   20:08:10
+#!date = 2023.11.29
 
 [Rule]
 DOMAIN, dns.jd.com, REJECT

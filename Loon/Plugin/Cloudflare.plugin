@@ -1,7 +1,7 @@
 #!name = Cloudflare
 #!desc = 1.1.1.1 with WARP 客户端配置管理
 #!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/1111.png
-#!date = 2023.11.28   20:08:10
+#!date = 2023.11.29
 
 [Script]
 # WARP Panel

@@ -1,7 +1,7 @@
-#!name = 贴吧去广告
+#!name = 百度贴吧
 #!desc = 开屏广告 各种广告
 #!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/Tieba.png
-#!date = 2023.11.28   20:08:10
+#!date = 2023.11.29
 
 [Rule]
 DOMAIN, 180.76.76.200, REJECT

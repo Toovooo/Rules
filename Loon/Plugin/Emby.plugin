@@ -1,7 +1,7 @@
 #!name = Emby
 #!desc = 解锁播放,支持外连播放器
 #!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/Emby.png
-#!date = 2023.11.28   20:08:10
+#!date = 2023.11.29
 
 [Rule]
 DOMAIN-SUFFIX, cf.jmsooo.com, PROXY

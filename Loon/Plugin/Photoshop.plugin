@@ -1,7 +1,7 @@
 #!name = PS Express
 #!desc = 解锁订阅
 #!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/Photoshop.png
-#!date = 2023.11.28   20:08:10
+#!date = 2023.11.29
 
 [Script]
 http-response ^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Adobe/photoshop.js, requires-body = true, tag = PS Express

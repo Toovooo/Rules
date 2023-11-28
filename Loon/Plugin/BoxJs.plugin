@@ -1,7 +1,7 @@
 #!name = BoxJs
 #!desc = 数据管理
 #!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/BoxJs.png
-#!date = 2023.11.28   20:08:10
+#!date = 2023.11.29
 
 [Rule]
 DOMAIN-SUFFIX, jsdelivr.net, PROXY
