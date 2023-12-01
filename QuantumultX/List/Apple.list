@@ -1,5 +1,10 @@
 #!name=Apple
 HOST,apple.comscoreresearch.com,Apple
+HOST,ppq.apple.com,Apple
+HOST-SUFFIX,apps.apple.com,Apple
+HOST-SUFFIX,itunes.apple.com,Apple
+HOST-SUFFIX,itunes-apple.com.akadns.net,Apple
+HOST-SUFFIX,mzstatic.com,Apple
 HOST-SUFFIX,aaplimg.com,Apple
 HOST-SUFFIX,akadns.net,Apple
 HOST-SUFFIX,apple-cloudkit.com,Apple
@@ -7,7 +12,6 @@ HOST-SUFFIX,apple-mapkit.com,Apple
 HOST-SUFFIX,apple.co,Apple
 HOST-SUFFIX,apple.com,Apple
 HOST-SUFFIX,apple.com.cn,Apple
-HOST-SUFFIX,apple.news,Apple
 HOST-SUFFIX,apple-livephotoskit.com,Apple
 HOST-SUFFIX,applemusic.com,Apple
 HOST-SUFFIX,apzones.com,Apple
