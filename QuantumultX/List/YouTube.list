@@ -1,8 +1,4 @@
 #!name=YouTube
-HOST,music.youtube.com,YouTube
-USER-AGENT,YouTubeMusic*,YouTube
-USER-AGENT,com.google.ios.youtubemusic*,YouTube
-
 USER-AGENT,*youtube*,YouTube
 USER-AGENT,YouTube*,YouTube
 USER-AGENT,com.google.ios.youtube*,YouTube
