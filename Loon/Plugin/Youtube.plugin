@@ -1,23 +1,12 @@
 #!name = YouTube
-#!desc = 拦截广告 字幕模块
+#!desc = 拦截广告 自动翻译
 #!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/YouTube.png
-#!select=自动显示翻译字幕,是,否
-#!select=仅输出译文,是,否
-#!select=字幕译文位置,译文位于外文之上,译文位于外文之下
 #!date = 2023.11.29
 
 [Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-img
 
 [Script]
-# 字幕模块
-# http-response ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubsYouTubePlayerResponse.js, tag=DualSubs.YouTube.Player.response.json, argument=
-# http-response ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubsYouTubePlayerResponse.js, tag=DualSubs.YouTube.Player.response.proto, argument=
-# http-request ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext requires-body=0, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubsYouTubeTimedTextRequest.js, tag=DualSubsYouTubeTimedTextRequest, argument=
-# http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=(Official|External) requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubsSubtitlesCompositeResponse.js, tag=DualSubs.Subtitles.Composite.response, argument=
-# http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=Translate requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubsSubtitlesTranslateResponse.js, tag=DualSubs.Subtitles.Translate.response, argument=
-
-# 拦截广告
 http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\? script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YoutubeRequest.js, requires-body = true, binary-body-mode = true, tag = Youtube Request
 http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YoutubeResponse.js, requires-body = true, binary-body-mode = true, tag = Youtube Response
 
