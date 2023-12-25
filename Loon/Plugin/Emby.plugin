@@ -9,9 +9,10 @@ DOMAIN-SUFFIX, cf2.jmsooo.com, PROXY
 DOMAIN-SUFFIX, embymv.tk, PROXY
 DOMAIN-SUFFIX, pornhub.com, PROXY
 DOMAIN-SUFFIX, xvideos.com, PROXY
+DOMAIN-SUFFIX, film.ohhhh.org, PROXY
 
 [Script]
 http-response ^https:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice\? script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby/Emby.js, requires-body = true, binary-body-mode = true, tag = 播放解锁
 
 [Mitm]
-hostname = mb3admin.com, *.jmsooo.com, embymv.tk
+hostname = mb3admin.com, *.jmsooo.com, embymv.tk, film.ohhhh.org
