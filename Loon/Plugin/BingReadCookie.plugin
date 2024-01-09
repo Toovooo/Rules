@@ -1,10 +1,10 @@
-#!name = Bing阅读新闻
-#!desc = 获取cookie
-#!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/Read.png
-#!date = 2023.11.29
+#!name=Bing阅读新闻
+#!desc=获取cookie
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/Read.png
+#!date=2024.01.09
 
 [Script]
-http-request ^https:\/\/prod\.rewardsplatform\.microsoft\.com\/dapi\/me\/activities script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Bing/BingReadCookie.js, requires-body = 0, tag = Bing新闻阅读
+http-request ^https:\/\/prod\.rewardsplatform\.microsoft\.com\/dapi\/me\/activities script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Bing/BingReadCookie.js, requires-body=0, tag=Bing新闻阅读
 
 [Mitm]
 hostname = prod.rewardsplatform.microsoft.com

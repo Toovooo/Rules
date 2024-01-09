@@ -1,7 +1,7 @@
-#!name = 拦截广告
-#!desc = 移除开屏广告 
-#!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/General.png
-#!date = 2023.11.29
+#!name=拦截广告
+#!desc=移除开屏广告 
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/General.png
+#!date=2024.01.09
 
 [Rewrite]
 # 饿了么 - elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com
@@ -34,5 +34,11 @@
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm reject
 ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd reject
 
+# Pornhub  *.pornhub.com
+^https:\/\/(cn|www)\.pornhub\.com\/_xa\/ads reject-dict
+
+# Bing  www.bing.com
+^https:\/\/www\.bing\.com\/(search|new) header-replace-regex User-Agent \w+\/[\d\.]+$ "AppleWebKit/537.36 Chrome/110.0 Safari/537.36 Edg/110.0"
+
 [Mitm]
-hostname = elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, gw.alicdn.com, acs.m.taobao.com, wallet.95516.com, clientaccess.10086.cn, m.client.10010.com
+hostname = elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, gw.alicdn.com, acs.m.taobao.com, wallet.95516.com, clientaccess.10086.cn, m.client.10010.com, *.pornhub.com, www.bing.com

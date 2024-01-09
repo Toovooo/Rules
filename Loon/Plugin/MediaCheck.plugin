@@ -1,7 +1,7 @@
-#!name = 查询
-#!desc = 流媒体解锁查询
-#!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/MediaCheck.png
-#!date = 2023.11.29
+#!name=查询
+#!desc=流媒体解锁查询
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/MediaCheck.png
+#!date=2024.01.09
 
 [Script]
-generic script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Check/MediaCheck.js, tag = 流媒体解锁查询, img-url = play.rectangle
+generic script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Check/MediaCheck.js, tag=流媒体解锁查询, img-url=play.rectangle
