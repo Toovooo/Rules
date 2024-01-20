@@ -1,12 +1,12 @@
 /*
-README:https://github.com/DualSubs/Spotify
+README: https://github.com/DualSubs/Spotify
 */
 
-const $ = new Env("🍿 DualSubs: 🎵 Spotify v1.3.3(6) request");
-const URL = new URLs();
+const $ = new Env("🍿 DualSubs: 🎵 Spotify v1.3.5(6) request");
+const URI = new URIs();
 const DataBase = {
 	"Default":{
-		"Settings":{"Switch":true,"Type":"Translate","Types":["Official","Translate"],"Languages":["EN","ZH"],"CacheSize":20}
+		"Settings":{"Switch":true,"Type":"Translate","Types":["Official","Translate"],"Languages":["EN","ZH"],"CacheSize":50}
 	},
 	"Universal":{
 		"Settings":{"Switch":true,"Types":["Official","Translate"],"Languages":["EN","ZH"]},
@@ -15,7 +15,7 @@ const DataBase = {
 		}
 	},
 	"YouTube": {
-		"Settings":{"Switch":true,"Type":"Official","Types":["Translate","External"],"Languages":["AUTO","AUTO"],"AutoCC":true,"ShowOnly":false},
+		"Settings":{"Switch":true,"Type":"Official","Types":["Translate","External"],"Languages":["AUTO","ZH"],"AutoCC":true,"ShowOnly":false},
 		"Configs":{
 			"Languages":{"BG":"bg-BG","CS":"cs","DA":"da-DK","DE":"de","EL":"el","EN":"en","EN-GB":"en-GB","EN-US":"en-US","EN-US SDH":"en-US SDH","ES":"es","ES-419":"es-419","ES-ES":"es-ES","ET":"et-EE","FI":"fi","FR":"fr","HU":"hu-HU","ID":"id","IS":"is-IS","IT":"it","JA":"ja","KO":"ko","LT":"lt-LT","LV":"lv-LV","NL":"nl-NL","NO":"nb-NO","PL":"pl-PL","PT":"pt","PT-PT":"pt-PT","PT-BR":"pt-BR","RO":"ro-RO","RU":"ru-RU","SK":"sk-SK","SL":"sl-SI","SV":"sv-SE","YUE":"yue","YUE-HK":"yue-HK","ZH":"zh","ZH-HANS":"zh-Hans","ZH-HK":"zh-Hant-HK","ZH-HANT":"zh-Hant","ZH-TW":"zh-TW"},
 			"translationLanguages":{
@@ -34,20 +34,20 @@ const DataBase = {
 		"Settings":{"Switch":true,"Types":["Translate","External"],"Languages":["AUTO","ZH"]}
 	},
 	"Composite":{
-		"Settings":{"CacheSize":20,"Position":"Reverse","Offset":0,"Tolerance":1000}
+		"Settings":{"CacheSize":20,"ShowOnly":false,"Position":"Reverse","Offset":0,"Tolerance":1000}
 	},
 	"Translate":{
 		"Settings":{"Vendor":"Google","ShowOnly":false,"Position":"Forward","CacheSize":10,"Method":"Part","Times":3,"Interval":500,"Exponential":true},
 		"Configs":{
 			"Languages":{
-				"Google":{"AUTO":"auto","AR":"ar","BG":"bg","CS":"cs","DA":"da","DE":"de","EL":"el","EN":"en","EN-GB":"en","EN-US":"en","EN-US SDH":"en","ES":"es","ES-419":"es","ES-ES":"es","ET":"et","FI":"fi","FR":"fr","HU":"hu","IT":"it","JA":"ja","KO":"ko","LT":"lt","LV":"lv","NL":"nl","NO":"no","PL":"pl","PT":"pt","PT-PT":"pt","PT-BR":"pt","RO":"ro","RU":"ru","SK":"sk","SL":"sl","SV":"sv","IS":"is","TR":"tr","ZH":"zh","ZH-HANS":"zh-CN","ZH-HK":"zh-TW","ZH-HANT":"zh-TW"},
-				"Microsoft":{"AUTO":"","AR":"ar","BG":"bg","CS":"cs","DA":"da","DE":"de","EL":"el","EN":"en","EN-GB":"en","EN-US":"en","EN-US SDH":"en","ES":"es","ES-419":"es","ES-ES":"es","ET":"et","FI":"fi","FR":"fr","HU":"hu","IT":"it","JA":"ja","KO":"ko","LT":"lt","LV":"lv","NL":"nl","NO":"no","PL":"pl","PT":"pt","PT-PT":"pt","PT-BR":"pt","RO":"ro","RU":"ru","SK":"sk","SL":"sl","SV":"sv","IS":"is","TR":"tr","ZH":"zh-Hans","ZH-HANS":"zh-Hans","ZH-HK":"yue","ZH-HANT":"zh-Hant"},
+				"Google":{"AUTO":"auto","AF":"af","AM":"am","AR":"ar","AS":"as","AY":"ay","AZ":"az","BG":"bg","BE":"be","BM":"bm","BN":"bn","BHO":"bho","CS":"cs","DA":"da","DE":"de","EL":"el","EU":"eu","EN":"en","EN-GB":"en","EN-US":"en","EN-US SDH":"en","ES":"es","ES-419":"es","ES-ES":"es","ET":"et","FI":"fi","FR":"fr","FR-CA":"fr","HU":"hu","IS":"is","IT":"it","JA":"ja","KO":"ko","LT":"lt","LV":"lv","NL":"nl","NO":"no","PL":"pl","PT":"pt","PT-PT":"pt","PT-BR":"pt","PA":"pa","RO":"ro","RU":"ru","SK":"sk","SL":"sl","SQ":"sq","ST":"st","SV":"sv","TH":"th","TR":"tr","UK":"uk","UR":"ur","VI":"vi","ZH":"zh","ZH-HANS":"zh-CN","ZH-HK":"zh-TW","ZH-HANT":"zh-TW"},
+				"Microsoft":{"AUTO":"","AF":"af","AM":"am","AR":"ar","AS":"as","AY":"ay","AZ":"az","BG":"bg","BE":"be","BM":"bm","BN":"bn","BHO":"bho","CS":"cs","DA":"da","DE":"de","EL":"el","EU":"eu","EN":"en","EN-GB":"en","EN-US":"en","EN-US SDH":"en","ES":"es","ES-419":"es","ES-ES":"es","ET":"et","FI":"fi","FR":"fr","FR-CA":"fr-ca","HU":"hu","IS":"is","IT":"it","JA":"ja","KO":"ko","LT":"lt","LV":"lv","NL":"nl","NO":"no","PL":"pl","PT":"pt","PT-PT":"pt-pt","PT-BR":"pt","PA":"pa","RO":"ro","RU":"ru","SK":"sk","SL":"sl","SQ":"sq","ST":"st","SV":"sv","TH":"th","TR":"tr","UK":"uk","UR":"ur","VI":"vi","ZH":"zh-Hans","ZH-HANS":"zh-Hans","ZH-HK":"yue","ZH-HANT":"zh-Hant"},
 				"DeepL":{"AUTO":"","BG":"BG","CS":"CS","DA":"DA","DE":"de","EL":"el","EN":"EN-US","EN-GB":"EN-GB","EN-US":"EN-US","EN-US SDH":"EN-US","ES":"ES","ES-419":"ES","ES-ES":"ES","ET":"ET","FI":"FI","FR":"FR","HU":"HU","IT":"IT","JA":"JA","KO":"ko","LT":"LT","LV":"LV","NL":"NL","PL":"PL","PT":"PT-PT","PT-PT":"PT-PT","PT-BR":"PT-BR","RO":"RO","RU":"RU","SK":"SK","SL":"SL","SV":"SV","TR":"TR","ZH":"ZH","ZH-HANS":"ZH","ZH-HK":"ZH","ZH-HANT":"ZH"}
 			}
 		}
 	},
 	"External":{
-		"Settings":{"SubVendor":"URL","LrcVendor":"NeteaseMusicNodeJS","CacheSize":50}
+		"Settings":{"SubVendor":"URL","LrcVendor":"QQMusic","CacheSize":50}
 	},
 	"API":{
 		"Settings":{
@@ -62,27 +62,27 @@ let $response = undefined;
 
 /***************** Processing *****************/
 // 解构URL
-let url = URL.parse($request?.url);
-$.log(`⚠ ${$.name}`, `URL: ${JSON.stringify(url)}`, "");
+const URL = URI.parse($request.url);
+$.log(`⚠ ${$.name}`, `URL: ${JSON.stringify(URL)}`, "");
 // 获取连接参数
-const METHOD = $request?.method, HOST = url?.host, PATH = url?.path, PATHs = url?.paths;
+const METHOD = $request.method, HOST = URL.host, PATH = URL.path, PATHs = URL.paths;
 $.log(`⚠ ${$.name}`, `METHOD: ${METHOD}`, "");
 // 获取平台
 const PLATFORM = detectPlatform(HOST);
 $.log(`⚠ ${$.name}, PLATFORM: ${PLATFORM}`, "");
 // 解析格式
-let FORMAT = ($request?.headers?.["Content-Type"] ?? $request?.headers?.["content-type"])?.split(";")?.[0];
-if (FORMAT === "application/octet-stream" || FORMAT === "text/plain") FORMAT = detectFormat(url, $response?.body);
+let FORMAT = $request.body ? ($response.headers?.["Content-Type"] ?? $response.headers?.["content-type"])?.split(";")?.[0] : undefined;
+if (FORMAT === "application/octet-stream" || FORMAT === "text/plain") FORMAT = detectFormat(URL, $request.body);
 $.log(`⚠ ${$.name}, FORMAT: ${FORMAT}`, "");
 (async () => {
 	// 读取设置
-	const { Settings, Caches, Configs } = setENV("DualSubs", [(["YouTube", "Netflix", "BiliBili", "Spotify"].includes(PLATFORM)) ? PLATFORM : "Universal", url?.query?.subtype], DataBase);
+	const { Settings, Caches, Configs } = setENV("DualSubs", [(["YouTube", "Netflix", "BiliBili", "Spotify"].includes(PLATFORM)) ? PLATFORM : "Universal", URL.query?.subtype], DataBase);
 	$.log(`⚠ ${$.name}`, `Settings.Switch: ${Settings?.Switch}`, "");
 	switch (Settings.Switch) {
 		case true:
 		default:
 			// 获取字幕类型与语言
-			const Type = url?.query?.subtype ?? Settings.Type, Languages = [(url?.query?.lang ?? Settings.Languages[0])?.split?.(/[-_]/)?.[0]?.toUpperCase(), (url?.query?.tlang ?? Caches?.tlang ?? Settings.Languages[1])?.split?.(/[-_]/)?.[0]?.toUpperCase()];
+			const Type = URL.query?.subtype ?? Settings.Type, Languages = [URL.query?.lang?.split?.(/[-_]/)?.[0]?.toUpperCase?.() ?? Settings.Languages[0], (URL.query?.tlang?.split?.(/[-_]/)?.[0] ?? Caches?.tlang)?.toUpperCase?.() ?? Settings.Languages[1]];
 			$.log(`⚠ ${$.name}, Type: ${Type}, Languages: ${Languages}`, "");
 			// 创建空数据
 			let body = {};
@@ -105,29 +105,18 @@ $.log(`⚠ ${$.name}, FORMAT: ${FORMAT}`, "");
 						case "application/x-mpegurl":
 						case "application/vnd.apple.mpegurl":
 						case "audio/mpegurl":
-							//body = M3U8.parse($response.body);
-							//$.log(`🚧 ${$.name}`, "M3U8.parse($response.body)", JSON.stringify(body), "");
-							//$response.body = M3U8.stringify(body);
 							break;
 						case "text/xml":
 						case "text/plist":
 						case "application/xml":
 						case "application/plist":
 						case "application/x-plist":
-							//body = XML.parse($response.body);
-							//$.log(body);
-							//$response.body = XML.stringify(body);
 							break;
 						case "text/vtt":
 						case "application/vtt":
-							//body = VTT.parse($response.body);
-							//$.log(body);
-							//$response.body = VTT.stringify(body);
 							break;
 						case "text/json":
 						case "application/json":
-							//body = JSON.parse($request?.body ?? "{}");
-							//$request.body = JSON.stringify(body);
 							break;
 						case "application/protobuf":
 						case "application/x-protobuf":
@@ -135,9 +124,9 @@ $.log(`⚠ ${$.name}, FORMAT: ${FORMAT}`, "");
 						case "application/grpc":
 						case "application/grpc+proto":
 						case "applecation/octet-stream":
-							//$.log(`🚧 ${$.name}`, `$request.body: ${JSON.stringify($request.body)}`, "");
-							let rawBody = $.isQuanX() ? new Uint8Array($request.bodyBytes) : $request?.body ?? new Uint8Array();
-							//$.log(`🚧 ${$.name}`, `isBuffer? ${ArrayBuffer.isView(rawBody)}: ${JSON.stringify(rawBody)}`, "");
+							//$.log(`🚧 ${$.name}, 调试信息`, `$request.body: ${JSON.stringify($request.body)}`, "");
+							let rawBody = $.isQuanX() ? new Uint8Array($request.bodyBytes ?? []) : $request.body ?? new Uint8Array();
+							//$.log(`🚧 ${$.name}, 调试信息`, `isBuffer? ${ArrayBuffer.isView(rawBody)}: ${JSON.stringify(rawBody)}`, "");
 							/******************  initialization start  *******************/
 							// timostamm/protobuf-ts 2.9.0
 							// text-decoder
@@ -165,78 +154,61 @@ $.log(`⚠ ${$.name}, FORMAT: ${FORMAT}`, "");
 					if (PATH.startsWith("color-lyrics/v2/track/")) {
 						let trackId = PATHs?.[3];
 						$.log(`🚧 ${$.name}, 调试信息`, `trackId: ${trackId}`, "");
-						//let _request = JSON.parse(JSON.stringify($request));
-						//_request.url = `https://api.spotify.com/v1/tracks?ids=${trackId}`;
+						let _request = JSON.parse(JSON.stringify($request));
+						_request.url = `https://api.spotify.com/v1/tracks?ids=${trackId}`;
+						delete _request?.headers?.Host;
+						if (_request?.headers?.Accept) _request.headers.Accept = "application/json";
+						if (_request?.headers?.accept) _request.headers.accept = "application/json";
 						//$.log(`🚧 ${$.name}, 调试信息`, `_request: ${JSON.stringify(_request)}`, "");
 						const detectStutus = $.http.get($request);
-						//const detectTrack = $.http.get(_request);
-						//const detectTrack = $httpClient.get(_request);
-						const detectTrack = $.http.get({"url":`https://api.spotify.com/v1/tracks?ids=${trackId}`, "headers": $request.headers});
+						const detectTrack = $.http.get(_request);
 						await Promise.allSettled([detectStutus, detectTrack]).then(results => {
-							/*
-							results.forEach((result,i) => {
-								$.log(`🚧 ${$.name}, 调试信息`, `result[${i}]: ${JSON.stringify(result)}`, "");
-							});
-							*/
-							if (results[0].status === "fulfilled") {
-								let response = results[0].value;
-								switch (response?.statusCode ?? response?.status) {
-									case 200:
-										if (Settings.Types.includes("Translate")) url.query.subtype = "Translate";
-										else if (Settings.Types.includes("External")) url.query.subtype = "External";
-										break;
-									case 401:
-									default:
-										break;
-									case 404:
-										if (Settings.Types.includes("External")) url.query.subtype = "External";
-										break;
-								};
-							};
-							if (results[1].status === "fulfilled") {
-								let response = results[1].value;
-								body = JSON.parse(response.body);
-								body?.tracks?.forEach?.(track => {
-									//$.log(`🚧 ${$.name}`, `track: ${JSON.stringify(track)}`, "");
-									const trackId = track?.id;
-									const trackInfo = {
-										"track": track?.name,
-										"album": track?.album?.name,
-										"artist": track?.artists?.[0]?.name
+							switch (results[0].status) {
+								case "fulfilled":
+									let response = results[0].value;
+									switch (response?.statusCode ?? response?.status) {
+										case 200:
+											if (Settings.Types.includes("Translate")) $.lodash_set(URL, "query.subtype", "Translate");
+											else if (Settings.Types.includes("External")) $.lodash_set(URL, "query.subtype", "External");
+											break;
+										case 401:
+										default:
+											break;
+										case 404:
+											if (Settings.Types.includes("External")) $.lodash_set(URL, "query.subtype", "External");
+											break;
 									};
-									// 写入数据
-									Caches.Metadatas.Tracks.set(trackId, trackInfo);
-								});
-								// 格式化缓存
-								$.log(`🚧 ${$.name}`, `Caches.Metadatas.Tracks: ${JSON.stringify([...Caches.Metadatas.Tracks.entries()])}`, "");
-								Caches.Metadatas.Tracks = setCache(Caches.Metadatas.Tracks, Settings.CacheSize);
-								// 写入持久化储存
-								$.setjson(Caches.Metadatas.Tracks, `@DualSubs.${"Spotify"}.Caches.Metadatas.Tracks`);
-							};
-						});
-						/*
-						await $.http.get($request).then(response => {
-							//$.log(`🚧 ${$.name}, 调试信息`, `response: ${JSON.stringify(response)}`, "");
-							switch (response?.statusCode ?? response?.status) {
-								case 200:
-									url.query.subtype = "Translate";
 									break;
-								case 401:
-								default:
-									break;
-								case 404:
-									url.query.subtype = "External";
+								case "rejected":
+									if (Settings.Types.includes("External")) $.lodash_set(URL, "query.subtype", "External");
 									break;
 							};
+							switch (results[1].status) {
+								case "fulfilled":
+									let response = results[1].value;
+									body = JSON.parse(response.body);
+									body?.tracks?.forEach?.(track => {
+										const trackId = track?.id;
+										const trackInfo = {
+											"id": track?.id,
+											"track": track?.name,
+											"album": track?.album?.name,
+											"artist": track?.artists?.[0]?.name
+										};
+										// 写入数据
+										Caches.Metadatas.Tracks.set(trackId, trackInfo);
+									});
+									// 格式化缓存
+									$.log(`🚧 ${$.name}`, `Caches.Metadatas.Tracks: ${JSON.stringify([...Caches.Metadatas.Tracks.entries()])}`, "");
+									Caches.Metadatas.Tracks = setCache(Caches.Metadatas.Tracks, Settings.CacheSize);
+									// 写入持久化储存
+									$.setjson(Caches.Metadatas.Tracks, `@DualSubs.${"Spotify"}.Caches.Metadatas.Tracks`);
+									break;
+								case "rejected":
+									$.log(`🚧 ${$.name}, 调试信息`, `detectTrack.reason: ${JSON.stringify(results[1].reason)}`, "");
+									break;
+							};
 						});
-						let trackId = PATHs[3]
-						$.log(`🚧 ${$.name}, 调试信息`, `trackId: ${trackId}`, "");
-						let _Request = JSON.parse(JSON.stringify($request));
-						_Request.url = `https://api.spotify.com/v1/tracks/${trackId}`;
-						await $.http.get(_Request).then(response => {
-							$.log(`🚧 ${$.name}, 调试信息`, `response: ${JSON.stringify(response)}`, "");
-						})
-						*/
 					};
 				case "HEAD":
 				case "OPTIONS":
@@ -245,8 +217,8 @@ $.log(`⚠ ${$.name}, FORMAT: ${FORMAT}`, "");
 				case "TRACE":
 					break;
 			};
-			if ($request?.headers?.Host) $request.headers.Host = url.host;
-			$request.url = URL.stringify(url);
+			if ($request.headers?.Host) $request.headers.Host = URL.host;
+			$request.url = URI.stringify(URL);
 			$.log(`🚧 ${$.name}, 调试信息`, `$request.url: ${$request.url}`, "");
 			break;
 		case false:
@@ -257,7 +229,7 @@ $.log(`⚠ ${$.name}, FORMAT: ${FORMAT}`, "");
 	.finally(() => {
 		switch ($response) {
 			default: { // 有构造回复数据，返回构造的回复数据
-				//const FORMAT = ($response?.headers?.["Content-Type"] ?? $response?.headers?.["content-type"])?.split(";")?.[0];
+				const FORMAT = ($response?.headers?.["Content-Type"] ?? $response?.headers?.["content-type"])?.split(";")?.[0];
 				$.log(`🎉 ${$.name}, finally`, `echo $response`, `FORMAT: ${FORMAT}`, "");
 				//$.log(`🚧 ${$.name}, finally`, `echo $response: ${JSON.stringify($response)}`, "");
 				if ($response?.headers?.["Content-Encoding"]) $response.headers["Content-Encoding"] = "identity";
@@ -281,7 +253,7 @@ $.log(`⚠ ${$.name}, FORMAT: ${FORMAT}`, "");
 						case "application/vnd.google.protobuf":
 						case "application/grpc":
 						case "application/grpc+proto":
-						//case "applecation/octet-stream":
+						case "applecation/octet-stream":
 							// 返回二进制数据
 							//$.log(`${$response.bodyBytes.byteLength}---${$response.bodyBytes.buffer.byteLength}`);
 							$.done({ status: $response.status, headers: $response.headers, bodyBytes: $response.bodyBytes });
@@ -298,18 +270,18 @@ $.log(`⚠ ${$.name}, FORMAT: ${FORMAT}`, "");
 					switch (FORMAT) {
 						case undefined: // 视为无body
 							// 返回普通数据
-							$.done({ url: $request.url, headers: $request.headers })
+							$.done({ url: $request.url, headers: $request.headers });
 							break;
 						default:
 							// 返回普通数据
-							$.done({ url: $request.url, headers: $request.headers, body: $request.body })
+							$.done({ url: $request.url, headers: $request.headers, body: $request.body });
 							break;
 						case "application/protobuf":
 						case "application/x-protobuf":
 						case "application/vnd.google.protobuf":
 						case "application/grpc":
 						case "application/grpc+proto":
-						//case "applecation/octet-stream":
+						case "applecation/octet-stream":
 							// 返回二进制数据
 							//$.log(`${$request.bodyBytes.byteLength}---${$request.bodyBytes.buffer.byteLength}`);
 							$.done({ url: $request.url, headers: $request.headers, bodyBytes: $request.bodyBytes.buffer.slice($request.bodyBytes.byteOffset, $request.bodyBytes.byteLength + $request.bodyBytes.byteOffset) });
@@ -364,11 +336,12 @@ function setENV(name, platforms, database) {
 		Settings.AutoCC = $persistentStore.read("自动显示翻译字幕") ?? Settings.AutoCC;
 		switch (Settings.AutoCC) {
 			case "是":
-			default:
 				Settings.AutoCC = true;
 				break;
 			case "否":
 				Settings.AutoCC = false;
+				break;
+			default:
 				break;
 		};
 		Settings.ShowOnly = $persistentStore.read("仅输出译文") ?? Settings.ShowOnly;
@@ -397,11 +370,11 @@ function setENV(name, platforms, database) {
 	$.log(`✅ ${$.name}, Set Environment Variables`, `Settings: ${typeof Settings}`, `Settings内容: ${JSON.stringify(Settings)}`, "");
 	/***************** Caches *****************/
 	//$.log(`✅ ${$.name}, Set Environment Variables`, `Caches: ${typeof Caches}`, `Caches内容: ${JSON.stringify(Caches)}`, "");
-	if (typeof Caches.Playlists !== "object" || Array.isArray(Caches.Playlists)) Caches.Playlists = {}; // 创建Playlists缓存
+	if (typeof Caches?.Playlists !== "object" || Array.isArray(Caches?.Playlists)) Caches.Playlists = {}; // 创建Playlists缓存
 	Caches.Playlists.Master = new Map(JSON.parse(Caches?.Playlists?.Master || "[]")); // Strings转Array转Map
 	Caches.Playlists.Subtitle = new Map(JSON.parse(Caches?.Playlists?.Subtitle || "[]")); // Strings转Array转Map
 	if (typeof Caches?.Subtitles !== "object") Caches.Subtitles = new Map(JSON.parse(Caches?.Subtitles || "[]")); // Strings转Array转Map
-	if (typeof Caches.Metadatas !== "object" || Array.isArray(Caches.Metadatas)) Caches.Metadatas = {}; // 创建Playlists缓存
+	if (typeof Caches?.Metadatas !== "object" || Array.isArray(Caches?.Metadatas)) Caches.Metadatas = {}; // 创建Playlists缓存
 	if (typeof Caches?.Metadatas?.Tracks !== "object") Caches.Metadatas.Tracks = new Map(JSON.parse(Caches?.Metadatas?.Tracks || "[]")); // Strings转Array转Map
 	/***************** Configs *****************/
 	return { Settings, Caches, Configs };
@@ -416,8 +389,8 @@ function setENV(name, platforms, database) {
  */
 function detectFormat(url, body) {
 	let format = undefined;
-	$.log(`☑️ ${$.name}`, `detectFormat, format: ${url?.format ?? url?.query?.fmt ?? url?.query?.format}`, "");
-	switch (url?.format ?? url?.query?.fmt ?? url?.query?.format) {
+	$.log(`☑️ ${$.name}`, `detectFormat, format: ${url.format ?? url.query?.fmt ?? url.query?.format}`, "");
+	switch (url.format ?? url.query?.fmt ?? url.query?.format) {
 		case "txt":
 			format = "text/plain";
 			break;
@@ -514,7 +487,7 @@ function Env(t,e){class s{constructor(t){this.env=t}send(t,e="GET"){t="string"==
  * @param {Object} database - Default Database
  * @return {Object} { Settings, Caches, Configs }
  */
-function getENV(key,names,database){let BoxJs=$.getjson(key,database),Argument={};if("undefined"!=typeof $argument&&Boolean($argument)){let arg=Object.fromEntries($argument.split("&").map((item=>item.split("="))));for(let item in arg)setPath(Argument,item,arg[item])}const Store={Settings:database?.Default?.Settings||{},Configs:database?.Default?.Configs||{},Caches:{}};Array.isArray(names)||(names=[names]);for(let name of names)Store.Settings={...Store.Settings,...database?.[name]?.Settings,...BoxJs?.[name]?.Settings,...Argument},Store.Configs={...Store.Configs,...database?.[name]?.Configs},BoxJs?.[name]?.Caches&&"string"==typeof BoxJs?.[name]?.Caches&&(BoxJs[name].Caches=JSON.parse(BoxJs?.[name]?.Caches)),Store.Caches={...Store.Caches,...BoxJs?.[name]?.Caches};return function traverseObject(o,c){for(var t in o){var n=o[t];o[t]="object"==typeof n&&null!==n?traverseObject(n,c):c(t,n)}return o}(Store.Settings,((key,value)=>("true"===value||"false"===value?value=JSON.parse(value):"string"==typeof value&&(value?.includes(",")?value=value.split(","):value&&!isNaN(value)&&(value=parseInt(value,10))),value))),Store;function setPath(object,path,value){path.split(".").reduce(((o,p,i)=>o[p]=path.split(".").length===++i?value:o[p]||{}),object)}}
+function getENV(key,names,database){let BoxJs=$.getjson(key,database),Argument={};if("undefined"!=typeof $argument&&Boolean($argument)){let arg=Object.fromEntries($argument.split("&").map((item=>item.split("="))));for(let item in arg)setPath(Argument,item,arg[item])}const Store={Settings:database?.Default?.Settings||{},Configs:database?.Default?.Configs||{},Caches:{}};Array.isArray(names)||(names=[names]);for(let name of names)Store.Settings={...Store.Settings,...database?.[name]?.Settings,...BoxJs?.[name]?.Settings,...Argument},Store.Configs={...Store.Configs,...database?.[name]?.Configs},BoxJs?.[name]?.Caches&&"string"==typeof BoxJs?.[name]?.Caches&&(BoxJs[name].Caches=JSON.parse(BoxJs?.[name]?.Caches)),Store.Caches={...Store.Caches,...BoxJs?.[name]?.Caches};return function traverseObject(o,c){for(var t in o){var n=o[t];o[t]="object"==typeof n&&null!==n?traverseObject(n,c):c(t,n)}return o}(Store.Settings,((key,value)=>("true"===value||"false"===value?value=JSON.parse(value):"string"==typeof value&&(value=value.includes(",")?value.split(",").map((item=>string2number(item))):string2number(value)),value))),Store;function setPath(object,path,value){path.split(".").reduce(((o,p,i)=>o[p]=path.split(".").length===++i?value:o[p]||{}),object)}function string2number(string){return string&&!isNaN(string)&&(string=parseInt(string,10)),string}}
 
-// https://github.com/VirgilClyne/GetSomeFries/blob/main/function/URL/URLs.embedded.min.js
-function URLs(t){return new class{constructor(t=[]){this.name="URL v1.2.5",this.opts=t,this.json={scheme:"",host:"",path:"",query:{}}}parse(t){let s=t.match(/(?:(?<scheme>.+):\/\/(?<host>[^/]+))?\/?(?<path>[^?]+)?\??(?<query>[^?]+)?/)?.groups??null;if(s?.path?s.paths=s.path.split("/"):s.path="",s?.paths){const t=s.paths[s.paths.length-1];if(t?.includes(".")){const e=t.split(".");s.format=e[e.length-1]}}return s?.query&&(s.query=Object.fromEntries(s.query.split("&").map((t=>t.split("="))))),s}stringify(t=this.json){let s="";return t?.scheme&&t?.host&&(s+=t.scheme+"://"+t.host),t?.path&&(s+=t?.host?"/"+t.path:t.path),t?.query&&(s+="?"+Object.entries(t.query).map((t=>t.join("="))).join("&")),s}}(t)}
+// https://github.com/VirgilClyne/GetSomeFries/blob/main/function/URI/URIs.embedded.min.js
+function URIs(t){return new class{constructor(t=[]){this.name="URI v1.2.6",this.opts=t,this.json={scheme:"",host:"",path:"",query:{}}}parse(t){let s=t.match(/(?:(?<scheme>.+):\/\/(?<host>[^/]+))?\/?(?<path>[^?]+)?\??(?<query>[^?]+)?/)?.groups??null;if(s?.path?s.paths=s.path.split("/"):s.path="",s?.paths){const t=s.paths[s.paths.length-1];if(t?.includes(".")){const e=t.split(".");s.format=e[e.length-1]}}return s?.query&&(s.query=Object.fromEntries(s.query.split("&").map((t=>t.split("="))))),s}stringify(t=this.json){let s="";return t?.scheme&&t?.host&&(s+=t.scheme+"://"+t.host),t?.path&&(s+=t?.host?"/"+t.path:t.path),t?.query&&(s+="?"+Object.entries(t.query).map((t=>t.join("="))).join("&")),s}}(t)}

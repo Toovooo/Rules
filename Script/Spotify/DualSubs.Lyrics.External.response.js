@@ -1,13 +1,13 @@
 /*
-README: https://github.com/DualSubs/Universal
+README: https://github.com/DualSubs
 */
 
-const $ = new Env("🍿️ DualSubs: 🔣 Universal v1.4.1(1) Lyrics.External.response");
-const URL = new URLs();
+const $ = new Env("🍿️ DualSubs: 🔣 Universal v1.5.0(6) Lyrics.External.response");
+const URI = new URIs();
 const LRC = new LRCs();
 const DataBase = {
 	"Default":{
-		"Settings":{"Switch":true,"Type":"Translate","Types":["Official","Translate"],"Languages":["EN","ZH"],"CacheSize":20}
+		"Settings":{"Switch":true,"Type":"Translate","Types":["Official","Translate"],"Languages":["EN","ZH"],"CacheSize":50}
 	},
 	"Universal":{
 		"Settings":{"Switch":true,"Types":["Official","Translate"],"Languages":["EN","ZH"]},
@@ -16,7 +16,7 @@ const DataBase = {
 		}
 	},
 	"YouTube": {
-		"Settings":{"Switch":true,"Type":"Official","Types":["Translate","External"],"Languages":["AUTO","AUTO"],"AutoCC":true,"ShowOnly":false},
+		"Settings":{"Switch":true,"Type":"Official","Types":["Translate","External"],"Languages":["AUTO","ZH"],"AutoCC":true,"ShowOnly":false},
 		"Configs":{
 			"Languages":{"BG":"bg-BG","CS":"cs","DA":"da-DK","DE":"de","EL":"el","EN":"en","EN-GB":"en-GB","EN-US":"en-US","EN-US SDH":"en-US SDH","ES":"es","ES-419":"es-419","ES-ES":"es-ES","ET":"et-EE","FI":"fi","FR":"fr","HU":"hu-HU","ID":"id","IS":"is-IS","IT":"it","JA":"ja","KO":"ko","LT":"lt-LT","LV":"lv-LV","NL":"nl-NL","NO":"nb-NO","PL":"pl-PL","PT":"pt","PT-PT":"pt-PT","PT-BR":"pt-BR","RO":"ro-RO","RU":"ru-RU","SK":"sk-SK","SL":"sl-SI","SV":"sv-SE","YUE":"yue","YUE-HK":"yue-HK","ZH":"zh","ZH-HANS":"zh-Hans","ZH-HK":"zh-Hant-HK","ZH-HANT":"zh-Hant","ZH-TW":"zh-TW"},
 			"translationLanguages":{
@@ -35,20 +35,20 @@ const DataBase = {
 		"Settings":{"Switch":true,"Types":["Translate","External"],"Languages":["AUTO","ZH"]}
 	},
 	"Composite":{
-		"Settings":{"CacheSize":20,"Position":"Reverse","Offset":0,"Tolerance":1000}
+		"Settings":{"CacheSize":20,"ShowOnly":false,"Position":"Reverse","Offset":0,"Tolerance":1000}
 	},
 	"Translate":{
 		"Settings":{"Vendor":"Google","ShowOnly":false,"Position":"Forward","CacheSize":10,"Method":"Part","Times":3,"Interval":500,"Exponential":true},
 		"Configs":{
 			"Languages":{
-				"Google":{"AUTO":"auto","AR":"ar","BG":"bg","CS":"cs","DA":"da","DE":"de","EL":"el","EN":"en","EN-GB":"en","EN-US":"en","EN-US SDH":"en","ES":"es","ES-419":"es","ES-ES":"es","ET":"et","FI":"fi","FR":"fr","HU":"hu","IT":"it","JA":"ja","KO":"ko","LT":"lt","LV":"lv","NL":"nl","NO":"no","PL":"pl","PT":"pt","PT-PT":"pt","PT-BR":"pt","RO":"ro","RU":"ru","SK":"sk","SL":"sl","SV":"sv","IS":"is","TR":"tr","ZH":"zh","ZH-HANS":"zh-CN","ZH-HK":"zh-TW","ZH-HANT":"zh-TW"},
-				"Microsoft":{"AUTO":"","AR":"ar","BG":"bg","CS":"cs","DA":"da","DE":"de","EL":"el","EN":"en","EN-GB":"en","EN-US":"en","EN-US SDH":"en","ES":"es","ES-419":"es","ES-ES":"es","ET":"et","FI":"fi","FR":"fr","HU":"hu","IT":"it","JA":"ja","KO":"ko","LT":"lt","LV":"lv","NL":"nl","NO":"no","PL":"pl","PT":"pt","PT-PT":"pt","PT-BR":"pt","RO":"ro","RU":"ru","SK":"sk","SL":"sl","SV":"sv","IS":"is","TR":"tr","ZH":"zh-Hans","ZH-HANS":"zh-Hans","ZH-HK":"yue","ZH-HANT":"zh-Hant"},
+				"Google":{"AUTO":"auto","AF":"af","AM":"am","AR":"ar","AS":"as","AY":"ay","AZ":"az","BG":"bg","BE":"be","BM":"bm","BN":"bn","BHO":"bho","CS":"cs","DA":"da","DE":"de","EL":"el","EU":"eu","EN":"en","EN-GB":"en","EN-US":"en","EN-US SDH":"en","ES":"es","ES-419":"es","ES-ES":"es","ET":"et","FI":"fi","FR":"fr","FR-CA":"fr","HU":"hu","IS":"is","IT":"it","JA":"ja","KO":"ko","LT":"lt","LV":"lv","NL":"nl","NO":"no","PL":"pl","PT":"pt","PT-PT":"pt","PT-BR":"pt","PA":"pa","RO":"ro","RU":"ru","SK":"sk","SL":"sl","SQ":"sq","ST":"st","SV":"sv","TH":"th","TR":"tr","UK":"uk","UR":"ur","VI":"vi","ZH":"zh","ZH-HANS":"zh-CN","ZH-HK":"zh-TW","ZH-HANT":"zh-TW"},
+				"Microsoft":{"AUTO":"","AF":"af","AM":"am","AR":"ar","AS":"as","AY":"ay","AZ":"az","BG":"bg","BE":"be","BM":"bm","BN":"bn","BHO":"bho","CS":"cs","DA":"da","DE":"de","EL":"el","EU":"eu","EN":"en","EN-GB":"en","EN-US":"en","EN-US SDH":"en","ES":"es","ES-419":"es","ES-ES":"es","ET":"et","FI":"fi","FR":"fr","FR-CA":"fr-ca","HU":"hu","IS":"is","IT":"it","JA":"ja","KO":"ko","LT":"lt","LV":"lv","NL":"nl","NO":"no","PL":"pl","PT":"pt","PT-PT":"pt-pt","PT-BR":"pt","PA":"pa","RO":"ro","RU":"ru","SK":"sk","SL":"sl","SQ":"sq","ST":"st","SV":"sv","TH":"th","TR":"tr","UK":"uk","UR":"ur","VI":"vi","ZH":"zh-Hans","ZH-HANS":"zh-Hans","ZH-HK":"yue","ZH-HANT":"zh-Hant"},
 				"DeepL":{"AUTO":"","BG":"BG","CS":"CS","DA":"DA","DE":"de","EL":"el","EN":"EN-US","EN-GB":"EN-GB","EN-US":"EN-US","EN-US SDH":"EN-US","ES":"ES","ES-419":"ES","ES-ES":"ES","ET":"ET","FI":"FI","FR":"FR","HU":"HU","IT":"IT","JA":"JA","KO":"ko","LT":"LT","LV":"LV","NL":"NL","PL":"PL","PT":"PT-PT","PT-PT":"PT-PT","PT-BR":"PT-BR","RO":"RO","RU":"RU","SK":"SK","SL":"SL","SV":"SV","TR":"TR","ZH":"ZH","ZH-HANS":"ZH","ZH-HK":"ZH","ZH-HANT":"ZH"}
 			}
 		}
 	},
 	"External":{
-		"Settings":{"SubVendor":"URL","LrcVendor":"NeteaseMusicNodeJS","CacheSize":50}
+		"Settings":{"SubVendor":"URL","LrcVendor":"QQMusic","CacheSize":50}
 	},
 	"API":{
 		"Settings":{
@@ -60,17 +60,17 @@ const DataBase = {
 
 /***************** Processing *****************/
 // 解构URL
-let url = URL.parse($request?.url);
-$.log(`⚠ ${$.name}`, `URL: ${JSON.stringify(url)}`, "");
+const URL = URI.parse($request.url);
+$.log(`⚠ ${$.name}`, `URL: ${JSON.stringify(URL)}`, "");
 // 获取连接参数
-const METHOD = $request?.method, HOST = url?.host, PATH = url?.path, PATHs = url?.paths;
+const METHOD = $request.method, HOST = URL.host, PATH = URL.path, PATHs = URL.paths;
 $.log(`⚠ ${$.name}`, `METHOD: ${METHOD}`, "");
 // 获取平台
 const PLATFORM = detectPlatform(HOST);
 $.log(`⚠ ${$.name}, PLATFORM: ${PLATFORM}`, "");
 // 解析格式
-let FORMAT = ($response?.headers?.["Content-Type"] ?? $response?.headers?.["content-type"])?.split(";")?.[0];
-if (FORMAT === "application/octet-stream" || FORMAT === "text/plain") FORMAT = detectFormat(url, $response?.body);
+let FORMAT = ($response.headers?.["Content-Type"] ?? $response.headers?.["content-type"])?.split(";")?.[0];
+if (FORMAT === "application/octet-stream" || FORMAT === "text/plain") FORMAT = detectFormat(URL, $response?.body);
 $.log(`⚠ ${$.name}, FORMAT: ${FORMAT}`, "");
 (async () => {
 	// 读取设置
@@ -80,16 +80,16 @@ $.log(`⚠ ${$.name}, FORMAT: ${FORMAT}`, "");
 		case true:
 		default:
 			// 获取字幕类型与语言
-			const Type = url?.query?.subtype ?? Settings.Type, Languages = [(url?.query?.lang ?? Settings.Languages[0])?.split?.(/[-_]/)?.[0]?.toUpperCase(), (url?.query?.tlang ?? Caches?.tlang ?? Settings.Languages[1])?.split?.(/[-_]/)?.[0]?.toUpperCase()];
+			const Type = URL.query?.subtype ?? Settings.Type, Languages = [URL.query?.lang?.split?.(/[-_]/)?.[0]?.toUpperCase?.() ?? Settings.Languages[0], (URL.query?.tlang?.split?.(/[-_]/)?.[0] ?? Caches?.tlang)?.toUpperCase?.() ?? Settings.Languages[1]];
 			$.log(`⚠ ${$.name}, Type: ${Type}, Languages: ${Languages}`, "");
-			// 创建空数据
-			let body = {};
 			// 查询缓存
 			const trackId = PATHs?.[3];
 			$.log(`🚧 ${$.name}, 调试信息`, `trackId: ${trackId}`, "");
 			const trackInfo = Caches.Metadatas.Tracks.get(trackId);
 			$.log(`🚧 ${$.name}, 调试信息`, `trackInfo: ${JSON.stringify(trackInfo)}`, "");
 			if (trackInfo && !FORMAT) FORMAT = $request?.headers?.Accept ?? $request?.headers?.accept;
+			// 创建空数据
+			let body = {};
 			// 格式判断
 			switch (FORMAT) {
 				case undefined: // 视为无body
@@ -105,55 +105,46 @@ $.log(`⚠ ${$.name}, FORMAT: ${FORMAT}`, "");
 				case "audio/mpegurl":
 					//body = M3U8.parse($response.body);
 					//$.log(`🚧 ${$.name}`, `body: ${JSON.stringify(body)}`, "");
-					//$response.body = M3U8.stringify(PlayList);
+					//$response.body = M3U8.stringify(body);
 					break;
 				case "text/xml":
 				case "text/plist":
 				case "application/xml":
 				case "application/plist":
-				case "application/x-plist": {
+				case "application/x-plist":
 					//body = XML.parse($response.body);
-					//$.log(`🚧 ${$.name}`, `body: ${JSON.stringify(body)}`, "");
 					//$.log(`🚧 ${$.name}`, `body: ${JSON.stringify(body)}`, "");
 					//$response.body = XML.stringify(body);
 					break;
-				};
 				case "text/vtt":
-				case "application/vtt": {
+				case "application/vtt":
 					//body = VTT.parse($response.body);
-					//$.log(`🚧 ${$.name}`, `body: ${JSON.stringify(body)}`, "");
 					//$.log(`🚧 ${$.name}`, `body: ${JSON.stringify(body)}`, "");
 					//$response.body = VTT.stringify(body);
 					break;
-				};
 				case "text/json":
-				case "application/json": {
-					body = JSON.parse($response?.body ?? "{}");
+				case "application/json":
+					body = JSON.parse($response.body ?? "{}");
 					//$.log(`🚧 ${$.name}`, `body: ${JSON.stringify(body)}`, "");
 					switch (PLATFORM) {
-						case "YouTube": {
+						case "YouTube":
 							break;
-						};
-						case "Spotify": {
+						case "Spotify":
 							body = await injectionLyric(Settings.LrcVendor, trackInfo, body);
 							if (!$response?.headers?.["Content-Type"] && $response?.headers?.["content-type"]) $response.headers["Content-Type"] = FORMAT;								$response.headers["Content-Type"] = FORMAT;
 							$response.status = ($.isQuanX()) ? "HTTP/1.1 200 OK" : 200;
 							break;
-						};
 					};
 					//$.log(`🚧 ${$.name}`, `body: ${JSON.stringify(body)}`, "");
 					$response.body = JSON.stringify(body);
 					break;
-				};
 				case "application/protobuf":
 				case "application/x-protobuf":
 				case "application/vnd.google.protobuf":
 				case "application/grpc":
 				case "application/grpc+proto":
 				case "applecation/octet-stream":
-					//$.log(`🚧 ${$.name}`, `$response.body: ${$response.body}`, "");
-					let rawBody = $.isQuanX() ? new Uint8Array($response.bodyBytes) : $response?.body ?? new Uint8Array();
-					//$.log(`🚧 ${$.name}`, `isBuffer? ${ArrayBuffer.isView(rawBody)}: ${JSON.stringify(rawBody)}`, "");
+					let rawBody = $.isQuanX() ? new Uint8Array($response.bodyBytes ?? []) : $response.body ?? new Uint8Array();
 					/******************  initialization start  *******************/
 					// timostamm/protobuf-ts 2.9.0
 					// text-decoder
@@ -217,7 +208,7 @@ $.log(`⚠ ${$.name}, FORMAT: ${FORMAT}`, "");
 												{ no: 1, name: "startTimeMs", kind: "scalar", T: 3 /*ScalarType.INT64*/ },
 												{ no: 2, name: "words", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
 												{ no: 3, name: "syllables", kind: "message", repeat: 1 /*RepeatType.PACKED*/, T: () => Syllable },
-												{ no: 4, name: "endTimeMs", kind: "scalar", opt: true, T: 3 /*ScalarType.INT64*/ }
+												//{ no: 4, name: "endTimeMs", kind: "scalar", opt: true, T: 3 /*ScalarType.INT64*/ }
 											]);
 										}
 									}
@@ -264,7 +255,6 @@ $.log(`⚠ ${$.name}, FORMAT: ${FORMAT}`, "");
 									const Alternative = new Alternative$Type();
 									/******************  initialization finish  *******************/
 									body = ColorLyricsResponse.fromBinary(rawBody);
-									//$.log(`🚧 ${$.name}`, `body: ${JSON.stringify(body)}`, "");
 									/*
 									let UF = UnknownFieldHandler.list(body);
 									$.log(`🚧 ${$.name}`, `UF: ${JSON.stringify(UF)}`, "");
@@ -293,9 +283,8 @@ $.log(`⚠ ${$.name}, FORMAT: ${FORMAT}`, "");
 											break;
 									};
 									body.lyrics.fullscreenAction = 0;
-									if (!$response?.headers?.["Content-Type"] && $response?.headers?.["content-type"]) $response.headers["Content-Type"] = FORMAT;								$response.headers["Content-Type"] = FORMAT;
+									if (!$response?.headers?.["Content-Type"] && $response?.headers?.["content-type"]) $response.headers["Content-Type"] = FORMAT;
 									$response.status = ($.isQuanX()) ? "HTTP/1.1 200 OK" : 200;
-									//$.log(`🚧 ${$.name}`, `body: ${JSON.stringify(body)}`, "");
 									rawBody = ColorLyricsResponse.toBinary(body);
 									break;
 								};
@@ -310,6 +299,15 @@ $.log(`⚠ ${$.name}, FORMAT: ${FORMAT}`, "");
 					if ($.isQuanX()) $response.bodyBytes = rawBody
 					else $response.body = rawBody;
 					break;
+			};
+			// 缓存查询信息
+			if (trackInfo?.NeteaseMusic?.id ?? trackInfo?.QQMusic?.mid) {
+				Caches.Metadatas.Tracks.set(trackInfo.id, trackInfo);
+				// 格式化缓存
+				$.log(`🚧 ${$.name}`, `Caches.Metadatas.Tracks: ${JSON.stringify([...Caches.Metadatas.Tracks.entries()])}`, "");
+				Caches.Metadatas.Tracks = setCache(Caches.Metadatas.Tracks, Settings.CacheSize);
+				// 写入持久化储存
+				$.setjson(Caches.Metadatas.Tracks, `@DualSubs.${PLATFORM}.Caches.Metadatas.Tracks`);
 			};
 			break;
 		case false:
@@ -329,21 +327,21 @@ $.log(`⚠ ${$.name}, FORMAT: ${FORMAT}`, "");
 					switch (FORMAT) {
 						case undefined: // 视为无body
 							// 返回普通数据
-							$.done({ headers: $response.headers });
+							$.done({ status: $response.status, headers: $response.headers });
 							break;
 						default:
 							// 返回普通数据
-							$.done({ headers: $response.headers, body: $response.body });
+							$.done({ status: $response.status, headers: $response.headers, body: $response.body });
 							break;
 						case "application/protobuf":
 						case "application/x-protobuf":
 						case "application/vnd.google.protobuf":
 						case "application/grpc":
 						case "application/grpc+proto":
-						//case "applecation/octet-stream":
+						case "applecation/octet-stream":
 							// 返回二进制数据
 							//$.log(`${$response.bodyBytes.byteLength}---${$response.bodyBytes.buffer.byteLength}`);
-							$.done({ headers: $response.headers, bodyBytes: $response.bodyBytes.buffer.slice($response.bodyBytes.byteOffset, $response.bodyBytes.byteLength + $response.bodyBytes.byteOffset) });
+							$.done({ status: $response.status, headers: $response.headers, bodyBytes: $response.bodyBytes.buffer.slice($response.bodyBytes.byteOffset, $response.bodyBytes.byteLength + $response.bodyBytes.byteOffset) });
 							break;
 					};
 				} else $.done($response);
@@ -432,11 +430,11 @@ function setENV(name, platforms, database) {
 	$.log(`✅ ${$.name}, Set Environment Variables`, `Settings: ${typeof Settings}`, `Settings内容: ${JSON.stringify(Settings)}`, "");
 	/***************** Caches *****************/
 	//$.log(`✅ ${$.name}, Set Environment Variables`, `Caches: ${typeof Caches}`, `Caches内容: ${JSON.stringify(Caches)}`, "");
-	if (typeof Caches.Playlists !== "object" || Array.isArray(Caches.Playlists)) Caches.Playlists = {}; // 创建Playlists缓存
+	if (typeof Caches?.Playlists !== "object" || Array.isArray(Caches?.Playlists)) Caches.Playlists = {}; // 创建Playlists缓存
 	Caches.Playlists.Master = new Map(JSON.parse(Caches?.Playlists?.Master || "[]")); // Strings转Array转Map
 	Caches.Playlists.Subtitle = new Map(JSON.parse(Caches?.Playlists?.Subtitle || "[]")); // Strings转Array转Map
 	if (typeof Caches?.Subtitles !== "object") Caches.Subtitles = new Map(JSON.parse(Caches?.Subtitles || "[]")); // Strings转Array转Map
-	if (typeof Caches.Metadatas !== "object" || Array.isArray(Caches.Metadatas)) Caches.Metadatas = {}; // 创建Playlists缓存
+	if (typeof Caches?.Metadatas !== "object" || Array.isArray(Caches?.Metadatas)) Caches.Metadatas = {}; // 创建Playlists缓存
 	if (typeof Caches?.Metadatas?.Tracks !== "object") Caches.Metadatas.Tracks = new Map(JSON.parse(Caches?.Metadatas?.Tracks || "[]")); // Strings转Array转Map
 	/***************** Configs *****************/
 	return { Settings, Caches, Configs };
@@ -451,8 +449,8 @@ function setENV(name, platforms, database) {
  */
 function detectFormat(url, body) {
 	let format = undefined;
-	$.log(`☑️ ${$.name}`, `detectFormat, format: ${url?.format ?? url?.query?.fmt ?? url?.query?.format}`, "");
-	switch (url?.format ?? url?.query?.fmt ?? url?.query?.format) {
+	$.log(`☑️ ${$.name}`, `detectFormat, format: ${url.format ?? url.query?.fmt ?? url.query?.format}`, "");
+	switch (url.format ?? url.query?.fmt ?? url.query?.format) {
 		case "txt":
 			format = "text/plain";
 			break;
@@ -480,8 +478,6 @@ function detectFormat(url, body) {
 			break;
 		case undefined:
 			const HEADER = body?.substring?.(0, 6).trim?.();
-			//$.log(`🚧 ${$.name}`, `detectFormat, HEADER: ${HEADER}`, "");
-			//$.log(`🚧 ${$.name}`, `detectFormat, HEADER?.substring?.(0, 1): ${HEADER?.substring?.(0, 1)}`, "");
 			switch (HEADER) {
 				case "<?xml":
 					format = "text/xml";
@@ -571,11 +567,10 @@ async function Fetch(request = {}) {
 		? await $.http.post(request)
 		: await $.http.get(request);
 	$.log(`✅ ${$.name}, Fetch Ruled Reqeust`, "");
-	//$.log(`🚧 ${$.name}, Fetch Ruled Reqeust`, `Response:${JSON.stringify(response)}`, "");
 	return response;
 };
 
-async function injectionLyric(vendor = "NeteaseMusicNodeJS", trackInfo = {}, body = $response.body){
+async function injectionLyric(vendor = "QQMusic", trackInfo = {}, body = $response.body) {
 	$.log(`☑️ ${$.name}, Injection Lyric`, `vendor: ${vendor}, trackInfo: ${JSON.stringify(trackInfo)}`, "");
 	const UAPool = [
 		"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36", // 13.5%
@@ -593,13 +588,14 @@ async function injectionLyric(vendor = "NeteaseMusicNodeJS", trackInfo = {}, bod
 	];
 	// 外部歌词
 	let externalLyric = undefined;
+	let transLyric = undefined;
 	// 构建歌词结构
 	if (!body) body = {};
 	// 按平台填充必要歌词信息
 	switch (PLATFORM) {
 		case "Spotify":
 			body.lyrics = {
-				"syncType": "LINE_SYNCED",
+				"syncType": "UNSYNCED",
 				//"syncType": 1,
 				"lines": [
 					{
@@ -634,61 +630,90 @@ async function injectionLyric(vendor = "NeteaseMusicNodeJS", trackInfo = {}, bod
 	switch (vendor) {
 		case "NeteaseMusicNodeJS":
 		case "NeteaseMusic":
-		default:
-			trackInfo.NeteaseMusic = await searchTrack(vendor, `${trackInfo.track} - ${trackInfo.artist}`, UAPool);
-			if (trackInfo?.NeteaseMusic?.id) {
-				externalLyric = await searchLyric(vendor, trackInfo.NeteaseMusic.id, UAPool);
-				switch (PLATFORM) {
-					case "Spotify":
+			if (!trackInfo?.NeteaseMusic?.id) trackInfo.NeteaseMusic = await searchTrack(vendor, `${trackInfo.track} ${trackInfo.artist}`, UAPool);
+			if (trackInfo?.NeteaseMusic?.id) externalLyric = await searchLyric(vendor, trackInfo.NeteaseMusic.id, UAPool);
+			if (externalLyric?.tlyric?.lyric) transLyric = LRC.toSpotify(externalLyric?.tlyric?.lyric);
+			switch (PLATFORM) {
+				case "Spotify":
+					if (externalLyric?.yrc?.lyric) {
+						body.lyrics.syncType = "SYLLABLE_SYNCED";
+						body.lyrics.lines = LRC.toSpotify(externalLyric?.yrc?.lyric);
+					} else if (externalLyric?.lrc?.lyric) {
+						body.lyrics.syncType = "LINE_SYNCED";
 						body.lyrics.lines = LRC.toSpotify(externalLyric?.lrc?.lyric);
-						if (externalLyric?.tlyric?.lyric) {
-							let tlyric = LRC.toSpotify(externalLyric?.tlyric?.lyric);
-							let duolyric = LRC.combineSpotify(body.lyrics.lines, tlyric);
-							body.lyrics.alternatives.push({
-								"language": "zh",
-								"lines": duolyric.map(line => line?.twords ?? "♪")
-							});
-						}
-						body.lyrics.provider = "NeteaseMusic";
-						body.lyrics.providerLyricsId = trackInfo.NeteaseMusic.id.toString();
-						body.lyrics.providerDisplayName = `网易云音乐 - ${externalLyric?.lyricUser?.nickname ?? "未知"}`;
-						body.colors.background = -8249806; // 网易红 8527410 821E32 rgb(130,30,50)
-						//$.log(`🚧 ${$.name}, 调试信息`, `body.lyrics.lines: ${JSON.stringify(body.lyrics.lines)}`, "");
-						break
-				};
+					};
+					body.lyrics.provider = "NeteaseMusic";
+					body.lyrics.providerLyricsId = trackInfo?.NeteaseMusic?.id?.toString?.();
+					body.lyrics.providerDisplayName = `网易云音乐 - ${externalLyric?.lyricUser?.nickname ?? "未知"}`;
+					body.colors.background = -8249806; // 网易红 8527410 #821E32 rgb(130,30,50)
+					//body.colors.background = -55775; // 网易红 16721441 #FF2621 rgb(255,38,33)
+					break
+				case "YouTube":
+					break;
 			};
 			break;
 		case "QQMusic":
-			trackInfo.QQMusic = await searchTrack(vendor, `${trackInfo.track} - ${trackInfo.artist}`, UAPool);
-			if (trackInfo?.QQMusic?.mid) {
-				externalLyric = await searchLyric(vendor, trackInfo.QQMusic.mid, UAPool);
-				switch (PLATFORM) {
-					case "Spotify":
+		default:
+			if (!trackInfo?.QQMusic?.mid) trackInfo.QQMusic = await searchTrack(vendor, `${trackInfo.track} ${trackInfo.artist}`, UAPool);
+			if (trackInfo?.QQMusic?.mid) externalLyric = await searchLyric(vendor, trackInfo.QQMusic.mid, UAPool);
+			if (externalLyric?.trans) transLyric = LRC.toSpotify(externalLyric?.trans);
+			switch (PLATFORM) {
+				case "Spotify":
+					if (externalLyric?.lyric) {
+						body.lyrics.syncType = "LINE_SYNCED";
 						body.lyrics.lines = LRC.toSpotify(externalLyric?.lyric);
-						if (externalLyric?.trans) {
-							let tlyric = LRC.toSpotify(externalLyric?.trans);
-							let duolyric = LRC.combineSpotify(body.lyrics.lines, tlyric);
-							body.lyrics.alternatives.push({
-								"language": "zh",
-								"lines": duolyric.map(line => line?.twords ?? "♪")
-							});
-						}
-						body.lyrics.provider = "QQMusic";
-						body.lyrics.providerLyricsId = trackInfo.QQMusic.mid.toString();
-						body.lyrics.providerDisplayName = `QQ音乐 - ${externalLyric?.lyricUser?.nickname ?? "未知"}`;
-						body.colors.background = -11038189; // QQ音乐绿 5739027 579213 rgb(87,146,19)
-						//$.log(`🚧 ${$.name}, 调试信息`, `body.lyrics.lines: ${JSON.stringify(body.lyrics.lines)}`, "");
-						break
-				};
+					};
+					body.lyrics.provider = "QQMusic";
+					body.lyrics.providerLyricsId = trackInfo?.QQMusic?.mid?.toString?.();
+					body.lyrics.providerDisplayName = `QQ音乐`;
+					body.colors.background = -11038189; // QQ音乐绿 5739027 #579213 rgb(87,146,19)
+					break
+				case "YouTube":
+					break;
 			};
 			break;
 	};
+	// 翻译歌词
+	if (transLyric) {
+		let duolyric = LRC.combineSpotify(body.lyrics.lines, transLyric);
+		switch (PLATFORM) {
+			case "Spotify":
+				switch ($request?.headers?.["app-platform"] ?? $request?.headers?.["App-Platform"]) {
+					case "OSX": // macOS App 暂不支持翻译功能
+					case "Win32_x86_64": // Windows App 暂不支持翻译功能
+					case "WebPlayer": // Web App
+					case undefined:
+					default:
+						/*
+						body.lyrics.lines = body.lyrics.lines.map((line, i) => {
+							if (line?.words) line.words = combineText(line.words, duolyric?.[i]?.twords ?? "♪");
+							return line;
+						});
+						*/
+						body.lyrics.lines = LRC.separateSpotify(duolyric).map(line => {
+							line.startTimeMs = line.startTimeMs.toString();
+							line.endTimeMs = line.endTimeMs.toString();
+							return line;
+						});
+					//break; 不中断，继续处理
+					case "iOS":
+						body.lyrics.alternatives.unshift({
+							"language": "zh",
+							"lines": duolyric.map(line => line?.twords ?? "♪")
+						});
+						break;
+				};
+				break
+			case "YouTube":
+				break;
+		};
+	};
+
 	$.log(`✅ ${$.name}, Injection Lyric`, "");
-	//$.log(`🚧 ${$.name}, Injection Lyric`, `body: ${JSON.stringify(body)}`, "");
 	return body;
 };
 
-async function searchTrack(vendor = "NeteaseMusicNodeJS", keyword = "", UAPool = []){
+async function searchTrack(vendor = "QQMusic", keyword = "", UAPool = []){
 	$.log(`☑️ ${$.name}, Search Track`, `vendor: ${vendor}, keyword: ${keyword}`, "");
 	const searchRequest = {
 		"headers": {
@@ -698,12 +723,13 @@ async function searchTrack(vendor = "NeteaseMusicNodeJS", keyword = "", UAPool =
 	};
 	const trackInfo = {};
 	switch (vendor) {
-		case "NeteaseMusicNodeJS":
-		default: {
+		case "NeteaseMusicNodeJS": {
 			const HostPool = [
 				"api.music.areschang.top",
 				"mu-api.yuk0.com",
-				"netease.happyking.top"
+				"netease.happyking.top",
+				"music.lovethewind.cn",
+				"neteasecloudmusicapi.nanocat.cloud"
 			];
 			// 搜索歌曲
 			const searchUrl = {
@@ -718,8 +744,7 @@ async function searchTrack(vendor = "NeteaseMusicNodeJS", keyword = "", UAPool =
 					"keywords": encodeURIComponent(keyword),
 				}
 			};
-			//$.log(`🚧 ${$.name}, 调试信息`, `searchUrl: ${JSON.stringify(searchUrl)}`, "");
-			searchRequest.url = URL.stringify(searchUrl);
+			searchRequest.url = URI.stringify(searchUrl);
 			searchRequest.headers.Referer = "https://music.163.com";
 			const searchResult = await $.http.get(searchRequest).then(response => {
 				//$.log(`🚧 ${$.name}, 调试信息`, `searchResult: ${JSON.stringify(response.body)}`, "");
@@ -743,11 +768,10 @@ async function searchTrack(vendor = "NeteaseMusicNodeJS", keyword = "", UAPool =
 					"s": encodeURIComponent(keyword),
 				}
 			};
-			//$.log(`🚧 ${$.name}, 调试信息`, `searchUrl: ${JSON.stringify(searchUrl)}`, "");
-			searchRequest.url = URL.stringify(searchUrl);
+			searchRequest.url = URI.stringify(searchUrl);
 			searchRequest.headers.Referer = "https://music.163.com";
 			const searchResult = await $.http.get(searchRequest).then(response => {
-				$.log(`🚧 ${$.name}, 调试信息`, `searchResult: ${JSON.stringify(response)}`, "");
+				$.log(`🚧 ${$.name}, 调试信息`, `searchResult: ${JSON.stringify(response.body)}`, "");
 				body = JSON.parse(response.body);
 				trackInfo.id = body?.result?.songs?.[0]?.id;
 				trackInfo.track = body?.result?.songs?.[0]?.name;
@@ -756,40 +780,34 @@ async function searchTrack(vendor = "NeteaseMusicNodeJS", keyword = "", UAPool =
 			});
 			break;
 		};
-		case "QQMusic": {
+		case "QQMusic":
+		default: {
 			const searchUrl = {
 				"scheme": "https",
-				"host": "c.y.qq.com",
-				"path": "soso/fcgi-bin/search_for_qq_cp",
-				//"path": "soso/fcgi-bin/client_search_cp",
-				"query": {
-					"format": "json",
-					//"outCharset": 'utf-8',
-					//"ct": 24,
-					//"qqmusic_ver": 1298,
-					"p": 1,
-					"n": 1,
-					"w": encodeURIComponent(keyword),
-					//"key": encodeURIComponent(keyword),
-					"remoteplace": 'txt.yqq.song',
-					//"t": 0,
-					//"aggr": 1,
-					//"cr": 1,
-					//"lossless": 0,
-					//"flag_qc": 0,
-					//"platform": 'yqq.json',
-				}
+				"host": "u.y.qq.com",
+				"path": "cgi-bin/musicu.fcg"
 			};
-			//$.log(`🚧 ${$.name}, 调试信息`, `searchUrl: ${JSON.stringify(searchUrl)}`, "");
-			searchRequest.url = URL.stringify(searchUrl);
+			searchRequest.url = URI.stringify(searchUrl);
 			searchRequest.headers.Referer = "https://c.y.qq.com";
-			const searchResult = await $.http.get(searchRequest).then(response => {
-				//$.log(`🚧 ${$.name}, 调试信息`, `searchResult: ${JSON.stringify(response)}`, "");
+			searchRequest.body = JSON.stringify({
+				"music.search.SearchCgiService": {
+					"method": "DoSearchForQQMusicDesktop",
+					"module": "music.search.SearchCgiService",
+					"param": {
+						"num_per_page": 1,
+						"page_num": 1,
+						"query": keyword,
+						"search_type": 0
+					}
+				}
+			});
+			const searchResult = await $.http.post(searchRequest).then(response => {
 				body = JSON.parse(response.body);
-				trackInfo.mid = body?.data?.song?.list?.[0]?.songmid;
-				trackInfo.track = body?.data?.song?.list?.[0]?.songname;
-				trackInfo.album = body?.data?.song?.list?.[0]?.albumname;
-				trackInfo.artist = body?.data?.song?.list?.[0]?.singer?.[0]?.name;
+				body = body["music.search.SearchCgiService"].data.body;
+				trackInfo.mid = body?.song?.list?.[0]?.mid;
+				trackInfo.track = body?.song?.list?.[0]?.name;
+				trackInfo.album = body?.song?.list?.[0]?.album?.name;
+				trackInfo.artist = body?.song?.list?.[0]?.singer?.[0]?.name;
 			});
 			break;
 		};
@@ -798,7 +816,7 @@ async function searchTrack(vendor = "NeteaseMusicNodeJS", keyword = "", UAPool =
 	return trackInfo;
 };
 
-async function searchLyric(vendor = "NeteaseMusicNodeJS", trackId = undefined, UAPool = []){
+async function searchLyric(vendor = "QQMusic", trackId = undefined, UAPool = []){
 	$.log(`☑️ ${$.name}, Search Lyric`, `vendor: ${vendor}, trackId: ${trackId}`, "");
 	const lyricRequest = {
 		"headers": {
@@ -808,12 +826,13 @@ async function searchLyric(vendor = "NeteaseMusicNodeJS", trackId = undefined, U
 	};
 	let lyricResult = {};
 	switch (vendor) {
-		case "NeteaseMusicNodeJS":
-		default: {
+		case "NeteaseMusicNodeJS": {
 			const HostPool = [
 				"api.music.areschang.top",
 				"mu-api.yuk0.com",
-				"netease.happyking.top"
+				"netease.happyking.top",
+				"music.lovethewind.cn",
+				"neteasecloudmusicapi.nanocat.cloud"
 			];
 			const lyricUrl = {
 				"scheme": "https",
@@ -823,8 +842,7 @@ async function searchLyric(vendor = "NeteaseMusicNodeJS", trackId = undefined, U
 					"id": trackId // trackInfo.NeteaseMusic.id
 				}
 			};
-			//$.log(`🚧 ${$.name}, 调试信息`, `lyricUrl: ${JSON.stringify(lyricUrl)}`, "");
-			lyricRequest.url = URL.stringify(lyricUrl);
+			lyricRequest.url = URI.stringify(lyricUrl);
 			lyricRequest.headers.Referer = "https://music.163.com";
 			lyricResult = await $.http.get(lyricRequest).then(response => JSON.parse(response.body));
 			break;
@@ -839,12 +857,13 @@ async function searchLyric(vendor = "NeteaseMusicNodeJS", trackId = undefined, U
 				}
 			};
 			$.log(`🚧 ${$.name}, 调试信息`, `lyricUrl: ${JSON.stringify(lyricUrl)}`, "");
-			lyricRequest.url = URL.stringify(lyricUrl);
+			lyricRequest.url = URI.stringify(lyricUrl);
 			lyricRequest.headers.Referer = "https://music.163.com";
 			lyricResult = await $.http.get(lyricRequest).then(response => JSON.parse(response.body));
 			break;
 		};
-		case "QQMusic": {
+		case "QQMusic":
+		default: {
 			const lyricUrl = {
 				"scheme": "https",
 				"host": "c.y.qq.com",
@@ -856,15 +875,13 @@ async function searchLyric(vendor = "NeteaseMusicNodeJS", trackId = undefined, U
 					"songmid": trackId // trackInfo.QQMusic.mid
 				}
 			};
-			//$.log(`🚧 ${$.name}, 调试信息`, `lyricUrl: ${JSON.stringify(lyricUrl)}`, "");
-			lyricRequest.url = URL.stringify(lyricUrl);
+			lyricRequest.url = URI.stringify(lyricUrl);
 			lyricRequest.headers.Referer = "https://lyric.music.qq.com";
 			lyricResult = await $.http.get(lyricRequest).then(response => JSON.parse(response.body));
 			break;
 		};
 	};
 	$.log(`✅ ${$.name}, Search Lyric`, "");
-	//$.log(`🚧 ${$.name}, Search Lyric`, `lyricResult: ${JSON.stringify(lyricResult)}`, "");
 	return lyricResult;
 };
 
@@ -952,16 +969,16 @@ function Env(t,e){class s{constructor(t){this.env=t}send(t,e="GET"){t="string"==
  * @param {Object} database - Default Database
  * @return {Object} { Settings, Caches, Configs }
  */
-function getENV(key,names,database){let BoxJs=$.getjson(key,database),Argument={};if("undefined"!=typeof $argument&&Boolean($argument)){let arg=Object.fromEntries($argument.split("&").map((item=>item.split("="))));for(let item in arg)setPath(Argument,item,arg[item])}const Store={Settings:database?.Default?.Settings||{},Configs:database?.Default?.Configs||{},Caches:{}};Array.isArray(names)||(names=[names]);for(let name of names)Store.Settings={...Store.Settings,...database?.[name]?.Settings,...BoxJs?.[name]?.Settings,...Argument},Store.Configs={...Store.Configs,...database?.[name]?.Configs},BoxJs?.[name]?.Caches&&"string"==typeof BoxJs?.[name]?.Caches&&(BoxJs[name].Caches=JSON.parse(BoxJs?.[name]?.Caches)),Store.Caches={...Store.Caches,...BoxJs?.[name]?.Caches};return function traverseObject(o,c){for(var t in o){var n=o[t];o[t]="object"==typeof n&&null!==n?traverseObject(n,c):c(t,n)}return o}(Store.Settings,((key,value)=>("true"===value||"false"===value?value=JSON.parse(value):"string"==typeof value&&(value?.includes(",")?value=value.split(","):value&&!isNaN(value)&&(value=parseInt(value,10))),value))),Store;function setPath(object,path,value){path.split(".").reduce(((o,p,i)=>o[p]=path.split(".").length===++i?value:o[p]||{}),object)}}
+function getENV(key,names,database){let BoxJs=$.getjson(key,database),Argument={};if("undefined"!=typeof $argument&&Boolean($argument)){let arg=Object.fromEntries($argument.split("&").map((item=>item.split("="))));for(let item in arg)setPath(Argument,item,arg[item])}const Store={Settings:database?.Default?.Settings||{},Configs:database?.Default?.Configs||{},Caches:{}};Array.isArray(names)||(names=[names]);for(let name of names)Store.Settings={...Store.Settings,...database?.[name]?.Settings,...BoxJs?.[name]?.Settings,...Argument},Store.Configs={...Store.Configs,...database?.[name]?.Configs},BoxJs?.[name]?.Caches&&"string"==typeof BoxJs?.[name]?.Caches&&(BoxJs[name].Caches=JSON.parse(BoxJs?.[name]?.Caches)),Store.Caches={...Store.Caches,...BoxJs?.[name]?.Caches};return function traverseObject(o,c){for(var t in o){var n=o[t];o[t]="object"==typeof n&&null!==n?traverseObject(n,c):c(t,n)}return o}(Store.Settings,((key,value)=>("true"===value||"false"===value?value=JSON.parse(value):"string"==typeof value&&(value=value.includes(",")?value.split(",").map((item=>string2number(item))):string2number(value)),value))),Store;function setPath(object,path,value){path.split(".").reduce(((o,p,i)=>o[p]=path.split(".").length===++i?value:o[p]||{}),object)}function string2number(string){return string&&!isNaN(string)&&(string=parseInt(string,10)),string}}
 
-// https://github.com/VirgilClyne/GetSomeFries/blob/main/function/URL/URLs.embedded.min.js
-function URLs(t){return new class{constructor(t=[]){this.name="URL v1.2.5",this.opts=t,this.json={scheme:"",host:"",path:"",query:{}}}parse(t){let s=t.match(/(?:(?<scheme>.+):\/\/(?<host>[^/]+))?\/?(?<path>[^?]+)?\??(?<query>[^?]+)?/)?.groups??null;if(s?.path?s.paths=s.path.split("/"):s.path="",s?.paths){const t=s.paths[s.paths.length-1];if(t?.includes(".")){const e=t.split(".");s.format=e[e.length-1]}}return s?.query&&(s.query=Object.fromEntries(s.query.split("&").map((t=>t.split("="))))),s}stringify(t=this.json){let s="";return t?.scheme&&t?.host&&(s+=t.scheme+"://"+t.host),t?.path&&(s+=t?.host?"/"+t.path:t.path),t?.query&&(s+="?"+Object.entries(t.query).map((t=>t.join("="))).join("&")),s}}(t)}
+// https://github.com/VirgilClyne/GetSomeFries/blob/main/function/URI/URIs.embedded.min.js
+function URIs(t){return new class{constructor(t=[]){this.name="URI v1.2.6",this.opts=t,this.json={scheme:"",host:"",path:"",query:{}}}parse(t){let s=t.match(/(?:(?<scheme>.+):\/\/(?<host>[^/]+))?\/?(?<path>[^?]+)?\??(?<query>[^?]+)?/)?.groups??null;if(s?.path?s.paths=s.path.split("/"):s.path="",s?.paths){const t=s.paths[s.paths.length-1];if(t?.includes(".")){const e=t.split(".");s.format=e[e.length-1]}}return s?.query&&(s.query=Object.fromEntries(s.query.split("&").map((t=>t.split("="))))),s}stringify(t=this.json){let s="";return t?.scheme&&t?.host&&(s+=t.scheme+"://"+t.host),t?.path&&(s+=t?.host?"/"+t.path:t.path),t?.query&&(s+="?"+Object.entries(t.query).map((t=>t.join("="))).join("&")),s}}(t)}
 
 // https://github.com/DualSubs/LRC/blob/main/LRCs.embedded.min.js
 function LRCs(opts) {
 	return new (class {
 		constructor(opts) {
-			this.name = "LRC v0.2.1";
+			this.name = "LRC v0.4.0";
 			this.opts = opts;
 			this.newLine = "\n";
 		};
@@ -969,33 +986,43 @@ function LRCs(opts) {
 		toSpotify(txt = new String) {
 			//console.log(`☑️ ${this.name}, LRC.toSpotify`, "");
 			let json = txt?.split?.(this.newLine)?.filter?.(Boolean)?.map?.(line=> {
-				let Line = {};
+				const Line = {
+					"startTimeMs": 0,
+					"words": "",
+					"syllables": [],
+					"endTimeMs": 0
+				};
 				switch (line?.trim?.()?.substring?.(0, 1)) {
 					case "{":
 						line = JSON.parse(line);
-						Line = {
-							"startTimeMs": (line.t < 0) ? 0 : line.t,
-							"words": line?.c?.map?.(word => word.tx).join(" "),
-							"syllables": [],
-							"endTimeMs": 0
-						};
+						//$.log(`🚧 ${$.name}, 调试信息`, `line: ${JSON.stringify(line)}`, "");
+						Line.startTimeMs = (line.t < 0) ? 0 : line.t;
+						Line.words = line?.c?.map?.(word => word.tx).join("");
 						break;
 					case "[":
-						const LineRegex = /^(?:\[(?<startTimeMs>[:.1234567890]+)\])?(?<words>.*)/;
+						const LineRegex = /^\[(?:(?<startTimeMs>(\d\d:\d\d\.\d\d\d?|\d+,\d+))|(?<tag>\w+:.*))\](?<words>.*)?/;
+						const SyllableRegex = /\((?<startTimeMs>\d+),\d+,\d+\)/g;
 						line = line.match(LineRegex)?.groups;
-						//$.log(`🚧 ${$.name}, 调试信息`, `line: ${JSON.stringify(line)}`, "");
-						let startTimeMs = (line?.startTimeMs ?? "0:0").split(":");
-						line.startTimeMs = Math.round((parseInt(startTimeMs[0], 10) * 60 + parseFloat(startTimeMs[1], 10)) * 1000);
-						if (line.startTimeMs < 0) line.startTimeMs = 0;
-						Line = {
-							"startTimeMs": line.startTimeMs,
-							"words": line?.words ?? "♪",
-							"syllables": [],
-							"endTimeMs": 0
-						};
+						if (line?.startTimeMs?.includes(":")) {
+							Line.startTimeMs = (line?.startTimeMs ?? "0:0").split(":");
+							Line.startTimeMs = Math.round((parseInt(Line.startTimeMs[0], 10) * 60 + parseFloat(Line.startTimeMs[1], 10)) * 1000);
+							if (Line.startTimeMs < 0) Line.startTimeMs = 0;
+						} else if (line?.startTimeMs?.includes(",")) Line.startTimeMs = parseInt(line?.startTimeMs?.split(",")?.[0], 10);
+						if (SyllableRegex.test(line?.words)) {
+							let index = 0, syllablesArray = [], syllablesOriginArray = line?.words?.split(SyllableRegex);
+							syllablesOriginArray.shift();
+    						while(index < syllablesOriginArray.length) syllablesArray.push(syllablesOriginArray.slice(index, index += 2));
+							syllablesArray.forEach((syllables) => {
+								Line.words += syllables[1];
+								let syllable = {
+									"startTimeMs": parseInt(syllables[0], 10),
+									"numChars": syllables[1].length
+								};
+								Line.syllables.push(syllable);
+							});
+						} else Line.words = line?.words?.decodeHTML?.() ?? "";
 						break;
 				};
-				//$.log(`🚧 ${$.name}, 调试信息`, `Line: ${JSON.stringify(Line)}`, "");
 				return Line;
 			});
 			//console.log(`✅ ${this.name}, LRC.toSpotify, json: ${JSON.stringify(json)}`, "");
@@ -1010,16 +1037,52 @@ function LRCs(opts) {
 			//console.log(`☑️ ${this.name}, LRC.combineSpotify`, "");
 			let combineLyric = [];
 			for (let line1 of array1) {
+				let line = line1;
 				for (let line2 of array2) {
-					if (line1.startTimeMs === line2.startTimeMs) {
-						line1.twords = line2?.words ?? "♪";
+					if (Math.abs(line1.startTimeMs - line2.startTimeMs) < 1000) {
+						line = {
+							"startTimeMs": line1.startTimeMs,
+							"words": line1?.words ?? "",
+							"twords": line2?.words ?? "",
+							"syllables": line1?.syllables ?? [],
+							"endTimeMs": 0
+						};
 						break;
 					};
 				};
-				combineLyric.push(line1);
+				combineLyric.push(line);
 			};
 			//console.log(`✅ ${this.name}, LRC.combineSpotify, combineLyric: ${JSON.stringify(combineLyric)}`, "");
 			return combineLyric;
 		};
+
+		separateSpotify(array = new Array) {
+			//console.log(`☑️ ${this.name}, LRC.separateSpotify`, "");
+			let separateLyric = array.map(line => {
+				let line1 = {
+					"startTimeMs": line.startTimeMs,
+					"words": line?.words ?? "",
+					"syllables": line?.syllables ?? [],
+					"endTimeMs": 0
+				};
+				let line2 = {
+					"startTimeMs": line.startTimeMs + 100,
+					"words": line?.twords ?? "",
+					"syllables": [],
+					"endTimeMs": 0
+				};
+				return [line1, line2];
+			}).flat(Infinity);
+			//console.log(`✅ ${this.name}, LRC.separateSpotify, separateLyric: ${JSON.stringify(separateLyric)}`, "");
+			return separateLyric;
+		};
 	})(opts)
+};
+
+String.prototype.decodeHTML = function () {
+	return this.replace(/&apos;/g, "'")
+		.replace(/&quot;/g, '"')
+		.replace(/&gt;/g, '>')
+		.replace(/&lt;/g, '<')
+		.replace(/&amp;/g, '&');
 };
