@@ -4,7 +4,9 @@
 
 ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/SpotifyProto.js
 ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ url script-request-header https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/SpotifyJson.js
-^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/SpotifyLyrics.js
-^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*) url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/SpotifyLyrics.js
+^https?:\/\/api\.spotify\.com\/v1\/tracks\? url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/DualSubs.Spotify.response.js
+^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*) url script-request-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/DualSubs.Spotify.request.js
+^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)subtype=External url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/DualSubs.Lyrics.External.response.js
+^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*) url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/DualSubs.Subtitles.Translate.response.js
 
-hostname = spclient.wg.spotify.com
+hostname = api.spotify.com, spclient.wg.spotify.com
