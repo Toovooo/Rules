@@ -8,17 +8,17 @@
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting) url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YoutubeResponse.js
 
 # YouTube
-^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player url script-request-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubs.YouTube.request.js
-^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubs.YouTube.response.js
-^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player url script-request-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubs.YouTube.request.js
-^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubs.YouTube.response.js
-^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext url script-request-header https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubs.YouTube.request.js
+^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player url script-request-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YouTube.request.js
+^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YouTube.response.js
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player url script-request-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YouTube.request.js
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YouTube.response.js
+^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext url script-request-header https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YouTube.request.js
 ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=Translate url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/Translate.response.js
 ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/Composite.Subtitles.response.js
 
 # YouTube Music
-^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse url script-request-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubs.YouTube.request.js
-^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse url script-request-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/DualSubs.YouTube.request.js
+^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse url script-request-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YouTube.request.js
+^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse url script-request-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YouTube.request.js
 ^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/Translate.response.js
 ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse url script-response-body https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/Translate.response.js
 
