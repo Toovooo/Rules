@@ -14,4 +14,4 @@ DOMAIN-SUFFIX,xvideos.com,PROXY
 http-response ^https:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice\? script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Emby/Emby.js, requires-body=true, binary-body-mode=true, tag=播放解锁
 
 [Mitm]
-hostname = mb3admin.com, cf2.jmsooo.com, cf.jmsooo.com, embyme.tk
+hostname = mb3admin.com, cf2.jmsooo.com, cf.jmsooo.com, embymv.tk
