@@ -1,9 +1,13 @@
-var modifiedHeaders = $request.headers;
-var operationName = modifiedHeaders['X-APOLLO-OPERATION-NAME'];
+var body = $response.body;
 
-if (operationName == "GetCurrentUser"||operationName == "GetUserById") {
-  var body = $response.body.replace(/"premium":false/g, '"premium":true');
-  $done({ body: body });
-} else {
-  $done({});
-}
+body = body.replace(/"premium":false/g, '"premium":true');
+body = body.replace(/"hasInAppPurchases":false/g,'"hasInAppPurchases":true');
+body = body.replace(/"youOwn":false/g,
+'"youOwn":true');
+body = body.replace(/"arcade":false/g,
+'"arcade":true');
+
+body = body.replace(/"preorder":false/g,
+'"preorder":true');
+
+$done({ body });
