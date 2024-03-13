@@ -16,4 +16,4 @@ IP-CIDR6,2402:db40:5100:1011::5/128,REJECT,no-resolve
 http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|welcomeHome) script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Adblock/shop.js, requires-body=true, tag=京东去广告
 
 [Mitm]
-hostname = api.m.jd.com, ms.jr.jd.com
+hostname = -api.m.jd.com, ms.jr.jd.com
