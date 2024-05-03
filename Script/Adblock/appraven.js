@@ -5,9 +5,9 @@ body = body.replace(/"hasInAppPurchases":false/g,'"hasInAppPurchases":true');
 body = body.replace(/"youOwn":false/g,
 '"youOwn":false');
 body = body.replace(/"arcade":false/g,
-'"arcade":true');
+'"arcade":false');
 
 body = body.replace(/"preorder":false/g,
-'"preorder":true');
+'"preorder":false');
 
 $done({ body });
