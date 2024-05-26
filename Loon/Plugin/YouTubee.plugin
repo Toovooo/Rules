@@ -8,8 +8,8 @@
 
 [Script]
 # YouTube
-http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js,tag=Youtube Request
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js,tag=Youtube Response
+http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/youtube.request.preview.js,tag=Youtube Request
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/youtube.response.preview.js,tag=Youtube Response
 
 [MITM]
 hostname = *.googlevideo.com, youtubei.googleapis.com
