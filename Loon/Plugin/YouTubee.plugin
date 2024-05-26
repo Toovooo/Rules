@@ -1,0 +1,15 @@
+#!name=YouTube
+#!desc=拦截广告
+#!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/YouTube.png
+#!date=2024.01.09
+
+[Rewrite]
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-img
+
+[Script]
+# YouTube
+http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js,tag=Youtube Request
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js,tag=Youtube Response
+
+[MITM]
+hostname = *.googlevideo.com, youtubei.googleapis.com
