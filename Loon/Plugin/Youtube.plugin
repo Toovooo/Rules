@@ -17,8 +17,8 @@ AND,((DOMAIN-SUFFIX,youtubei.googleapis.com),(PROTOCOL,QUIC)),REJECT
 
 [Script]
 # YouTube
-http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/youtube.request.preview.js,requires-body=1,binary-body-mode=1,tag=Youtube Request
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/youtube.response.preview.js,requires-body=1,binary-body-mode=1,tag=Youtube Response
+http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/youtube.request.preview.js,requires-body=true,binary-body-mode=true,tag=Youtube Request
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/youtube.response.preview.js,requires-body=true,binary-body-mode=true,tag=Youtube Response
 
 [MITM]
 hostname = *.googlevideo.com, youtubei.googleapis.com
