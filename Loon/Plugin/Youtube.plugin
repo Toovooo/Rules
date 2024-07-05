@@ -1,33 +1,24 @@
 #!name=YouTube
 #!desc=拦截广告
 #!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/YouTube.png
-#!select=自动显示翻译字幕,是,否
-#!select=仅输出译文,是,否
-#!select=字幕译文位置,译文位于外文之上,译文位于外文之下
-#!date=2024.01.09
+#!date=2024.07.05
+#!select = 隐藏上传按钮, 开启, 关闭
+#!select = 隐藏选段按钮, 开启, 关闭
+#!select = 字幕翻译语言, 简体, 繁体, 日语, 韩语, 英语, 关闭
+#!select = 歌词翻译语言, 简体, 繁体, 日语, 韩语, 英语, 关闭
+#!select = 启用调试模式, 开启, 关闭
+
+[Rule]
+AND, ((DOMAIN-SUFFIX, googlevideo.com),  (PROTOCOL, QUIC)), REJECT
+AND, ((DOMAIN-SUFFIX, youtubei.googleapis.com),  (PROTOCOL, QUIC)), REJECT
 
 [Rewrite]
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-img
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-dict
 
 [Script]
-# YouTube AD
-http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence) script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YoutubeRequest.js, requires-body=true, binary-body-mode=true, tag=Youtube Request
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting) script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YoutubeResponse.js, requires-body=true, binary-body-mode=true, tag=Youtube Response
-
 # YouTube
-http-request https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YouTube.request.js, tag=DualSubs.YouTube.Player.request.json, argument=
-http-response ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YouTube.response.js, tag=DualSubs.YouTube.Player.response.json, argument=
-http-request ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YouTube.request.js, tag=DualSubs.YouTube.Player.request.proto, argument=
-http-response ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YouTube.response.js, tag=DualSubs.YouTube.Player.response.proto, argument=
-http-request ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext requires-body=0, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YouTube.request.js, tag=DualSubs.YouTube.TimedText.request, argument=
-http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=(Official|External) requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/Composite.Subtitles.response.js, tag=DualSubs.YouTube.Composite.TimedText.response, argument=
-http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=Translate requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/Translate.response.js, tag=DualSubs.YouTube.Translate.TimedText.response, argument=
-
-# YouTube Music
-http-request ^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YouTube.request.js, tag=DualSubs.YouTubeMusic.Browse.request.json, argument=
-http-request ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/YouTube.request.js, tag=DualSubs.YouTube.Browse.request.proto, argument=
-http-response ^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/Translate.response.js, tag=DualSubs.YouTubeMusic.Translate.Lyrics.response.json, argument=
-http-response ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/Translate.response.js, tag=DualSubs.YouTubeMusic.Translate.Lyrics.response.proto, argument=
+http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/youtube.request.preview.js,tag=Youtube Request
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/youtube.response.preview.js,tag=Youtube Response
 
 [MITM]
-hostname = www.youtube.com, m.youtube.com, tv.youtube.com, music.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com
+hostname = *.googlevideo.com, youtubei.googleapis.com
