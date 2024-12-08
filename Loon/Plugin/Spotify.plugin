@@ -1,19 +1,34 @@
+
+
+
 #!name=Spotify
-#!desc=解锁premium
+#!desc=去广告,双语歌词
 #!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/Spotify.png
-#!date=2024.01.09
+#!date=2025.01.01
+#!system = iOS,iPadOS,macOS
+#!system_version = 15
+
+[Argument]
+Types = input,"Translate,External",tag=[歌词] 启用类型（多选）,desc=请选择要添加的歌词选项，如果为多选，则会自动决定提供的歌词类型。
+Languages[0] = select,"AUTO","ZH","ZH-HANS","ZH-HK","ZH-HANT","EN","ES","JA","KO","DE","FR","TR","KM",tag=[翻译器] 主语言（源语言）,desc=仅当源语言识别不准确时更改此选项。
+Languages[1] = select,"ZH","ZH-HANS","ZH-HK","ZH-HANT","EN","EN-US","ES","ES-ES","ES-419","JA","KO","DE","FR","TR","KM",tag=[翻译器] 副语言（目标语言）,desc=请指定翻译歌词的目标语言。
+Vendor = select,"Google","Microsoft",tag=[翻译器] 服务商API,desc=请选择翻译器所使用的服务商API，更多翻译选项请使用BoxJs。
+LrcVendor = select,"NeteaseMusic","QQMusic","NeteaseMusicNodeJS",tag=[歌词] 服务商API,desc=请选择外部源所使用的服务商API。
 
 [Script]
 http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/SpotifyJson.js, timeout=10, tag=Spotify Json
 http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/SpotifyProto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=Spotify Proto
 
-http-response ^https?:\/\/api\.spotify\.com\/v1\/tracks\? requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/Spotify.response.js, tag=DualSubs.Spotify.Tracks.response.json
-http-request ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/Spotify.request.js, tag=DualSubs.Spotify.Lyrics.request.json
-http-request ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*) requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/Spotify.request.js, tag=DualSubs.Spotify.Lyrics.request.proto
-http-response ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json(.*)subtype=Translate requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/Translate.response.js, tag=DualSubs.Spotify.Translate.Lyrics.response.json
-http-response ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*)subtype=Translate requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/Translate.response.js, tag=DualSubs.Spotify.Translate.Lyrics.response.proto
-http-response ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json(.*)subtype=External requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/External.Lyrics.response.js, tag=DualSubs.Spotify.External.Lyrics.response.json
-http-response ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*)subtype=External requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/External.Lyrics.response.js, tag=DualSubs.Spotify.External.Lyrics.response.proto
+http-response ^https?:\/\/api\.spotify\.com\/v1\/tracks\? requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/response.bundle.js, tag=DualSubs.Spotify.Tracks.response.json, argument=[{Types},{Languages[0]},{Languages[1]},{Vendor},{LrcVendor}]
+
+http-request ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/request.bundle.js, tag=DualSubs.Spotify.Lyrics.request.json, argument=[{Types},{Languages[0]},{Languages[1]},{Vendor},{LrcVendor}]
+http-request ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*) requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/request.bundle.js, tag=DualSubs.Spotify.Lyrics.request.proto, argument=[{Types},{Languages[0]},{Languages[1]},{Vendor},{LrcVendor}]
+
+http-response ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json(.*)subtype=Translate requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/Translate.response.bundle.js, tag=DualSubs.Spotify.Translate.Lyrics.response.json, argument=[{Types},{Languages[0]},{Languages[1]},{Vendor},{LrcVendor}]
+http-response ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*)subtype=Translate requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/Translate.response.bundle.js, tag=DualSubs.Spotify.Translate.Lyrics.response.proto, argument=[{Types},{Languages[0]},{Languages[1]},{Vendor},{LrcVendor}]
+
+http-response ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json(.*)subtype=External requires-body=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/External.Lyrics.response.bundle.js, tag=DualSubs.Spotify.External.Lyrics.response.json, argument=[{Types},{Languages[0]},{Languages[1]},{Vendor},{LrcVendor}]
+http-response ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*)subtype=External requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Spotify/External.Lyrics.response.bundle.js, tag=DualSubs.Spotify.External.Lyrics.response.proto, argument=[{Types},{Languages[0]},{Languages[1]},{Vendor},{LrcVendor}]
 
 [Mitm]
 hostname = api.spotify.com, spclient.wg.spotify.com
