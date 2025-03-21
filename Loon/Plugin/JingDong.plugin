@@ -1,19 +1,10 @@
 #!name=京东
-#!desc=去开屏广告
+#!desc=京东比价
 #!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/JingDong.png
-#!date=2024.01.09
-
-[Rule]
-DOMAIN,dns.jd.com,REJECT
-IP-CIDR,101.124.19.122/32,REJECT,no-resolve
-IP-CIDR6,2402:db40:5100:1011::5/128,REJECT,no-resolve
-
-[Rewrite]
-^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture reject-dict
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend) reject-dict
+#!date=2025.03.21
 
 [Script]
-http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|welcomeHome) script-path=https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Adblock/shop.js, requires-body=true, tag=京东去广告
+http-response ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, requires-body=true, timeout=30, tag=JD Price History, img-url=https://raw.githubusercontent.com/GeQ1an/Rules/master/Images/Icons/Apps/JD.png
 
-[Mitm]
-hostname = api.m.jd.com, ms.jr.jd.com
+[MITM]
+hostname = in.m.jd.com
