@@ -7,8 +7,8 @@
 Auto A = switch,true,tag=隐藏上传按钮
 Auto B = switch,true,tag=隐藏shorts按钮
 Auto C = switch,true,tag=隐藏选段按钮
-Type = select,zh-Hans, zh-Hant, ja, ko, en, off,tag=字幕翻译语言
-Types = select,zh-Hans, zh-Hant, ja, ko, en, off,tag=歌词翻译语言
+Type = select,"zh-Hans", "zh-Hant", "ja", "ko", "en", "off",tag=字幕翻译语言
+Types = select,"zh-Hans", "zh-Hant", "ja", "ko", "en", "off",tag=歌词翻译语言
 
 [Rule]
 AND,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,QUIC)),REJECT
