@@ -1,7 +1,7 @@
 #!name=YouTube
 #!desc=拦截广告
 #!icon=https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/YouTube.png
-#!date=2024.07.05
+#!date=2025.04.15
 
 [Argument]
 Auto A = switch,true,tag=隐藏上传按钮
