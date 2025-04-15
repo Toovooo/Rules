@@ -8,6 +8,7 @@
 #!select = 歌词翻译语言, zh-Hans, zh-Hant, ja, ko, en, off
 #select = 启用调试模式, true, false
 
+Auto B = switch,true,tag=隐藏shorts按钮
 [Rule]
 AND,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,QUIC)),REJECT
 AND,((DOMAIN-SUFFIX,youtubei.googleapis.com),(PROTOCOL,QUIC)),REJECT
@@ -20,5 +21,6 @@ AND,((DOMAIN-SUFFIX,youtubei.googleapis.com),(PROTOCOL,QUIC)),REJECT
 http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/youtube.request.preview.js, requires-body = true, binary-body-mode = true, tag = Youtube Request
 http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) script-path = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/youtube.response.preview.js, requires-body = true, binary-body-mode = true, tag = Youtube Response
 
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) script-path= https://raw.githubusercontent.com/Toovooo/Rules/master/Script/Youtube/Youtube.js, requires-body=true, binary-body-mode=true, tag=YouTube
 [MITM]
 hostname = *.googlevideo.com, youtubei.googleapis.com
