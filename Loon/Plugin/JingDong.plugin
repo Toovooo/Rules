@@ -4,7 +4,9 @@
 #!date=2025.03.21
 
 [Script]
-http-response ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, requires-body=true, timeout=30, tag=JD Price History, img-url=https://raw.githubusercontent.com/GeQ1an/Rules/master/Images/Icons/Apps/JD.png
+http-request ^https?:\/\/apapia-sqk-weblogic\.manmanbuy\.com\/baoliao\/center\/menu$ script-path=https://github.com/Moli-X/Tool/raw/X/Loon/Plugin/Kelee/Script/JD_Price.js, requires-body=true, timeout=10, tag=捕获令牌
 
-[MITM]
-hostname = in.m.jd.com
+http-response ^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path=https://github.com/Moli-X/Tool/raw/X/Loon/Plugin/Kelee/Script/JD_Price.js, requires-body=true, timeout=10, tag=京东比价
+
+[MitM]
+hostname=in.m.jd.com, apapia-sqk-weblogic.manmanbuy.com
