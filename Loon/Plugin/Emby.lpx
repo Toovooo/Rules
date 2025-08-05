@@ -1,0 +1,10 @@
+#!name=Emby
+#!desc=公益服分流规则
+#!icon=https://github.com/Toovooo/Rules/raw/master/Icon/Line/Emby.png
+#!date=2025.07.01
+
+[Rule]
+DOMAIN-SUFFIX,nano.jmsuper.com,PROXY
+DOMAIN-SUFFIX,cf2.jmsooo.com,PROXY
+DOMAIN-SUFFIX,lite.cn2gias.uk,DIRECT
+DOMAIN-SUFFIX,emby.zn.al,DIRECT

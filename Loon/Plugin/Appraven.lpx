@@ -1,0 +1,10 @@
+#!name=Appraven
+#!desc=没有实际的功能
+#!icon=https://github.com/Toovooo/Rules/raw/master/Icon/Line/Appraven.png
+#!date=2025.07.01
+
+[Script]
+http-response ^https?:\/\/appraven\.net\/AppRaven\/(app|social|buy) script-path=https://github.com/Toovooo/Rules/raw/master/Script/Adblock/appraven.js, requires-body=true, tag=Appraven
+
+[Mitm]
+hostname = v2.appraven.net

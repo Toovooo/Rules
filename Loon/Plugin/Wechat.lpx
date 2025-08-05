@@ -1,0 +1,10 @@
+#!name=微信
+#!desc=去公众号广告
+#!icon=https://github.com/Toovooo/Rules/raw/master/Icon/Line/Wechat.png
+#!date=2025.07.01
+
+[Script]
+http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path=https://github.com/Toovooo/Rules/raw/master/Script/Adblock/wechat.js, requires-body=true, tag=公众号广告
+
+[Mitm]
+hostname = mp.weixin.qq.com

@@ -1,0 +1,9 @@
+#!name=节点检测工具
+#!desc=地理位置、节点解锁、入口落地等查询
+#!icon=https://github.com/Toovooo/Rules/raw/master/Icon/Line/MediaCheck.png
+#!date=2025.07.01
+
+[Script]
+generic script-path=https://github.com/Toovooo/Rules/raw/master/Script/Check/NetworkEntryAndExitQueries.js, timeout=10, tag=入口落地查询,img-url=globe.asia.australia.system
+generic script-path=https://github.com/Toovooo/Rules/raw/master/Script/Check/LocationDetection.js, timeout=10, tag=地理位置查询,img-url=location.circle.system
+generic script-path=https://github.com/Toovooo/Rules/raw/master/Script/Check/NodeUnlockDetection.js, timeout=20, tag=节点解锁查询,img-url=play.circle.system
