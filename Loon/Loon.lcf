@@ -55,11 +55,8 @@ https://github.com/Toovooo/Rules/raw/master/Loon/List/Steam.lsr, policy = 香港
 https://github.com/Toovooo/Rules/raw/master/Loon/List/Spotify.lsr, policy = 美国, tag = Spotify, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/List/Telegram.lsr, policy = 美国, tag = Telegram, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/List/AI.lsr, policy = 美国, tag = ChatGPT, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Netflix.lsr, policy = 美国, tag = Netflix, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Disney.lsr, policy = 美国, tag = Disney, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/List/YouTube.lsr, policy = 免流, tag = YouTube, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/List/Proxy.lsr, policy = 免流, tag = Proxy, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Copilot.lsr, policy = 美国, tag = Copilot, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/List/Apple.lsr, policy = DIRECT, tag = Apple, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/List/Epic.lsr, policy = DIRECT, tag = Epic, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/List/China.lsr, policy = DIRECT, tag = China, enabled = true
