@@ -39,7 +39,7 @@ XX = NameRegex, FilterKey = ".*"
 VV = NameRegex, FilterKey = "(?i)(CDN|0x)"
 
 [Proxy Group]
-免流 = select, US, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/UnitedStates.png
+免流 = select, VV, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/UnitedStates.png
 美国 = select, US, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/UnitedStates.png
 香港 = select, HK, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/HongKong.png
 日本 = select, JP, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/Japan.png
@@ -50,86 +50,39 @@ VV = NameRegex, FilterKey = "(?i)(CDN|0x)"
 FINAL, 免流
 
 [Remote Rule]
-https://raw.githubusercontent.com/Toovooo/Rules/master/Loon/List/AdBlock.list, policy = REJECT, tag = AdBlock, enabled = true
-https://raw.githubusercontent.com/Toovooo/Rules/master/Loon/List/DNSBlock.list, policy = REJECT, tag = HTTPDNS Block, enabled = true
-https://raw.githubusercontent.com/Toovooo/Rules/master/Loon/List/AppStore.list, policy = 苹果, tag = App Store, enabled = true
-https://raw.githubusercontent.com/Toovooo/Rules/master/Loon/List/Apple.list, policy = 苹果, tag = Apple, enabled = true
-https://raw.githubusercontent.com/Toovooo/Rules/master/Loon/List/Spotify.list, policy = Spotify, tag = Spotify, enabled = true
-https://raw.githubusercontent.com/Toovooo/Rules/master/Loon/List/Telegram.list, policy = 国际代理, tag = Telegram, enabled = true
-https://raw.githubusercontent.com/Toovooo/Rules/master/Loon/List/Netflix.list, policy = 国际代理, tag = Netflix, enabled = true
-https://raw.githubusercontent.com/Toovooo/Rules/master/Loon/List/Disney.list, policy = 国际代理, tag = Disney, enabled = true
-https://raw.githubusercontent.com/Toovooo/Rules/master/Loon/List/YouTube.list, policy = 国际代理, tag = YouTube, enabled = true
-https://raw.githubusercontent.com/Toovooo/Rules/master/Loon/List/Streaming.list, policy = 国际代理, tag = Streaming, enabled = true
-https://raw.githubusercontent.com/Toovooo/Rules/master/Loon/List/Proxy.list, policy = 国际代理, tag = Proxy, enabled = true
-https://raw.githubusercontent.com/Toovooo/Rules/master/Loon/List/Microsoft.list, policy = DIRECT, tag = Microsoft, enabled = true
-https://raw.githubusercontent.com/Toovooo/Rules/master/Loon/List/China.list, policy = DIRECT, tag = China, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/AdBlock.lsr, policy = REJECT, tag = AdBlock, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Steam.lsr, policy = 香港, tag = Steam, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Spotify.lsr, policy = 美国, tag = Spotify, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Telegram.lsr, policy = 美国, tag = Telegram, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/AI.lsr, policy = 美国, tag = ChatGPT, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Netflix.lsr, policy = 美国, tag = Netflix, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Disney.lsr, policy = 美国, tag = Disney, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/YouTube.lsr, policy = 免流, tag = YouTube, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Proxy.lsr, policy = 免流, tag = Proxy, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Copilot.lsr, policy = 美国, tag = Copilot, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Apple.lsr, policy = DIRECT, tag = Apple, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Epic.lsr, policy = DIRECT, tag = Epic, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/China.lsr, policy = DIRECT, tag = China, enabled = true
 
 [Rewrite]
 
 [Script]
 
 [Plugin]
-https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/LoonGallery.plugin, policy = 国际代理, enabled = true
-https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy = 国际代理, enabled = true
-https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin, enabled = true
-https://raw.githubusercontent.com/app2smile/rules/master/plugin/tieba.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/LoonGallery.plugin, policy = 全球手动, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Cainiao_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/CaixinMedia_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/CoolApk_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Taobao_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Tieba_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/JD_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weibo_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Zhihu_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Soul_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/12306_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BabyTree_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/RedPaper_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/PiPiXia_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/IThome_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQMusic_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Reddit_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQKSong_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Spotify_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/TubeMax_remove_ads.plugin, policy = 全球手动, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/YouTube_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/AliYunDrive_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Amap_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BaiduNetDisk_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Himalaya_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QiDian_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Umetrip_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/NeteaseNews_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Remove_ads_by_keli.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Bilibili_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Baidu_input_method_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/smzdm_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BaiduSearchWebpage_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/mobileClouds_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BingAI.plugin, policy = 全球手动, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/JD_Price.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QuickSearch.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Prevent_DNS_Leaks.plugin, policy = 全球手动, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQ_Redirect.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/GitHubRedirect.plugin, enabled = false
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/TikTok_redirect.plugin, policy = 全球手动, enabled = false
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Node_detection_tool.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/WARP_Node_Query.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/TestFlight.plugin, policy = DIRECT, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Spotify_lyrics_translation.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/1.1.1.1.plugin, enabled = false
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/YouTubeSubtitlesTranslation.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Fileball_mount.plugin, enabled = false
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Google.plugin, enabled = false
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Auto_Join_TF.plugin, policy = DIRECT, enabled = false
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BoxJs.plugin, policy = 全球手动, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Sub-Store.plugin, policy = 全球手动, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Script-Hub.plugin, policy = 全球手动, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/AdBlock.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/BlockHTTPDNS.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Adsense.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Appraven.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Spotify.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Youtube.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Bilibili.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/WeatherKit.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Tieba.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/TaoBao.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Wechat.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Emby.lpx, policy = 免流, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/BoxJs.lpx, policy = Final, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/MediaCheck.lpx, enabled = true
 
 [MITM]
 hostname =
