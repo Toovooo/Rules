@@ -1,22 +1,26 @@
 [General]
-ipv6 = true
-test-timeout = 2
+ip-mode = dual
+ipv6-vif = off
+dns-server = system
 sni-sniffing = true
 disable-stun = false
-interface-mode = auto
-disable-udp-ports = 443
-allow-wifi-access = false
+dns-reject-mode = LoopbackIP
+domain-reject-mode = DNS
+udp-fallback-mode = REJECT
 wifi-access-http-port = 7222
 wifi-access-socks5-port = 7221
+allow-wifi-access = false
+interface-mode = auto
+test-timeout = 2
 disconnect-on-policy-change = false
 switch-node-after-failure-times = 3
-dns-server = 119.29.29.29, 223.5.5.5
-proxy-test-url = http://www.apple.com/library/test/success.html
-doh-server = https://223.5.5.5/dns-query, https://dns.alidns.com/dns-query
-#geoip-url = https://raw.githubusercontent.com/NobyDa/geoip/release/Private-GeoIP-CN.mmdb
-resource-parser = https://raw.githubusercontent.com/Toovooo/Rules/master/Script/LoonSubStore.js
-bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 239.255.255.250/32, 255.255.255.255/32
-skip-proxy = localhost, *.local, captive.apple.com, e.crashlytics.com, www.baidu.com, passenger.t3go.cn, yunbusiness.ccb.com, wxh.wo.cn, gate.lagou.com, www.abchina.com.cn, login-service.mobile-bank.psbc.com, mobile-bank.psbc.com, 10.0.0.0/8, 127.0.0.1/32, 172.16.0.0/12, 192.168.0.0/16, 192.168.122.1/32, 193.168.0.1/32, ::1/128, fe80::/10
+internet-test-url = http://connectivitycheck.platform.hicloud.com/generate_204
+proxy-test-url = http://www.gstatic.com/generate_204
+resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
+geoip-url = https://raw.githubusercontent.com/NobyDa/geoip/release/Private-GeoIP-CN.mmdb
+ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
+skip-proxy = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, e.crashlynatics.com
+bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
 
 [Host]
 
@@ -25,15 +29,25 @@ skip-proxy = localhost, *.local, captive.apple.com, e.crashlytics.com, www.baidu
 [Remote Proxy]
 
 [Remote Filter]
-节点 = NameRegex, FilterKey = ".*"
+US = NameRegex, FilterKey = "(?i)(美|US|United States)"
+HK = NameRegex, FilterKey = "(?i)(港|HK|Hong)"
+TW = NameRegex, FilterKey = "(?i)(台|TW|Tai)"
+JP = NameRegex, FilterKey = "(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)"
+KR = NameRegex, FilterKey = "(?i)(KR|Korea|KOR|首尔|韩|韓)"
+SG = NameRegex, FilterKey = "(?i)(新加坡|坡|狮城|SG|Singapore)"
+XX = NameRegex, FilterKey = ".*"
+VV = NameRegex, FilterKey = "(?i)(CDN|0x)"
 
 [Proxy Group]
-苹果 = select, DIRECT, 节点, img-url = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Color/Apple.png
-Spotify = select, 节点, img-url = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Color/Spotify.png
-国际代理 = select, 节点, img-url = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Color/Streaming.png
+免流 = select, US, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/UnitedStates.png
+美国 = select, US, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/UnitedStates.png
+香港 = select, HK, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/HongKong.png
+日本 = select, JP, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/Japan.png
+全球 = select, XX, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/Auto.png
+新加坡 = select, SG, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/Singapore.png
 
 [Rule]
-FINAL, 国际代理
+FINAL, 免流
 
 [Remote Rule]
 https://raw.githubusercontent.com/Toovooo/Rules/master/Loon/List/AdBlock.list, policy = REJECT, tag = AdBlock, enabled = true
