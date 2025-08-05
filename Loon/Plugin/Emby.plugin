@@ -5,7 +5,9 @@
 
 [Rule]
 DOMAIN-SUFFIX,nano.jmsuper.com,PROXY
-DOMAIN-SUFFIX,cf2.jmsooo.com,DIRECT
+DOMAIN-SUFFIX,cf2.jmsooo.com,PROXY
+DOMAIN-SUFFIX,lite.cn2gias.uk,DIRECT
+DOMAIN-SUFFIX,emby.zn.al,DIRECT
 
 [Script]
 http-response ^https:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice\? script-path=https://github.com/Toovooo/Rules/raw/master/Script/Emby/Emby.js, requires-body=true, binary-body-mode=true, tag=播放解锁
