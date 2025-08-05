@@ -39,7 +39,7 @@ XX = NameRegex, FilterKey = ".*"
 VV = NameRegex, FilterKey = "(?i)(CDN|0x)"
 
 [Proxy Group]
-免流 = select, VV, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/UnitedStates.png
+免流 = select, VV, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/Global.png
 美国 = select, US, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/UnitedStates.png
 香港 = select, HK, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/HongKong.png
 日本 = select, JP, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/Japan.png
