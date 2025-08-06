@@ -7,4 +7,4 @@
 http-response ^https?:\/\/appraven\.net\/AppRaven\/(app|social|buy) script-path=https://github.com/Toovooo/Rules/raw/master/Script/Adblock/appraven.js, requires-body=true, tag=Appraven
 
 [Mitm]
-hostname = v2.appraven.net
+hostname = v2.appraven.net, appraven.net
