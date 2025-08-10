@@ -47,6 +47,7 @@ VV = NameRegex, FilterKey = "(?i)(CDN|0x)"
 新加坡 = select, SG, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/Singapore.png
 
 [Rule]
+GEOIP,CN,DIRECT
 FINAL, 免流
 
 [Remote Rule]
