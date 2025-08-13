@@ -6,5 +6,5 @@
 [Rule]
 DOMAIN-SUFFIX,nano.jmsuper.com,PROXY
 DOMAIN-SUFFIX,cf2.jmsooo.com,PROXY
-DOMAIN-SUFFIX,lite.cn2gias.uk,DIRECT
+DOMAIN-SUFFIX,lite.cn2gias.uk,PROXY
 DOMAIN-SUFFIX,emby.zn.al,DIRECT
