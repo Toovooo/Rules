@@ -50,8 +50,12 @@ AND, ((URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch"), (USER-AGENT, "%E9%97%B2
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm reject
 ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd reject
 
+# Google - www.google.cn
+^https?:\/\/(www.)?(g|google)\.cn 307 https://www.google.com
+^https?:\/\/(ditu|maps).google\.cn 307 https://maps.google.com
+
 # Bing  www.bing.com
 ^https:\/\/www\.bing\.com\/(search|new) header-replace-regex User-Agent \w+\/[\d\.]+$ "AppleWebKit/537.36 Chrome/110.0 Safari/537.36 Edg/110.0"
 
 [Mitm]
-hostname = elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, acs.m.goofish.com, g-acs.m.goofish.com, wallet.95516.com, clientaccess.10086.cn, m.client.10010.com, www.bing.com
+hostname = elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, acs.m.goofish.com, g-acs.m.goofish.com, wallet.95516.com, clientaccess.10086.cn, m.client.10010.com, www.bing.com, www.google.cn
