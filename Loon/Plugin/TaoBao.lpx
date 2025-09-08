@@ -10,7 +10,6 @@ DOMAIN, adashx.m.taobao.com, REJECT
 DOMAIN, ossgw.alicdn.com, REJECT
 DOMAIN, ems.youku.com, REJECT
 DOMAIN, hudong.alicdn.com, REJECT
-DOMAIN, h-adashx.ut.taobao.com, REJECT
 DOMAIN, ut.taobao.com, REJECT
 
 [Rewrite]
@@ -28,7 +27,6 @@ DOMAIN, ut.taobao.com, REJECT
 
 [Script]
 http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path=https://github.com/Toovooo/Rules/raw/master/Script/Taobao.js, requires-body=true, tag=移除淘宝开屏广告
-
 http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path=https://github.com/Toovooo/Rules/raw/master/Script/Taobao.js, requires-body=true, tag=移除淘宝开屏广告
 
 [MitM]
