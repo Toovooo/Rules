@@ -41,27 +41,41 @@ XX = NameRegex, FilterKey = ".*"
 VV = NameRegex, FilterKey = "(?i)(CDN|0x)"
 
 [Proxy Group]
-免流 = select, VV, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/Global.png
-美国 = select, US, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/UnitedStates.png
-香港 = select, HK, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/HongKong.png
-日本 = select, JP, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/Japan.png
-全球 = select, XX, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/Auto.png
-新加坡 = select, SG, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/Singapore.png
-
+UnitedStates = select, US, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/UnitedStates.png
+HongKong = select, HK, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/HongKong.png
+Japan = select, JP, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Japan.png
+Korea = select, KR, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Korea.png
+Global = select, XX, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Global.png
+Singapore = select, SG, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Singapore.png
+Final = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, DIRECT, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Final.png
+Apple = select, DIRECT, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Apple.png
+ChatGPT = select, AA, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/OpenAI.png
+Disney = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Disney.png
+Netflix = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Netflix.png
+Spotify = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Spotify.png
+YouTube = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/YouTube.png
+Steam = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Steam.png
+Emby = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Emby.png
+Telegram = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Telegram.png
+ 
 [Rule]
-FINAL, 免流
-
+FINAL, Final
+ 
 [Remote Rule]
 https://github.com/Toovooo/Rules/raw/master/Loon/List/AdBlock.lsr, policy = REJECT, tag = AdBlock, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Steam.lsr, policy = 香港, tag = Steam, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Spotify.lsr, policy = 美国, tag = Spotify, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Telegram.lsr, policy = 美国, tag = Telegram, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/AI.lsr, policy = 美国, tag = ChatGPT, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/YouTube.lsr, policy = 免流, tag = YouTube, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Proxy.lsr, policy = 免流, tag = Proxy, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Apple.lsr, policy = DIRECT, tag = Apple, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Steam.lsr, policy = Steam, tag = Steam, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Spotify.lsr, policy = Spotify, tag = Spotify, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Telegram.lsr, policy = Telegram, tag = Telegram, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/AI.lsr, policy = ChatGPT, tag = ChatGPT, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Netflix.lsr, policy = Netflix, tag = Netflix, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Disney.lsr, policy = Disney, tag = Disney, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/YouTube.lsr, policy = YouTube, tag = YouTube, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Proxy.lsr, policy = Final, tag = Proxy, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Copilot.lsr, policy = ChatGPT, tag = Copilot, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Apple.lsr, policy = Apple, tag = Apple, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/List/Epic.lsr, policy = DIRECT, tag = Epic, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/China.lsr, policy = DIRECT, tag = China, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Emby.lsr, policy = Emby, tag = Emby, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Geoip.lsr, policy = DIRECT, tag = China, enabled = true
 
 [Rewrite]
 
