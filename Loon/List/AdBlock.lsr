@@ -1,4 +1,5 @@
 #!name = AdBlock
+DOMAIN,msmp.abchina.com.cn
 DOMAIN-SUFFIX,dagonghuzhu.co
 DOMAIN-SUFFIX,glitter.services.disqus.com
 DOMAIN-SUFFIX,juggler.services.disqus.com
