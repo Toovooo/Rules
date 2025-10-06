@@ -24,41 +24,34 @@ bypass-tun=10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192
 [Remote Proxy]
 
 [Remote Filter]
-US = NameRegex, FilterKey = "(?i)(美|US|United States)"
+US = NameRegex, FilterKey = "(?i)(美|US|United States|America)"
 HK = NameRegex, FilterKey = "(?i)(港|HK|Hong)"
-TW = NameRegex, FilterKey = "(?i)(台|TW|Tai)"
+TW = NameRegex, FilterKey = "(?i)(台|TW|Tai|Taiwan)"
 JP = NameRegex, FilterKey = "(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)"
 KR = NameRegex, FilterKey = "(?i)(KR|Korea|KOR|首尔|韩|韓)"
 SG = NameRegex, FilterKey = "(?i)(新加坡|坡|狮城|SG|Singapore)"
 XX = NameRegex, FilterKey = ".*"
-
+ 
 [Proxy Group]
-美国 = select, US, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/UnitedStates.png
-香港 = select, HK, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/HongKong.png
-日本 = select, JP, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/Japan.png
-全球 = select, XX, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/Auto.png
-新加坡 = select, SG, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/Singapore.png
-Final = select, DIRECT, 美国, 香港, 日本, 全球, 新加坡, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/Final.png
-Apple = select, DIRECT, 美国, 香港, 日本, 全球, 新加坡, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Mini/Apple.png
-
+Apple = select, DIRECT, 美国, 香港, 日本, 新加坡, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Apple.png
+Spotify = select, 美国, 香港, 日本, 新加坡, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Spotify.png
+国际代理 = select, 美国, 香港, 日本, 新加坡, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Streaming.png
+美国 = select, US, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/UnitedStates.png
+香港 = select, HK, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/HongKong.png
+日本 = select, JP, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Japan.png
+新加坡 = select, SG, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Singapore.png
+ 
 [Rule]
-FINAL, Final
-
+FINAL, 国际代理
+ 
 [Remote Rule]
-https://github.com/Toovooo/Rules/raw/master/Loon/List/AdBlock.list, policy = REJECT, tag = AdBlock, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Emby.list, policy = 全球, tag = Emby, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Apple.list, policy = Apple, tag = Apple, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Steam.list, policy = 香港, tag = Steam, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Spotify.list, policy = 美国, tag = Spotify, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Telegram.list, policy = 美国, tag = Telegram, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/OpenAI.list, policy = 美国, tag = ChatGPT, enabled = true
-#https://github.com/Toovooo/Rules/raw/master/Loon/List/Netflix.list, policy = 美国, tag = Netflix, enabled = true
-#https://github.com/Toovooo/Rules/raw/master/Loon/List/Disney.list, policy = 美国, tag = Disney, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/YouTube.list, policy = 美国, tag = YouTube, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Proxy.list, policy = Final, tag = Proxy, enabled = true
-#https://github.com/Toovooo/Rules/raw/master/Loon/List/Copilot.list, policy = Copilot, tag = Copilot, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/China.list, policy = DIRECT, tag = China, enabled = true
-
+https://github.com/Toovooo/Rules/raw/master/Loon/List/AdBlock.lsr, policy = REJECT, tag = AdBlock, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Spotify.lsr, policy = Spotify, tag = Spotify, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Telegram.lsr, policy = 国际代理, tag = Telegram, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/YouTube.lsr, policy = 国际代理, tag = YouTube, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Apple.lsr, policy = Apple, tag = Apple, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Geoip.lsr, policy = DIRECT, tag = China, enabled = true
+ 
 [Rewrite]
 
 [Script]
