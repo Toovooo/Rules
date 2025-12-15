@@ -9,7 +9,6 @@ AND, ((URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch"), (USER-AGENT, "%E6%B7%98
 DOMAIN, adashx.m.taobao.com, REJECT
 DOMAIN, ossgw.alicdn.com, REJECT
 DOMAIN, ems.youku.com, REJECT
-DOMAIN, hudong.alicdn.com, REJECT
 DOMAIN, ut.taobao.com, REJECT
 
 [Rewrite]
