@@ -144,7 +144,7 @@ DOMAIN-SUFFIX,p242.plainwrk.name
 DOMAIN-SUFFIX,referrer.disqus.com
 DOMAIN-SUFFIX,links.services.disqus.com
 DOMAIN-SUFFIX,cdn.viglink.com
-DOMAIN-SUFFIX, jknmthwd.xyz
+DOMAIN-SUFFIX,jknmthwd.xyz
 DOMAIN-SUFFIX,tcc.qscvli.com
 DOMAIN-SUFFIX,gtlpaj.com
 DOMAIN-SUFFIX,knlk2md.cn
@@ -393,7 +393,7 @@ DOMAIN-SUFFIX,miaozhen.com
 DOMAIN-SUFFIX,microad-cn.com
 DOMAIN-SUFFIX,miidi.net
 DOMAIN-SUFFIX,mijifen.com
-DOMAIN-SUFFIX,mixpanel.com
+#DOMAIN-SUFFIX,mixpanel.com
 DOMAIN-SUFFIX,mjmobi.com
 DOMAIN-SUFFIX,mng-ads.com
 DOMAIN-SUFFIX,moad.cn
