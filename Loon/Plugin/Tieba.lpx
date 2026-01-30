@@ -1,24 +1,18 @@
 #!name=百度贴吧
 #!desc=开屏广告 各种广告
 #!icon=https://github.com/Toovooo/Rules/raw/master/Icon/Line/Tieba.png
-#!date=2025.07.01
+#!date=2026.01.30
+
+[Argument]
+per_filter_video_thread = select,"0","1",tag=推荐页不展示视频贴,desc=设置为1则推荐页不展示视频贴
 
 [Rule]
-DOMAIN, 180.76.76.200, REJECT
-IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
-
-[Rewrite]
-^https:\/\/tieba\.baidu\.com\/c\/f\/member\/getMemberPopups$ reject-dict
-^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile$ response-body-json-del recom_naws_list namoaixud_entry custom_grid duxiaoman_entry finance_tab
-^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile$ response-body-json-replace user.shake_ad_switch.is_show 0
-^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile$ response-body-json-jq '.zone_info |= map(select(.type as $t | ["commerce","banner","game"] | index($t) | not))'
-^https:\/\/tiebac\.baidu\.com\/c\/f\/sidebar\/home$ response-body-json-del task_list game_center tools tools.yunying_tools_list tools.show_tools_list
-^https:\/\/tiebac\.baidu\.com\/c\/f\/sidebar\/home$ response-body-json-jq '.tools.show_tools_list |= map(.tools_list |= map(select(.title != "度小满钱包")))'
-^https:\/\/tiebac\.baidu\.com\/c\/f\/search\/discover$ reject-dict
-^https:\/\/tiebac\.baidu\.com\/c\/f\/frs\/frsBottom$ response-body-json-del card_activity
+DOMAIN,180.76.76.200,REJECT
+IP-CIDR,180.76.76.200/32,REJECT,no-resolve
 
 [Script]
-http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path=https://github.com/Toovooo/Rules/raw/master/Script/Tieba/Tieba.js, requires-body=true, binary-body-mode=true, timeout=10, tag=Proto处理
+http-response ^https?:\/\/(tiebac|c\.tieba)\.baidu\.com\/(c\/(s\/sync|f\/(ad\/getSplashAd|frs\/(page|threadlist|generalTabList)|pb\/(pic)?page|excellent\/personalized))$|tiebaads\/commonbatch\?) script-path=https://github.com/Toovooo/Rules/raw/master/Script/Tieba/TiebaJson.js, requires-body=true, timeout=10, tag=贴吧json
+http-response ^https?:\/\/(tiebac|c\.tieba)\.baidu\.com\/c\/(b\/ad\/adBid|f\/(frs\/(page|threadlist|generalTabList)|ad\/getFeedAd|pb\/page|excellent\/personalized))\?cmd script-path=https://github.com/Toovooo/Rules/raw/master/Script/Tieba/TiebaProto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=贴吧proto, argument=[{per_filter_video_thread}]
 
-[MitM]
-hostname=tiebac.baidu.com, tieba.baidu.com
+[Mitm]
+hostname = tiebac.baidu.com
