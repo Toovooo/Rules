@@ -57,7 +57,7 @@ https://github.com/Toovooo/Rules/raw/master/Loon/List/Spotify.lsr, policy = Spot
 https://github.com/Toovooo/Rules/raw/master/Loon/List/Telegram.lsr, policy = 国际代理, tag = Telegram, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/List/YouTube.lsr, policy = 国际代理, tag = YouTube, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/List/Apple.lsr, policy = Apple, tag = Apple, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Geoip.lsr, policy = DIRECT, tag = China, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/List/Geoip.lsr, policy = DIRECT, tag = Geoip, enabled = true
  
 [Rewrite]
 
@@ -65,16 +65,9 @@ https://github.com/Toovooo/Rules/raw/master/Loon/List/Geoip.lsr, policy = DIRECT
 
 [Plugin]
 https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/AdBlock.plugin, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/BlockHTTPDNS.plugin, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Adsense.plugin, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Appraven.plugin, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Spotify.plugin, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Youtube.plugin, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Bilibili.plugin, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/WeatherKit.plugin, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Tieba.plugin, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/TaoBao.plugin, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Wechat.plugin, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/BoxJs.plugin, policy = Final, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/MediaCheck.plugin, enabled = true
 
