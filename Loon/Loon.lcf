@@ -24,13 +24,6 @@ real-ip = easy-login.10099.com.cn,*-update.xoyocdn.com,id6.me,open.e.189.cn
 skip-first-packet = server.ovital.com:443
 bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
 
-[General]
-skip-proxy = www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,www.shanbay.com,login-service.mobile-bank.psbc.com,mobile-bank.psbc.com,id6.me
-real-ip = easy-login.10099.com.cn,*-update.xoyocdn.com,id6.me,open.e.189.cn
-skip-first-packet = server.ovital.com:443
-
-[Rule]
-DOMAIN,msmp.abchina.com.cn,REJECT
 [Host]
 
 [Proxy]
@@ -38,7 +31,7 @@ DOMAIN,msmp.abchina.com.cn,REJECT
 [Remote Proxy]
 
 [Remote Filter]
-US = NameRegex, FilterKey = "(?i)(美|US|United States)"
+US = NameRegex, FilterKey = "(?i)(美|US|United States|America)"
 HK = NameRegex, FilterKey = "(?i)(港|HK|Hong)"
 TW = NameRegex, FilterKey = "(?i)(台|TW|Tai)"
 JP = NameRegex, FilterKey = "(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)"
@@ -48,22 +41,22 @@ XX = NameRegex, FilterKey = ".*"
 VV = NameRegex, FilterKey = "(?i)(CDN|0x)"
 
 [Proxy Group]
-UnitedStates = select, US, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/UnitedStates.png
-HongKong = select, HK, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/HongKong.png
-Japan = select, JP, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Japan.png
-Korea = select, KR, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Korea.png
-Global = select, XX, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Global.png
-Singapore = select, SG, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Singapore.png
-Final = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, DIRECT, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Final.png
-Apple = select, DIRECT, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Apple.png
-ChatGPT = select, AA, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/OpenAI.png
-Disney = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Disney.png
-Netflix = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Netflix.png
-Spotify = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Spotify.png
-YouTube = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/YouTube.png
-Steam = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Steam.png
-Emby = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Emby.png
-Telegram = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Line/Telegram.png
+UnitedStates = select, US, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/UnitedStates.png
+HongKong = select, HK, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/HongKong.png
+Japan = select, JP, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Japan.png
+Korea = select, KR, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Korea.png
+Global = select, XX, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Global.png
+Singapore = select, SG, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Singapore.png
+Final = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, DIRECT, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Final.png
+Apple = select, DIRECT, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Apple.png
+ChatGPT = select, XX, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/OpenAI.png
+Disney = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Disney.png
+Netflix = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Netflix.png
+Spotify = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Spotify.png
+YouTube = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/YouTube.png
+Steam = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Steam.png
+Emby = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Emby.png
+Telegram = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Telegram.png
  
 [Rule]
 FINAL, Final
