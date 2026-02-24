@@ -1,7 +1,7 @@
 #!name=百度贴吧
 #!desc=开屏广告 各种广告
-#!icon=https://github.com/Toovooo/Rules/raw/master/Icon/Line/Tieba.png
-#!date=2026.01.30
+#!icon=https://github.com/Toovooo/Rules/raw/master/Icon/Color/Tieba.png
+#!date=2026.03.01
 
 [Argument]
 per_filter_video_thread = select,"0","1",tag=推荐页不展示视频贴,desc=设置为1则推荐页不展示视频贴
