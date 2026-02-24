@@ -64,12 +64,12 @@ https://github.com/Toovooo/Rules/raw/master/Loon/List/Geoip.lsr, policy = DIRECT
 [Script]
 
 [Plugin]
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/AdBlock.plugin, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Adsense.plugin, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Spotify.plugin, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Youtube.plugin, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/BoxJs.plugin, policy = Final, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/MediaCheck.plugin, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/AdBlock.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Adsense.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Spotify.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Youtube.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/BoxJs.lpx, policy = Final, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/MediaCheck.lpx, enabled = true
 
 [MITM]
 hostname =
