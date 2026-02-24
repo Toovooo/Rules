@@ -8,8 +8,10 @@ tab=switch, true, tag=移除底栏创建按钮, desc=此开关控制是否移除
 useractivity=switch, true, tag=启用Apple设备接力, desc=此开关控制是否使用Apple设备接力
 
 [Rewrite]
-^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/pendragon\/ reject-dict
-^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/artistview\/v1\/artist\/(.*)&platform=iphone header https://spclient.wg.spotify.com/artistview/v1/artist/$1&platform=ipad
+#^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/pendragon\/ reject-dict
+#^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/artistview\/v1\/artist\/(.*)&platform=iphone header https://spclient.wg.spotify.com/artistview/v1/artist/$1&platform=ipad
+^https?:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com\/pendragon\/ reject-dict
+^https:\/\/(?:spclient\.wg|[a-z0-9]+-spclient)\.spotify\.com(?::443)?\/(artistview|user-customization-service|bootstrap) https://mock.trigram-masques-8r.workers.dev/music/$1 header
 
 [Script]
 http-response ^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/(?:bootstrap|user-customization-service) script-path=https://github.com/Toovooo/Rules/raw/master/Script/Spotify/Spotify.js, requires-body=true, binary-body-mode=true, timeout=3, argument=[{tab},{useractivity}], tag=Spotify
