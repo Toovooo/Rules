@@ -1,7 +1,7 @@
 #!name = 高德地图
 #!desc = 移除各种广告
-#!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Line/Amap.png
-#!date = 2025.07.01
+#!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/Color/Amap.png
+#!date = 2026.03.01
 
 [Rule]
 # 移除广告下发请求
