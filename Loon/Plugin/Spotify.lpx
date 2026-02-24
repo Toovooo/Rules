@@ -1,15 +1,15 @@
 #!name=Spotify
 #!desc=去广告
-#!icon=https://github.com/Toovooo/Rules/raw/master/Icon/Line/Spotify.png
-#!date=2025.07.01
+#!icon=https://github.com/Toovooo/Rules/raw/master/Icon/Color/Spotify.png
+#!date=2026.03.01
 
 [Argument]
 tab=switch, true, tag=移除底栏创建按钮, desc=此开关控制是否移除底栏创建按钮
 useractivity=switch, true, tag=启用Apple设备接力, desc=此开关控制是否使用Apple设备接力
 
 [Rewrite]
-#^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/pendragon\/ reject-dict
-#^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/artistview\/v1\/artist\/(.*)&platform=iphone header https://spclient.wg.spotify.com/artistview/v1/artist/$1&platform=ipad
+^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/pendragon\/ reject-dict
+^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/artistview\/v1\/artist\/(.*)&platform=iphone header https://spclient.wg.spotify.com/artistview/v1/artist/$1&platform=ipad
 ^https?:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com\/pendragon\/ reject-dict
 ^https:\/\/(?:spclient\.wg|[a-z0-9]+-spclient)\.spotify\.com(?::443)?\/(artistview|user-customization-service|bootstrap) https://mock.trigram-masques-8r.workers.dev/music/$1 header
 
