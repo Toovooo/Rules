@@ -4,17 +4,23 @@
 #!date=2026.03.01
 
 [Argument]
-tab=switch, true, tag=移除底栏创建按钮, desc=此开关控制是否移除底栏创建按钮
-useractivity=switch, true, tag=启用Apple设备接力, desc=此开关控制是否使用Apple设备接力
+#tab=switch, true, tag=移除底栏创建按钮, desc=此开关控制是否移除底栏创建按钮
+#useractivity=switch, true, tag=启用Apple设备接力, desc=此开关控制是否使用Apple设备接力
 
 [Rewrite]
-^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/pendragon\/ reject-dict
-^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/artistview\/v1\/artist\/(.*)&platform=iphone header https://spclient.wg.spotify.com/artistview/v1/artist/$1&platform=ipad
-^https?:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com\/pendragon\/ reject-dict
-^https:\/\/(?:spclient\.wg|[a-z0-9]+-spclient)\.spotify\.com(?::443)?\/(artistview|user-customization-service|bootstrap) https://mock.trigram-masques-8r.workers.dev/music/$1 header
+#^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/pendragon\/ reject-dict
+#^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/artistview\/v1\/artist\/(.*)&platform=iphone header https://spclient.wg.spotify.com/artistview/v1/artist/$1&platform=ipad
+#^https?:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com\/pendragon\/ reject-dict
+#^https:\/\/(?:spclient\.wg|[a-z0-9]+-spclient)\.spotify\.com(?::443)?\/(artistview|user-customization-service|bootstrap) https://mock.trigram-masques-8r.workers.dev/music/$1 header
+
+^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/user-customization-service\/v1\/customize$ header-del if-none-match
 
 [Script]
-http-response ^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/(?:bootstrap|user-customization-service) script-path=https://github.com/Toovooo/Rules/raw/master/Script/Spotify/Spotify.js, requires-body=true, binary-body-mode=true, timeout=3, argument=[{tab},{useractivity}], tag=Spotify
+#http-response ^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/(?:bootstrap|user-customization-service) script-path=https://github.com/Toovooo/Rules/raw/master/Script/Spotify/Spotify.js, requires-body=true, binary-body-mode=true, timeout=3, argument=[{tab},{useractivity}], tag=Spotify
+
+http-request ^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path=https://github.com/Toovooo/Rules/raw/master/Script/Spotify/SpotifyJson.js, timeout=10, tag=spotifyJson
+http-response ^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://github.com/Toovooo/Rules/raw/master/Script/Spotify/SpotifyProto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=spotifyProto
 
 [MitM]
-hostname= *-spclient.spotify.com, spclient.wg.spotify.com
+#hostname= *-spclient.spotify.com, spclient.wg.spotify.com
+hostname = spclient.wg.spotify.com, *spclient.spotify.com
