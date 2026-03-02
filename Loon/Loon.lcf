@@ -93,7 +93,6 @@ https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/WeatherKit.lpx, enabled 
 https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Tieba.lpx, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/TaoBao.lpx, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Wechat.lpx, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Emby.lpx, policy = 免流, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/BoxJs.lpx, policy = Final, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/MediaCheck.lpx, enabled = true
 
