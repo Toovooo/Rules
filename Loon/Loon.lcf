@@ -84,7 +84,6 @@ https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/Youtube.lpx, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/WeatherKit.lpx, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/Tieba.lpx, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/BoxJs.lpx, policy = Final, enabled = true
-#https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/MediaCheck.lpx, enabled = true
 
 [MITM]
 hostname =
