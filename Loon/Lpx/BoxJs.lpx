@@ -1,0 +1,13 @@
+#!name=BoxJs
+#!desc=数据管理
+#!icon=https://github.com/Toovooo/Rules/raw/master/Icon/Color/BoxJs.png
+#!date=2026.03.03
+
+[Rule]
+DOMAIN-SUFFIX,jsdelivr.net,PROXY
+
+[Script]
+http-request ^https?:\/\/(.+\.)?boxjs\.(com|net) script-path=https://github.com/Toovooo/Rules/raw/master/Script/boxjs.js, requires-body=true, timeout=120, tag=BoxJs
+
+[Mitm]
+hostname = boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net

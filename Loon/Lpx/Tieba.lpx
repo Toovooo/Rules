@@ -1,0 +1,18 @@
+#!name=百度贴吧
+#!desc=开屏广告 各种广告
+#!icon=https://github.com/Toovooo/Rules/raw/master/Icon/Color/Tieba.png
+#!date=2026.03.03
+
+[Argument]
+per_filter_video_thread = select,"0","1",tag=推荐页不展示视频贴,desc=设置为1则推荐页不展示视频贴
+
+[Rule]
+DOMAIN,180.76.76.200,REJECT
+IP-CIDR,180.76.76.200/32,REJECT,no-resolve
+
+[Script]
+http-response ^https?:\/\/(tiebac|c\.tieba)\.baidu\.com\/(c\/(s\/sync|f\/(ad\/getSplashAd|frs\/(page|threadlist|generalTabList)|pb\/(pic)?page|excellent\/personalized))$|tiebaads\/commonbatch\?) script-path=https://github.com/Toovooo/Rules/raw/master/Script/Tieba/TiebaJson.js, requires-body=true, timeout=10, tag=贴吧json
+http-response ^https?:\/\/(tiebac|c\.tieba)\.baidu\.com\/c\/(b\/ad\/adBid|f\/(frs\/(page|threadlist|generalTabList)|ad\/getFeedAd|pb\/page|excellent\/personalized))\?cmd script-path=https://github.com/Toovooo/Rules/raw/master/Script/Tieba/TiebaProto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=贴吧proto, argument=[{per_filter_video_thread}]
+
+[Mitm]
+hostname = tiebac.baidu.com
