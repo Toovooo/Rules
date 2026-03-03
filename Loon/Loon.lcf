@@ -47,11 +47,8 @@ Japan = select, JP, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/C
 Korea = select, KR, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Korea.png
 Global = select, XX, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Global.png
 Singapore = select, SG, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Singapore.png
-Final = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, DIRECT, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Final.png
+Streaming = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, DIRECT, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Streaming.png
 Apple = select, DIRECT, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Apple.png
-ChatGPT = select, XX, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/OpenAI.png
-Disney = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Disney.png
-Netflix = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Netflix.png
 Spotify = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Spotify.png
 YouTube = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/YouTube.png
 Steam = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Steam.png
@@ -59,42 +56,35 @@ Emby = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url 
 Telegram = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Telegram.png
  
 [Rule]
-FINAL, Final
+FINAL, Streaming
  
 [Remote Rule]
-https://github.com/Toovooo/Rules/raw/master/Loon/List/AdBlock.lsr, policy = REJECT, tag = AdBlock, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Steam.lsr, policy = Steam, tag = Steam, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Spotify.lsr, policy = Spotify, tag = Spotify, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Telegram.lsr, policy = Telegram, tag = Telegram, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/AI.lsr, policy = ChatGPT, tag = ChatGPT, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Netflix.lsr, policy = Netflix, tag = Netflix, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Disney.lsr, policy = Disney, tag = Disney, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/YouTube.lsr, policy = YouTube, tag = YouTube, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Proxy.lsr, policy = Final, tag = Proxy, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Copilot.lsr, policy = ChatGPT, tag = Copilot, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Apple.lsr, policy = Apple, tag = Apple, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Epic.lsr, policy = DIRECT, tag = Epic, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Emby.lsr, policy = Emby, tag = Emby, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/List/Geoip.lsr, policy = DIRECT, tag = China, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/AdBlock.lsr, policy = REJECT, tag = AdBlock, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Steam.lsr, policy = Steam, tag = Steam, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Spotify.lsr, policy = Spotify, tag = Spotify, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Telegram.lsr, policy = Telegram, tag = Telegram, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/YouTube.lsr, policy = YouTube, tag = YouTube, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Streaming.lsr, policy = Streaming, tag = Streaming, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Apple.lsr, policy = Apple, tag = Apple, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Epic.lsr, policy = DIRECT, tag = Epic, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Emby.lsr, policy = Emby, tag = Emby, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Geoip.lsr, policy = DIRECT, tag = China, enabled = true
 
 [Rewrite]
 
 [Script]
+generic script-path=https://github.com/Toovooo/Rules/raw/master/Script/Check/NetworkEntryAndExitQueries.js, timeout=10, tag=入口落地查询,img-url=globe.asia.australia.system
+generic script-path=https://github.com/Toovooo/Rules/raw/master/Script/Check/LocationDetection.js, timeout=10, tag=地理位置查询,img-url=location.circle.system
+generic script-path=https://github.com/Toovooo/Rules/raw/master/Script/Check/NodeUnlockDetection.js, timeout=20, tag=节点解锁查询,img-url=play.circle.system
 
 [Plugin]
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/AdBlock.lpx, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/BlockHTTPDNS.lpx, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Adsense.lpx, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Appraven.lpx, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Spotify.lpx, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Youtube.lpx, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Bilibili.lpx, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/WeatherKit.lpx, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Tieba.lpx, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/TaoBao.lpx, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/Wechat.lpx, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/BoxJs.lpx, policy = Final, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/MediaCheck.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/AdBlock.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/Spotify.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/Youtube.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/WeatherKit.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/Tieba.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/BoxJs.lpx, policy = Final, enabled = true
+#https://github.com/Toovooo/Rules/raw/master/Loon/Plugin/MediaCheck.lpx, enabled = true
 
 [MITM]
 hostname =
