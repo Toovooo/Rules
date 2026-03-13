@@ -4,8 +4,8 @@
 #!date=2026.03.03
 
 [Argument]
-#tab=switch, true, tag=移除底栏创建按钮, desc=此开关控制是否移除底栏创建按钮
-#useractivity=switch, true, tag=启用Apple设备接力, desc=此开关控制是否使用Apple设备接力
+tab=switch, true, tag=移除底栏创建按钮, desc=此开关控制是否移除底栏创建按钮
+useractivity=switch, true, tag=启用Apple设备接力, desc=此开关控制是否使用Apple设备接力
 
 [Rewrite]
 ^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/pendragon\/ reject-dict
