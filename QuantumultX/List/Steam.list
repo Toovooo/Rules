@@ -1,16 +1,3 @@
-#!name=Steam
-HOST,f3b7q2p3.ssl.hwcdn.net,Steam
-HOST,steambroadcast.akamaized.net,Steam
-HOST,steamcdn-a.akamaihd.net,Steam
-HOST,steamcommunity-a.akamaihd.net,Steam
-HOST,steammobile.akamaized.net,Steam
-HOST,steampipe-kr.akamaized.net,Steam
-HOST,steampipe-partner.akamaized.net,Steam
-HOST,steampipe.akamaized.net,Steam
-HOST,steamstore-a.akamaihd.net,Steam
-HOST,steamusercontent-a.akamaihd.net,Steam
-HOST,steamuserimages-a.akamaihd.net,Steam
-HOST,steamvideo-a.akamaihd.net,Steam
 HOST-SUFFIX,cdn-ali.content.steamchina.com,Steam
 HOST-SUFFIX,cdn-qc.content.steamchina.com,Steam
 HOST-SUFFIX,cdn-ws.content.steamchina.com,Steam
@@ -19,6 +6,7 @@ HOST-SUFFIX,dl.steam.clngaa.com,Steam
 HOST-SUFFIX,dl.steam.ksyna.com,Steam
 HOST-SUFFIX,dota2.wmsj.cn,Steam
 HOST-SUFFIX,edge.steam-dns.top.comcast.net,Steam
+HOST-SUFFIX,f3b7q2p3.ssl.hwcdn.net,Steam
 HOST-SUFFIX,fanatical.com,Steam
 HOST-SUFFIX,humblebundle.com,Steam
 HOST-SUFFIX,playartifact.com,Steam
@@ -36,6 +24,7 @@ HOST-SUFFIX,steam.cdn.webra.ru,Steam
 HOST-SUFFIX,steam.eca.qtlglb.com,Steam
 HOST-SUFFIX,steam.naeu.qtlglb.com,Steam
 HOST-SUFFIX,steam.ru.qtlglb.com,Steam
+HOST-SUFFIX,steam.tv,Steam
 HOST-SUFFIX,steambroadcast.akamaized.net,Steam
 HOST-SUFFIX,steamcdn-a.akamaihd.net,Steam
 HOST-SUFFIX,steamcommunity-a.akamaihd.net,Steam
@@ -43,6 +32,9 @@ HOST-SUFFIX,steamcommunity.com,Steam
 HOST-SUFFIX,steamcontent.tnkjmec.com,Steam
 HOST-SUFFIX,steamdeck.com,Steam
 HOST-SUFFIX,steamgames.com,Steam
+HOST-SUFFIX,steammobile.akamaized.net,Steam
+HOST-SUFFIX,steampipe-kr.akamaized.net,Steam
+HOST-SUFFIX,steampipe-partner.akamaized.net,Steam
 HOST-SUFFIX,steampipe.akamaized.net,Steam
 HOST-SUFFIX,steampowered.com,Steam
 HOST-SUFFIX,steampowered.com.8686c.com,Steam

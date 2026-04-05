@@ -1,4 +1,4 @@
-#!name=AdBlock
+HOST-SUFFIX,msmp.abchina.com.cn,REJECT
 HOST-SUFFIX,dagonghuzhu.com,REJECT
 HOST-SUFFIX,glitter.services.disqus.com,REJECT
 HOST-SUFFIX,juggler.services.disqus.com,REJECT

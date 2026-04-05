@@ -1,8 +1,7 @@
-#!name=YouTube
-USER-AGENT,*youtube*,YouTube
-USER-AGENT,YouTube*,YouTube
-USER-AGENT,com.google.ios.youtube*,YouTube
-HOST-KEYWORD,youtube,YouTube
+HOST,music.youtube.com,YouTube
+USER-AGENT,YouTubeMusic*,YouTube
+USER-AGENT,com.google.ios.youtubemusic*,YouTube
+
 HOST,youtubei.googleapis.com,YouTube
 HOST,yt3.ggpht.com,YouTube
 HOST-SUFFIX,googlevideo.com,YouTube
@@ -16,3 +15,4 @@ HOST-SUFFIX,youtubegaming.com,YouTube
 HOST-SUFFIX,youtubekids.com,YouTube
 HOST-SUFFIX,yt.be,YouTube
 HOST-SUFFIX,ytimg.com,YouTube
+HOST-KEYWORD,youtube,YouTube
