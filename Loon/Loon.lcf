@@ -64,6 +64,7 @@ https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Spotify.lsr, policy = Spoti
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Telegram.lsr, policy = Streaming, tag = Telegram, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/YouTube.lsr, policy = YouTube, tag = YouTube, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Streaming.lsr, policy = Streaming, tag = Streaming, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/InteIIigence.lsr, policy = Streaming, tag = InteIIigence, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Apple.lsr, policy = Apple, tag = Apple, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Epic.lsr, policy = DIRECT, tag = Epic, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Emby.lsr, policy = Emby, tag = Emby, enabled = true
