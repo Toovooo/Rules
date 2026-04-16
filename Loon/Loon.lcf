@@ -49,9 +49,11 @@ Global = select, XX, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/
 Singapore = select, SG, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Singapore.png
 Streaming = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, DIRECT, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Streaming.png
 Apple = select, DIRECT, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Apple.png
+AI = select, DIRECT, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/OpenAI.png
 Spotify = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Spotify.png
 YouTube = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/YouTube.png
-Steam = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Steam.png
+Steam = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, DIRECT, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Steam.png
+Epic = select, DIRECT, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Game.png
 Emby = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Emby.png
 
 [Rule]
@@ -63,10 +65,10 @@ https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Steam.lsr, policy = Steam, 
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Spotify.lsr, policy = Spotify, tag = Spotify, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Telegram.lsr, policy = Streaming, tag = Telegram, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/YouTube.lsr, policy = YouTube, tag = YouTube, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Streaming.lsr, policy = Streaming, tag = Streaming, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/InteIIigence.lsr, policy = Streaming, tag = InteIIigence, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Streaming.lsr, policy = Global, tag = Streaming, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Apple.lsr, policy = Apple, tag = Apple, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Epic.lsr, policy = DIRECT, tag = Epic, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/InteIIigence.lsr, policy = AI, tag = AI, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Epic.lsr, policy = Epic, tag = Epic, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Emby.lsr, policy = Emby, tag = Emby, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Geoip.lsr, policy = DIRECT, tag = China, enabled = true
 
