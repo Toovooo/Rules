@@ -41,6 +41,7 @@ XX = NameRegex, FilterKey = ".*"
 VV = NameRegex, FilterKey = "(?i)(CDN|0x)"
 
 [Proxy Group]
+UnitedStates = load-balance,US,interval = 600,max-timeout = 3000,algorithm = pcc,img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/UnitedStates.png
 UnitedStates = select, US, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/UnitedStates.png
 HongKong = select, HK, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/HongKong.png
 Japan = select, JP, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Japan.png
