@@ -41,21 +41,18 @@ XX = NameRegex, FilterKey = ".*"
 VV = NameRegex, FilterKey = "(?i)(CDN|0x)"
 
 [Proxy Group]
-UnitedStates = load-balance,US,interval = 600,max-timeout = 3000,algorithm = pcc,img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/UnitedStates.png
-UnitedStates = select, US, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/UnitedStates.png
-HongKong = select, HK, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/HongKong.png
-Japan = select, JP, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Japan.png
-Korea = select, KR, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Korea.png
-Global = select, XX, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/UnitedNations.png
-Singapore = select, SG, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Singapore.png
-Streaming = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, DIRECT, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Streaming.png
-Apple = select, DIRECT, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Apple.png
-AI = select, DIRECT, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/OpenAI.png
-Spotify = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Spotify.png
-YouTube = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/YouTube.png
-Steam = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, DIRECT, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Steam.png
-Epic = select, DIRECT, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Game.png
-Emby = select, UnitedStates, HongKong, Japan, Korea, Global, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Emby.png
+UnitedStates = load-balance,US,interval = 600,max-timeout = 3000,algorithm = pcc, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/UnitedStates.png
+HongKong = load-balance,HK,interval = 600,max-timeout = 3000,algorithm = pcc, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/HongKong.png
+Japan = load-balance,JP,interval = 600,max-timeout = 3000,algorithm = pcc, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Japan.png
+Korea = load-balance,KR,interval = 600,max-timeout = 3000,algorithm = pcc, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Korea.png
+Singapore = load-balance,SG,interval = 600,max-timeout = 3000,algorithm = pcc, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Singapore.png
+Streaming = select, UnitedStates, HongKong, Japan, Korea, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Streaming.png
+Apple = select, DIRECT, UnitedStates, HongKong, Japan, Korea, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Apple.png
+Spotify = select, UnitedStates, HongKong, Japan, Korea, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Spotify.png
+YouTube = select, UnitedStates, HongKong, Japan, Korea, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/YouTube.png
+Steam = select, UnitedStates, HongKong, Japan, Korea, Singapore, DIRECT, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Steam.png
+Epic = select, DIRECT, UnitedStates, HongKong, Japan, Korea, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Game.png
+Emby = select, Japan, Korea, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Emby.png
 
 [Rule]
 FINAL, Streaming
@@ -66,9 +63,9 @@ https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Steam.lsr, policy = Steam, 
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Spotify.lsr, policy = Spotify, tag = Spotify, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Telegram.lsr, policy = Streaming, tag = Telegram, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/YouTube.lsr, policy = YouTube, tag = YouTube, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Streaming.lsr, policy = Global, tag = Streaming, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Streaming.lsr, policy = Streaming, tag = Streaming, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Apple.lsr, policy = Apple, tag = Apple, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/InteIIigence.lsr, policy = AI, tag = AI, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/InteIIigence.lsr, policy = UnitedStates, tag = AI, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Epic.lsr, policy = Epic, tag = Epic, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Emby.lsr, policy = Emby, tag = Emby, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Geoip.lsr, policy = DIRECT, tag = China, enabled = true
@@ -86,6 +83,8 @@ https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/Spotify.lpx, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/Youtube.lpx, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/WeatherKit.lpx, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/Tieba.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/Bilibili.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/TaoBao.lpx, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/BoxJs.lpx, policy = Streaming, enabled = true
 
 [MITM]
