@@ -65,7 +65,7 @@ https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Telegram.lsr, policy = Stre
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/YouTube.lsr, policy = YouTube, tag = YouTube, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Streaming.lsr, policy = Streaming, tag = Streaming, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Apple.lsr, policy = Apple, tag = Apple, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/InteIIigence.lsr, policy = UnitedStates, tag = AI, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Ai.lsr, policy = UnitedStates, tag = AI, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Epic.lsr, policy = Epic, tag = Epic, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Emby.lsr, policy = Emby, tag = Emby, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Geoip.lsr, policy = DIRECT, tag = China, enabled = true
