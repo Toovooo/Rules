@@ -101,7 +101,7 @@
 http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?) script-path=https://github.com/Toovooo/Rules/raw/master/Script/Adblock/adsense.js, requires-body=true, timeout=10, tag=广告联盟
 
 # X网页广告
-http-response ^https?:\/\/x\.com\/i\/api\/graphql\/[^\/]+\/(HomeTimeline|TweetDetail) script-path=https://github.com/Toovooo/Rules/raw/master/Script/X_ads.js, requires-body=true, tag=X网页版去广告
+http-response ^https?:\/\/x\.com\/i\/api\/graphql\/[^\/]+\/(HomeTimeline|HomeLatestTimeline|TweetDetail) script-path=https://github.com/Toovooo/Rules/raw/master/Script/X_ads.js, requires-body=true, tag=X网页版去广告
 
 [Mitm]
 hostname = elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, m.360buyimg.com, api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, ms.jr.jd.com, appconf.mail.163.com, support.you.163.com, dns.jd.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, misc-api-prd-mx.wandafilm.com, acs.m.goofish.com, g-acs.m.goofish.com, wallet.95516.com, clientaccess.10086.cn, client.app.coc.10086.cn, app.10086.cn, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, www.google.cn, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
