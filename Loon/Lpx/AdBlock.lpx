@@ -3,6 +3,13 @@
 #!icon=https://github.com/Toovooo/Rules/raw/master/Icon/Line/AdBlack.png
 #!date=2026.05.06
 
+[General]
+# 绕过代理
+skip-proxy = www.baidu.com, yunbusiness.ccb.com, wxh.wo.cn, gate.lagou.com, www.abchina.com.cn, www.shanbay.com, login-service.mobile-bank.psbc.com, mobile-bank.psbc.com, id6.me, www.163.com
+
+# 真实IP
+real-ip = easy-login.10099.com.cn, *-update.xoyocdn.com, id6.me, open.e.189.cn
+
 [Rewrite]
 # 饿了么 - elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com
 ^https?:\/\/elemecdn\.com\/.+\/sitemap reject
