@@ -1,9 +1,34 @@
-#!name=拦截广告
+#!name=广告合集
 #!desc=去开屏广告 
 #!icon=https://github.com/Toovooo/Rules/raw/master/Icon/Line/AdBlack.png
-#!date=2026.05.06
+#!date=2026.09.13
 
-[General]
+[Argument]
+# 网易云音乐
+MY = switch,true,tag=[隐藏底部]漫游标签,desc=
+DT = switch,false,tag=[隐藏底部]笔记标签,desc=
+FX = switch,true,tag=[隐藏底部]发现标签,desc=
+PRGG = switch,true,tag=[隐藏首页]问候语,desc=
+PRRK = switch,false,tag=[隐藏首页]排行榜,desc=
+PRDRD = switch,false,tag=[隐藏首页]每日推荐,desc=
+PRSCVPT = switch,false,tag=[隐藏首页]推荐歌单,desc=
+PRST = switch,false,tag=[隐藏首页]最近常听,desc=
+PRRR = switch,true,tag=[隐藏首页]雷达歌单,desc=
+HMPR = switch,false,tag=[隐藏首页]音乐合伙人,desc=
+PRMST = switch,true,tag=[隐藏首页]推荐专属歌单,desc=
+PRCN = switch,true,tag=[隐藏首页]你的专属歌单,desc=
+
+[Rule]
+# 网易云音乐
+DOMAIN,iadmusicmat.music.126.net,REJECT
+DOMAIN,iadmat.nosdn.127.net,REJECT
+DOMAIN,iadmatapk.nosdn.127.net,REJECT
+DOMAIN,httpdns.n.netease.com,REJECT
+DOMAIN,httpdns.music.163.com,REJECT
+
+# 闲鱼
+AND,((URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch"),(USER-AGENT,"%E9%97%B2%E9%B1%BC*")),REJECT
+DOMAIN-KEYWORD,iyes.youku.com,REJECT
 
 [Rewrite]
 # 饿了么 - elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com
@@ -42,31 +67,29 @@
 ^https:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api response-body-json-jq '.data.objects["OpenAPP-&-FlashAD"] = [] | .data.objects["InTheaters-&-BoxAD"] = []'
 ^https?:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api\?bannerInfos=%5B%7B%22cinemaI response-body-replace-regex "WX_index_mp-&-boxAD" "xxx"
 
+# 网易云音乐
+^https?:\/\/(ipv4|interface\d?)\.music\.163.com\/x?e?api\/ad - reject-dict
+^https?:\/\/interface\d?\.music\.163\.com\/(x|w)?e?api\/(side-bar\/mini-program\/music-service\/account|delivery\/(batch-deliver|deliver)|moment\/tab\/info\/get|yunbei\/account\/entrance\/get) - reject-dict
+^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(resource\/comments?\/musiciansaid|community\/friends\/fans-group\/artist\/group\/get|user\/sub\/artist|music\/songshare\/text\/recommend\/get|mine\/applet\/redpoint|resniche\/position\/play\/new\/get) - reject-dict
+^https?:\/\/interface\d?\.music\.163.com\/w?e?api\/(search\/(chart|default|rcmd\/keyword|specialkeyword)|resource-exposure\/|activity\/bonus\/playpage\/time\/query) - reject-dict
+^https?:\/\/interface\d?\.music\.163.com\/eapi\/(mlivestream\/entrance\/playpage|link\/(position\/show\/strategy|scene\/show)|ios\/version|v\d\/content\/exposure\/comment\/banner) - reject-dict
+
 # 闲鱼 - acs.m.goofish.com, g-acs.m.goofish.com
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlecommerce\.splash\.ads\/ reject-dict
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ response-body-json-jq '.data.homeTopList |= map(select(.sectionType == "kingkongDo")) | .data.sections |= map(select(.data.clickParam.args.cardType as $ct | $ct != "homeMultiBanner" and $ct != "mamaAD")) | .data.sections |= map(select((.template.name|type=="string")and(.template.name=="idlefish_home_new_commodity_card"or(.template.name|contains("fish_home_tags_item_card")))))'
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.widget\.refresh\.get\/ response-body-json-jq '.data.homeTopList |= map(select(.sectionType == "kingkongDo"))'
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.home\.whale\.modulet\/ response-body-json-jq '.data.container.sections |= map(select(.template.name == "fish_home_miniapp"))'
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/ reject-dict
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.feed\.list\/ response-body-json-jq '.data.sections|=map(select(.cardType==2001))'
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.community\/ response-body-json-jq '.data.feedsList |= map(select(.template.name == "idlefish_home_new_commodity_card" or .template.name == "idlefish_home_new_content_card"))'
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.recommend\.list\/ reject-dict
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.newitem\.page\/ response-body-json-jq '.data.sections |= map(select(.data.clickParam.args.cardType as $ct | $ct != "banner" and $ct != "mamaAD"))'
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.near\.by\.corner\.info\/ reject-dict
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.flow\.plat\.section\/ response-body-json-jq '.data.data.components |= map(select(.data and (.data|type=="object") and .data.template and (.data.template|type=="object") and .data.template.name and (.data.template.name|type=="string") and (.data.template.name|contains("fish_city_kingkong"))))'
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.home\.top\/ response-body-json-jq '.data.data.components |= map(select(.key == "fish_home_second_stage_top_cardV3"))'
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.home\/ response-body-json-jq '.data.sections |= map(select((.template.cardEnum != "ads") and (.cardType == "common")))'
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ response-body-json-jq '.data.container.sections |= map(select(.template.name | test("^my_fy[0-9]+_(header|user_info|trade|appraise|tools)$"))) | .data.container.sections |= map(.item |= (if .level and .level.exContent and (.level.exContent | has("tips")) then del(.level) else . end)) | .data.container.sections|=map(if .sectionBizCode=="entry2025" then .item.tool.exContent.tools|=[[.[][]|select(.exContent.id as $id|$id==1 or $id==2 or $id==3 or $id==5 or $id==29 or $id==32 or $id==38)]|sort_by(. as $item|([5,2,3,32,38,1,29]|index($item.exContent.id)))|[range(0;length;5) as $i|.[$i:$i+5]]][] else . end)'
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.buy\.feeds\/ reject-dict
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/ reject-dict
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/ response-body-json-jq '.data.circleList[]?.showInfo |= del(.titleImage, .atmosphereImageUrl) | .data.next.headList |= map(select(.bizCode == "main" or .bizCode == "market" or .bizCode == "IDLE_CIRCLE")) | del(.data.next.headList[]?.showInfo.rightTagImage)'
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.magic\.home\.page\.list\/ response-body-json-del data.topList
-^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ response-body-json-jq '.data.resultList |= map(if .data.item.main.exContent.dislikeFeedback.clickParam.args.bizType == "ad" then empty else . end)'
-^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ response-body-json-del data.resultPrefixBar
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/ response-body-json-jq '.data.resultList |= map(select(.type != "MarketHotSpot"))'
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/ response-body-json-jq '.data.cardList |= map(if has("cardData") and (.cardData | has("hotwords")) then .cardData |= del(.hotwords) else . end)'
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/ reject-dict
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.trade\.full\.info\/ response-body-json-jq '.data.components |= map(select(.render | . == "orderStatusVO" or . == "addressInfoVO" or . == "orderInfoVO"))'
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/2\.0 reject-dict
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/1\.0 reject-dict
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.resell\.recommendorhotcate\/1\.0 reject-dict
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.idle\.coin\.nextfresh\/1\.0 reject-dict
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.buy\.feeds reject-dict
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/1\.0 reject
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlecommerce\.splash\.ads reject-dict
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/ response-body-json-jq 'del(.data)'
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/ response-body-json-jq 'del(.data)'
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.group\.myself\.banner\/ response-body-json-jq '.data.bannerList = []'
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/2\.0 response-body-json-jq '.data.recommends = [] | .data.items = [] | .data.next = false'
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.recommend\.list\/ response-body-json-jq '.data.cardList = []'
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.often\.visit response-body-json-jq '.data.sections = []'
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.circle\.myself\.banner\/1\.0 response-body-json-jq '.data.bannerList = []'
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.circle\.visited\/1\.0 response-body-json-jq '.data.visitedCircleList = []'
 
 # 云闪付 - wallet.95516.com
 ^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 reject
@@ -103,7 +126,24 @@
 http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?) script-path=https://github.com/Toovooo/Rules/raw/master/Script/Adblock/adsense.js, requires-body=true, timeout=10, tag=广告联盟
 
 # X网页广告
-http-response ^https?:\/\/x\.com\/i\/api\/graphql\/[^\/]+\/(HomeTimeline|HomeLatestTimeline|TweetDetail) script-path=https://github.com/Toovooo/Rules/raw/master/Script/X_ads.js, requires-body=true, tag=X网页版去广告
+http-response ^https?:\/\/x\.com\/i\/api\/graphql\/[^\/]+\/(HomeTimeline|TweetDetail) script-path=https://github.com/Toovooo/Rules/raw/master/Script/X_ads.js, requires-body=true, tag=X网页版去广告
+
+# 网易云音乐
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/x?e?api\/(batch|v\d\/resource\/comment\/floor\/get) script-path=https://github.com/Toovooo/Rules/raw/master/Script/NeteaseCloudMusic/NeteaseCloudMusic.js, requires-body=true, binary-body-mode=true, timeout=20, tag=ne_mian
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/x?e?api\/link\/home\/framework\/tab script-path=https://github.com/Toovooo/Rules/raw/master/Script/NeteaseCloudMusic/NeteaseCloudMusic.js, requires-body=true, binary-body-mode=true, timeout=20, tag=ne_tab, argument=[{MY},{DT},{FX}]
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/x?e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)) script-path=https://github.com/Toovooo/Rules/raw/master/Script/NeteaseCloudMusic/NeteaseCloudMusic.js, requires-body=true, binary-body-mode=true, timeout=20, tag=ne_home, argument=[{PRGG},{PRRK},{PRDRD},{PRSCVPT},{PRST},{PRRR},{HMPR},{PRMST},{PRCN}]
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/x?e?api\/link\/page\/discovery\/resource\/show script-path=https://github.com/Toovooo/Rules/raw/master/Script/NeteaseCloudMusic/NeteaseCloudMusic.js, requires-body=true, binary-body-mode=true, timeout=20, tag=ne_fx
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/x?e?api\/link\/position\/show\/resource script-path=https://github.com/Toovooo/Rules/raw/master/Script/NeteaseCloudMusic/NeteaseCloudMusic.js, requires-body=true, binary-body-mode=true, timeout=20, tag=ne_mybarad
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/x?e?api\/user\/follow\/users\/mixed\/get script-path=https://github.com/Toovooo/Rules/raw/master/Script/NeteaseCloudMusic/NeteaseCloudMusic.js, requires-body=true, binary-body-mode=true, timeout=20, tag=ne_foll
+
+# 闲鱼
+http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ script-path = https://github.com/Toovooo/Rules/raw/master/Script/Adblock/goofish.js, requires-body = true, tag = 商品信息流广告
+http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.home\/ script-path = https://github.com/Toovooo/Rules/raw/master/Script/Adblock/goofish.js, requires-body = true, tag = 定位地区页面的信息流广告
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ script-path = https://github.com/Toovooo/Rules/raw/master/Script/Adblock/goofish.js, requires-body = true, tag = 个人主页
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/1\.0 script-path = https://github.com/Toovooo/Rules/raw/master/Script/Adblock/goofish.js, requires-body = true, tag = 首页顶部频道菜单
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.nearby\.itemdetail\.enter\/1\.0 script-path = https://github.com/Toovooo/Rules/raw/master/Script/Adblock/goofish.js, requires-body = true, tag = 商品详情页周边推荐
+http-response ^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ script-path = https://github.com/Toovooo/Rules/raw/master/Script/Adblock/goofish.js, requires-body = true, tag = 搜索结果信息流广告
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.flow\.plat\.section script-path = https://github.com/Toovooo/Rules/raw/master/Script/Adblock/goofish.js, requires-body = true, tag = 同城页横幅广告
 
 [Mitm]
-hostname = elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, m.360buyimg.com, api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, ms.jr.jd.com, appconf.mail.163.com, support.you.163.com, dns.jd.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, misc-api-prd-mx.wandafilm.com, acs.m.goofish.com, g-acs.m.goofish.com, wallet.95516.com, clientaccess.10086.cn, client.app.coc.10086.cn, app.10086.cn, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, www.google.cn, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
+hostname = elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, m.360buyimg.com, api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, ms.jr.jd.com, appconf.mail.163.com, support.you.163.com, dns.jd.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, misc-api-prd-mx.wandafilm.com, acs.m.goofish.com, g-acs.m.goofish.com, wallet.95516.com, clientaccess.10086.cn, client.app.coc.10086.cn, app.10086.cn, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, www.google.cn, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, interface.music.163.com, interface3.music.163.com, ipv4.music.163.com, interface9.music.163.com
