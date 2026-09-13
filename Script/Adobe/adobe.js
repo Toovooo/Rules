@@ -4,7 +4,7 @@
 脚本功能：解锁Adobe Photoshop, Adobe Illustrator, Adobe Lightroom, Premiere Rush, Adobe Express, Spark Page, Spark Video, Adobe Fresco
 
 [rewrite_local]
-# Adobe解锁订阅 //lcs-mobile-cops.adobe.io
+# Adobe解锁订阅 lcs-mobile-cops.adobe.io
 ^https?:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile\/nul\/v2 url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/Crack/adobePs.js
 
 [mitm]
