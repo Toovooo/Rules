@@ -12,7 +12,7 @@ DOMAIN,ad.aggrxinc.com
 DOMAIN,statis.miwuad.com
 DOMAIN,ad-evods.tianya.tv
 DOMAIN,ads.cup.com.cn
-DOMAIN,app-analytics-services.com
+#DOMAIN,app-analytics-services.com
 DOMAIN,odm.app-ads-services.com
 DOMAIN,firebaselogging-pa.googleapis.com
 DOMAIN,firebaseinappmessaging.googleapis.com
