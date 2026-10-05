@@ -8,8 +8,12 @@
 ^https:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api response-body-json-jq '.data.objects["OpenAPP-&-FlashAD"] = [] | .data.objects["InTheaters-&-BoxAD"] = []'
 ^https?:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api\?bannerInfos=%5B%7B%22cinemaI response-body-replace-regex "WX_index_mp-&-boxAD" "xxx"
 
+response if ${url} ~= /^https:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api/i then response.json.jq(".data.objects[\"OpenAPP-&-FlashAD\"] = [] | .data.objects[\"InTheaters-&-BoxAD\"] = []")
+response if ${url} ~= /^https?:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api\?bannerInfos=%5B%7B%22cinemaI/i then response.body.replace(/"WX_index_mp-&-boxAD"/, "\"xxx\"")
+
 # 云闪付 - wallet.95516.com
 ^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 reject
+request if ${url} ~= /^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1/i then reject(404)
 
 # 中国移动 - clientaccess.10086.cn, client.app.coc.10086.cn, app.10086.cn
 ^https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit reject
@@ -17,6 +21,12 @@
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit reject-200
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList reject
 ^https?:\/\/(client\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket reject
+
+request if ${url} ~= /^https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit/i then reject(404)
+request if ${url} ~= /^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query/i then reject(404)
+request if ${url} ~= /^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit/i then reject(200)
+request if ${url} ~= /^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList/i then reject(404)
+request if ${url} ~= /^https?:\/\/(client\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket/i then reject(404)
 
 # 中国联通 - m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm reject
@@ -27,6 +37,15 @@
 ^https?:\/\/[^(apple|10010)]+\.(com|cn)\/(a|A)d(s|v)?(\/|\.js) reject-img
 ^https?:\/\/m1\.ad\.10010\.com\/noticeMag\/images\/imageUpload\/2\d{3} reject-img
 ^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer= reject-img
+
+request if ${url} ~= /^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm/i then reject(404)
+request if ${url} ~= /^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd/i then reject(404)
+request if ${url} ~= /^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv)/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/getclientconfig\.htm/i then reject_dict(200)
+request if ${url} ~= /^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd)/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/[^(apple|10010)]+\.(com|cn)\/(a|A)d(s|v)?(\/|\.js)/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/m1\.ad\.10010\.com\/noticeMag\/images\/imageUpload\/2\d{3}/i then reject_img(200)
+request if ${url} ~= /^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer=/i then reject_img(200)
 
 # Google - www.google.cn
 ^https?:\/\/(www.)?(g|google)\.cn 307 https://www.google.com
