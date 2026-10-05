@@ -1,7 +1,7 @@
 #!name=广告合集
 #!desc=去开屏广告 
-#!icon=https://github.com/Toovooo/Rules/raw/master/Icon/Line/AdBlack.png
-#!date=2026.09.13
+#!icon=https://github.com/Toovooo/Rules/raw/master/Icon/zo/Loon.png
+#!date=2026.10.06
 
 [Rewrite]
 # > 万达电影 - , misc-api-prd-mx.wandafilm.com
@@ -33,4 +33,4 @@ request if ${url} ~= /^https?:\/\/(www.)?(g|google)\.cn/i then redirect(307, "ht
 request if ${url} ~= /^https?:\/\/(ditu|maps).google\.cn/i then redirect(307, "https://maps.google.com")
 
 [Mitm]
-hostname = elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, m.360buyimg.com, api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, ms.jr.jd.com, appconf.mail.163.com, support.you.163.com, dns.jd.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, misc-api-prd-mx.wandafilm.com, acs.m.goofish.com, g-acs.m.goofish.com, wallet.95516.com, clientaccess.10086.cn, client.app.coc.10086.cn, app.10086.cn, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, www.google.cn, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, interface.music.163.com, interface3.music.163.com, ipv4.music.163.com, interface9.music.163.com
+hostname = misc-api-prd-mx.wandafilm.com, wallet.95516.com, clientaccess.10086.cn, client.app.coc.10086.cn, app.10086.cn, m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn, www.google.cn
