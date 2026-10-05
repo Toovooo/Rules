@@ -41,19 +41,19 @@ XX = NameRegex, FilterKey = ".*"
 VV = NameRegex, FilterKey = "(?i)(CDN|0x)"
 
 [Proxy Group]
-UnitedStates = load-balance,US,interval = 600,max-timeout = 3000,algorithm = pcc, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/UnitedStates.png
-HongKong = load-balance,HK,interval = 600,max-timeout = 3000,algorithm = pcc, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/HongKong.png
-Japan = load-balance,JP,interval = 600,max-timeout = 3000,algorithm = pcc, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Japan.png
-Korea = load-balance,KR,interval = 600,max-timeout = 3000,algorithm = pcc, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Korea.png
-Singapore = load-balance,SG,interval = 600,max-timeout = 3000,algorithm = pcc, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Singapore.png
-Streaming = select, UnitedStates, HongKong, Japan, Korea, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Streaming.png
-Apple = select, DIRECT, UnitedStates, HongKong, Japan, Korea, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Apple.png
-AI = select, UnitedStates, HongKong, Japan, Korea, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/OpenAI.png
-Spotify = select, UnitedStates, HongKong, Japan, Korea, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Spotify.png
-YouTube = select, UnitedStates, HongKong, Japan, Korea, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/YouTube.png
-Steam = select, UnitedStates, HongKong, Japan, Korea, Singapore, DIRECT, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Steam.png
-Epic = select, DIRECT, UnitedStates, HongKong, Japan, Korea, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Game.png
-Emby = select, Japan, Korea, Singapore, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Emby.png
+美国 = load-balance,US,interval = 600,max-timeout = 3000,algorithm = pcc, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/UnitedStates.png
+香港 = load-balance,HK,interval = 600,max-timeout = 3000,algorithm = pcc, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/HongKong.png
+日本 = load-balance,JP,interval = 600,max-timeout = 3000,algorithm = pcc, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Japan.png
+韩国 = load-balance,KR,interval = 600,max-timeout = 3000,algorithm = pcc, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Korea.png
+新加坡 = load-balance,SG,interval = 600,max-timeout = 3000,algorithm = pcc, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Singapore.png
+Streaming = select, 美国, 香港, 日本, 韩国, 新加坡, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Streaming.png
+Apple = select, DIRECT, 美国, 香港, 日本, 韩国, 新加坡, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Apple.png
+#AI = select, 美国, 香港, 日本, 韩国, 新加坡, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/OpenAI.png
+Spotify = select, 美国, 香港, 日本, 韩国, 新加坡, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Spotify.png
+YouTube = select, 美国, 香港, 日本, 韩国, 新加坡, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/YouTube.png
+Steam = select, 美国, 香港, 日本, 韩国, 新加坡, DIRECT, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Steam.png
+Epic = select, DIRECT, 美国, 香港, 日本, 韩国, 新加坡, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Game.png
+Emby = select, 日本, 韩国, 新加坡, img-url = https://github.com/Toovooo/Rules/raw/master/Icon/Color/Emby.png
 
 [Rule]
 FINAL, Streaming
@@ -62,26 +62,22 @@ FINAL, Streaming
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/AdBlock.lsr, policy = REJECT, tag = AdBlock, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Steam.lsr, policy = Steam, tag = Steam, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Spotify.lsr, policy = Spotify, tag = Spotify, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Telegram.lsr, policy = Streaming, tag = Telegram, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Telegram.lsr, policy = YouTube, tag = Telegram, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/YouTube.lsr, policy = YouTube, tag = YouTube, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Proxy.lsr, policy = Streaming, tag = Streaming, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/APNs.lsr, policy = UnitedStates, tag = Apple, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Ai.lsr, policy = AI, tag = AI, enabled = true
+#https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/APNs.lsr, policy = 美国, tag = Apple, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Ai.lsr, policy = 美国, tag = AI, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Epic.lsr, policy = Epic, tag = Epic, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Emby.lsr, policy = Emby, tag = Emby, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Media.lsr, policy = Emby, tag = Emby, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Media.lsr, policy = 香港, tag = proxy, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Apple.lsr, policy = Apple, tag = Apple, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Direct.lsr, policy = DIRECT, tag = Direct, enabled = true
-https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Asn.lsr, policy = DIRECT, tag = Direct, enabled = true
+#https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Asn.lsr, policy = DIRECT, tag = Direct, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lsr/Geoip.lsr, policy = DIRECT, tag = Direct, enabled = true
 
 [Rewrite]
 
 [Script]
-generic script-path=https://github.com/Toovooo/Rules/raw/master/Script/Check/NetworkEntryAndExitQueries.js, timeout=10, tag=入口落地查询,img-url=globe.asia.australia.system
-generic script-path=https://github.com/Toovooo/Rules/raw/master/Script/Check/LocationDetection.js, timeout=10, tag=地理位置查询,img-url=location.circle.system
-generic script-path=https://github.com/Toovooo/Rules/raw/master/Script/Check/NodeUnlockDetection.js, timeout=20, tag=节点解锁查询,img-url=play.circle.system
-
 generic then script("https://github.com/Toovooo/Rules/raw/master/Script/Check/NetworkEntryAndExitQueries.js") with tag="入口落地查询", img_url="globe.asia.australia.system", timeout=10
 generic then script("https://github.com/Toovooo/Rules/raw/master/Script/Check/LocationDetection.js") with tag="地理位置查询", img_url="location.circle.system", timeout=10
 generic then script("https://github.com/Toovooo/Rules/raw/master/Script/Check/NodeUnlockDetection.js") with tag="节点解锁查询", img_url="play.circle.system", timeout=20
@@ -94,6 +90,7 @@ https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/WeatherKit.lpx, enabled = t
 https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/Tieba.lpx, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/Bilibili.lpx, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/TaoBao.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/Amap.lpx, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/BoxJs.lpx, policy = Streaming, enabled = true
 
 [MITM]
