@@ -1,7 +1,7 @@
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/refs/heads/main/Scripts/amap.js
 */
-// 2025-05-02 20:40
+// 2026-03-09 08:15
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -26,6 +26,10 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
   }
 } else if (url.includes("/boss/car/order/content_info")) {
   // 打车页面
+  if (obj?.data?.lubanData?.benefitsCard?.dataList?.length > 0) {
+    // 打车权益
+    obj.data.lubanData.benefitsCard.dataList = [];
+  }
   if (obj?.data?.lubanData?.popup?.dataList?.length > 0) {
     // 优惠弹窗
     obj.data.lubanData.popup.dataList = [];
@@ -281,6 +285,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
   // 搜索结果 模块详情
   const items = [
     "CouponBanner", // 高德红包
+    "CouponPush", // 团购优惠券
     // "anchor",
     "adStoreBigBannerModule", // 广告横幅 打车券之类的
     "adv_compliance_info", // 服务提供方
@@ -292,6 +297,8 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "brand_service", // 品牌服务
     "brand_shop_bar",
     // "brand_story",
+    "businessQualifications", // 服务须知
+    "carServiceCard", // 车主中心
     "checkIn",
     "check_in", // 足迹打卡
     "cityCardFeed", // 景点卡片
@@ -301,6 +308,8 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "co_branded_card",
     "collector_guide", // 游玩的图文指南
     "commonAiAgent", // ai门店助手
+    "commonGoodsShelf", // 商品信息
+    "commonHkfMiniPortal", // 订火车票
     "common_coupon_bar", // 领券条幅 新客专享 省钱卡
     "common_coupon_card", // 优惠券卡片
     // "companyInfo", // 简介
@@ -326,10 +335,12 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "first_surround_estate_tab", // 周边小区
     // "floor_guide_second", // 楼层导览
     // "footer_logo",
+    "footer_tel_button",
     // "foreclosurehouse",
     // "gallery_info", // 现场照片
-    // "ggc_entry",
-    // "hkfMiniPortal", // 订票页面 飞机 火车 汽车
+    "ggc_entry", // 优惠券横幅
+    "hkfMiniPortal", // 订票页面 飞机 火车 汽车
+    "hkfCalendarRecommend", // 春节火车票
     "horizontalGoodsShelf",
     "hospital_strategy", // 就医攻略
     "hotPlay", // 热门玩法
@@ -340,6 +351,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "hotelMustRead", // 订房必读
     // "hotelRooms", // 酒店所有房间
     // "hourHotelRooms", // 钟点房
+    "houseAgentService", // 买卖房屋经纪人
     // "houseEvaluationInfo", // 小区居住指数
     "houseList",
     "houseOfficeBrandIntroduction",
@@ -398,8 +410,10 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "parentPoiRecEntrance", // 所在商圈
     "platformCustomerCommonModule", // 众安保险赔付
     "platformCustomerComplianceInfo", // 保险公司信息
+    "poiDetailBottomBar",
     "poiDetailBottomBarOperation",
     "poiDetailCommonConfig",
+    "poiDetailNewBeltCardV2",
     "poiDetailNewBeltV2", // 金秋出行 横幅
     "poiDetailWaterFeed", // 附近景点瀑布流 新
     "poiDetailWaterFeedTitle", // 更多人气好去处 新
@@ -408,6 +422,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "portal_entrance", // 高德旅游版块 引流到旅游频道
     // "question_answer_card", // 问问 地点附近的热门问题
     "quickLink", // 地点详情页图标 酒店 景点 热榜
+    "quickLinksPortal", // 房产频道
     "relatedRecommends", // 附近同类型酒店
     // "realtorRealStep",
     "renthouse",
@@ -416,6 +431,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "rentsaleagencyv3",
     "rentsalehouse",
     "residentialOwners", // 小区业主
+    "retainInfo", // 回收二手车
     "reviews", // 用户评价
     // "roomSelect", // 选择订房日期 悬浮菜单
     "sameIndustryRecommendModule",
@@ -443,6 +459,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "second_surround_estate_tab", // 周边房产
     "service_shop", // 中介门店
     "shopBaseCase", // 小区装修案例
+    "shopStdActivity", // 店铺活动
     "shopStructGift", // 礼品广告位
     // "shop_news",
     "shoppingMallEvent", // 逛街必看
@@ -476,6 +493,10 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "yellowPageAdRecommendModule" //淘宝商品推荐
   ];
   if (obj?.data?.modules) {
+    if (obj?.data?.modules?.combineReviews?.data?.write_comment) {
+      // 写评论赢奖励
+      delete obj.data.modules.combineReviews.data.write_comment;
+    }
     for (let i of items) {
       delete obj.data.modules[i];
     }
@@ -571,7 +592,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
       let list = obj.data.modules.list_data.data;
       if (list?.content?.length > 0) {
         // brandAdCard广告卡片 toplist_al人气榜单 高德指南
-        list.content = list.content.filter((i) => !["brandAdCard", "toplist_al"]?.includes(i?.item_type));
+        list.content = list.content.filter((i) => !["brandAdCard", "toplist_al"].includes(i?.item_type));
       }
     }
   }
@@ -581,9 +602,9 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     if (obj?.tip_list?.length > 0) {
       for (let item of obj.tip_list) {
         if (
-          ["12"]?.includes(item?.tip?.datatype_spec) ||
-          ["ad", "poi_ad", "toplist"]?.includes(item?.tip?.result_type) ||
-          ["ad", "exct_query_sug_merge_theme", "query_sug_merge_theme", "sp"]?.includes(item?.tip?.task_tag)
+          ["12"].includes(item?.tip?.datatype_spec) ||
+          ["ad", "poi_ad", "toplist"].includes(item?.tip?.result_type) ||
+          ["ad", "exct_query_sug_merge_theme", "query_sug_merge_theme", "sp"].includes(item?.tip?.task_tag)
         ) {
           continue;
         } else {
@@ -599,9 +620,9 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
         let newTips = [];
         if (item?.tip_list?.length > 0) {
           for (let ii of item.tip_list) {
-            if (["12"]?.includes(ii?.tip?.datatype_spec)) {
+            if (["12"].includes(ii?.tip?.datatype_spec)) {
               continue;
-            } else if (["ad", "poi_ad"]?.includes(ii?.tip?.result_type)) {
+            } else if (["ad", "poi_ad"].includes(ii?.tip?.result_type)) {
               continue;
             } else {
               newTips.push(ii);
