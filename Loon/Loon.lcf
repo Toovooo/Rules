@@ -90,6 +90,7 @@ https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/WeatherKit.lpx, enabled = t
 https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/Tieba.lpx, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/Bilibili.lpx, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/TaoBao.lpx, enabled = true
+https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/Wechat.lpx, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/Amap.lpx, enabled = true
 https://github.com/Toovooo/Rules/raw/master/Loon/Lpx/BoxJs.lpx, policy = Streaming, enabled = true
 
