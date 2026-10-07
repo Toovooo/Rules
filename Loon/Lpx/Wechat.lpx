@@ -11,7 +11,7 @@ request if ${url} ~= /^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|geta
 request if ${url} ~= /^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword/i then reject_dict(200)
 
 [Script]
-response if ${url} ~= /^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?/i then script("https://github.com/Moli-X/Tool/raw/X/Loon/Plugin/Kelee/Script/UnblockURLinWeChat.js") with tag="微信外部链接解锁", requires_body=true
+response if ${url} ~= /^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?/i then script("https://github.com/Toovooo/Rules/raw/master/Script/WeChat/UnblockURLinWeChat.js") with tag="微信外部链接解锁", requires_body=true
 
 [MitM]
 hostname=mp.weixin.qq.com, weixin110.qq.com, security.wechat.com
