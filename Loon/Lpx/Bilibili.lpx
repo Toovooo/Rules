@@ -1,7 +1,7 @@
 #!name=哔哩哔哩
 #!desc=去开屏广告
 #!icon=https://github.com/Toovooo/Rules/raw/master/Icon/zo/Bilibili.png
-#!date=2026.10.06
+#!date=2026.10.08
 
 [Argument]
 displayUpList=select,"show","hide","auto",tag=[动态]中[最常访问]的显示方式

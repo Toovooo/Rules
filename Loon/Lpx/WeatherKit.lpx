@@ -1,7 +1,7 @@
 #!name=天气
 #!desc=解锁全部天气功能
 #!icon=https://github.com/Toovooo/Rules/raw/master/Icon/zo/AppleWeather.png
-#!date=2026.10.06
+#!date=2026.10.08
 
 [Argument]
 DataSets = input,"airQuality,currentWeather,forecastDaily,forecastHourly,forecastNextHour,weatherAlerts",tag=[数据集],desc=选择需要解析并处理的数据集；未选择的数据槽始终保持原样透传，不作修改。

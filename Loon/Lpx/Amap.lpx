@@ -1,7 +1,7 @@
 #!name = 高德地图
 #!desc = 移除各种广告
-#!icon = https://raw.githubusercontent.com/Toovooo/Rules/master/Icon/zo/Amap.png
-#!date = 2026.10.06
+#!icon = https://github.com/Toovooo/Rules/raw/master/Icon/zo/Amap.png
+#!date = 2026.10.08
 
 [Rule]
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
@@ -16,7 +16,6 @@ response if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/pr
 response if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/homepage\?/i then response.json.delete("history_tags")
 request if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_adv\?/i then reject_dict(200)
 request if ${url} ~= /^https:\/\/oss\.amap\.com\/ws\/banner\/lists\/\?/i then reject_dict(200)
-
 request if ${url} ~= /^https:\/\/ai\.amap\.com\/v1\/ai_rec\//i then reject_dict(200)
 request if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/aos\/main\/page\/product\/list\?/i then reject_dict(200)
 request if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(?:main-page-assets|main-page-location|ridewalk-end-fc|usr-profile-fc\/homeV2)/i then reject_dict(200)
@@ -24,7 +23,6 @@ request if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/(?:mapapi\/hint_text\/offlin
 request if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\?/i then reject_dict(200)
 request if ${url} ~= /^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\?/i then reject_dict(200)
 request if ${url} ~= /^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\?/i then reject_dict(200)
-
 request if ${url} ~= /^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:order\/car\/(?:feedback\/get_card_questions|feedback\/viptips|king_toolbox_car_bubble|remark\/satisfactionConf|rights_information)|tips\/onscene_visual_optimization)/i then reject_dict(200)
 request if ${url} ~= /^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:pay\/web\/paySuccess\/info\/request|transportation\/diversion\/resource\/driving)/i then reject_dict(200)
 response if ${url} ~= /^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_car_tips\?/i then response.json.delete("data.carTips.data.popupInfo")
