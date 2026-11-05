@@ -28,5 +28,26 @@ response if ${url} ~= /^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spoti
 response if ${url} ~= /^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)(\?.*)?$ then script("https://github.com/Toovooo/Rules/raw/master/Script/Spotify/spot-proto-eevee.js") with enable=${spot-ev1-enable}, tag="Spotify protobuf (remote)", timeout=10, requires_body=true, binary_body_mode=true
 response if ${url} ~= /^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)(\?.*)?$ then script("https://github.com/Toovooo/Rules/raw/master/Script/Spotify/spot-proto-ev3.js") with enable=${spot-ev3-enable}, tag="Spotify protobuf (local)", timeout=10, requires_body=true, binary_body_mode=true
 
+
+[Rule]
+AND,((DOMAIN-SUFFIX, spotify.com), (PROTOCOL, QUIC)),REJECT
+DOMAIN,aet.spotify.com,REJECT
+
+[Rewrite]
+request if ${url} ~= /^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/user-customization-service\/v1\/customize/i then request.header.del("if-none-match")
+request if ${url} ~= /^https:\/\/(spclient\.wg|.*-spclient)\.spotify\.com(:443)?\/pendragon/i then reject_dict(200)
+request if ${url} ~= /^https:\/\/(?:spclient\.wg|[\w-]+-spclient)\.spotify\.com(?::443)?\/watch-feed-entrypoints\/v\d\/discovery-from-seed/ && ${hide_discovery_feed} == true then reject_dict(200)
+request if ${url} ~= /^https:\/\/[\w-]+-spclient\.spotify\.com(?::443)?\/pam-view-service\// && ${hide_membership_info} == true then reject_dict(200)
+request if ${url} ~= /37i9dQZF1EYkqdzj48dyYq/ && ${hide_ai_dj} == true then reject_dict(200)
+
+[Script]
+request if ${url} ~= /^https:\/\/(.*-spclient\.spotify\.com(:443)?|spclient\.wg\.spotify\.com)\/gabo-receiver-service/i then script("https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Spotify/spot-gabo.js") with tag="Spotify gabo", timeout=10
+response if ${url} ~= /^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/browsita\/v.\/browse/i then script("https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Spotify/spot-NoSearchAd.js") with tag="Spotify search ads", timeout=10, requires_body=true, binary_body_mode=true
+response if ${url} ~= /^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/casita\/v.\/home\//i then script("https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Spotify/spot-NoHomeAd.js") with tag="Spotify home ads", timeout=10, requires_body=true, binary_body_mode=true
+response if ${url} ~= /^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/scrollsita\/v.\/scroll\/spotify/i then script("https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Spotify/spot-NoScrollAd.js") with tag="Spotify scroll ads", timeout=10, requires_body=true, binary_body_mode=true
+response if ${url} ~= /^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)(\?.*)?$/i then script("https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Spotify/spot-proto-eevee.js") with enable=${spot_remote_config}, tag="Spotify protobuf (remote)", timeout=10, requires_body=true, binary_body_mode=true
+response if ${url} ~= /^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)(\?.*)?$/i then script("https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Spotify/spot-proto-ev3.js") with tag="Spotify protobuf (local)", timeout=10, requires_body=true, binary_body_mode=true
+
+
 [Mitm]
 hostname = spclient.wg.spotify.com, *spclient.spotify.com
