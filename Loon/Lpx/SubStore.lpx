@@ -18,5 +18,13 @@ http-request ^https?:\/\/sub\.store script-path=https://github.com/sub-store-org
 
 cron {cron} script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js, timeout=900, tag=Sub-Store Sync, argument=[{sync_success_notify},{cors}]
 
+
+
+request if ${url} ~= /^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info)))/i then script("https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js", {${cors}}) with tag="Sub-Store Core", timeout=900, requires_body=true
+
+request if ${url} ~= /^https?:\/\/sub\.store/i then script("https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js", {${cors}}) with tag="Sub-Store Simple", timeout=900, requires_body=true
+
+cron ${cron} then script("https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js", {${sync_success_notify}, ${cors}}) with tag="Sub-Store Sync", timeout=900
+
 [MITM]
 hostname=sub.store
