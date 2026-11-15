@@ -2,16 +2,12 @@ function main(config) {
   config["proxy-groups"] = [
     {
       icon: "https://cdn.jsdelivr.net/gh/Toovooo/Rules@master/Icon/Color/Auto.png",
-      "include-all": true,
-      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       name: "PROXY",
       type: "select",
       proxies: ["美国", "香港", "新加坡", "日本"],
     },
     {
       icon: "https://cdn.jsdelivr.net/gh/Toovooo/Rules@master/Icon/Color/Game.png",
-      "include-all": true,
-      "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       name: "Epic",
       type: "select",
       proxies: ["DIRECT", "美国", "香港", "新加坡", "日本"],
