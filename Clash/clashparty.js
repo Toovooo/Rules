@@ -1,6 +1,12 @@
 function main(config) {
   config["proxy-groups"] = [
     {
+      icon: "https://cdn.jsdelivr.net/gh/Toovooo/Rules@master/Icon/Color/Global.png",
+      name: "GLOBAL",
+      type: "select",
+      proxies: ["美国", "香港", "新加坡", "日本"],
+    },
+    {
       icon: "https://cdn.jsdelivr.net/gh/Toovooo/Rules@master/Icon/Color/Auto.png",
       name: "PROXY",
       type: "select",
